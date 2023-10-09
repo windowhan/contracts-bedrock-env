@@ -1,0 +1,1202 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x602d6037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea164736f6c634300080f000a",
+    "sourceMap": "311:1885:172:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;311:1885:172;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea164736f6c634300080f000a",
+    "sourceMap": "311:1885:172:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"SecureMerkleTrie\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"SecureMerkleTrie is a thin wrapper around the MerkleTrie library that hashes the input         keys. Ethereum's state trie hashes input keys before storing them.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/libraries/trie/SecureMerkleTrie.sol\":\"SecureMerkleTrie\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[\":@cwia/=lib/clones-with-immutable-args/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@rari-capital/solmate/=lib/solmate/\",\":clones-with-immutable-args/=lib/clones-with-immutable-args/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":safe-contracts/=lib/safe-contracts/contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/libraries/Bytes.sol\":{\"keccak256\":\"0x827f47d123b0fdf3b08816d5b33831811704dbf4e554e53f2269354f6bba8859\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3137ac7204d30a245a8b0d67aa6da5286f1bd8c90379daab561f84963b6db782\",\"dweb:/ipfs/QmWRhisw3axJK833gUScs23ETh2MLFbVzzqzYVMKSDN3S9\"]},\"src/libraries/rlp/RLPReader.sol\":{\"keccak256\":\"0x9ba74a3b0a11693e622380807d213d5d1250d974e18b2cd768da9cbe719a6778\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0808d721ed9e05707526ee134faa051d707a95ee6b8bd6e0b1972275da8e5723\",\"dweb:/ipfs/QmcTTPu9xgckfWdbFUAcr2RAgk3J6vzyR4FpV798TjFMeN\"]},\"src/libraries/trie/MerkleTrie.sol\":{\"keccak256\":\"0xf8ba770ee6666e73ae43184c700e9c704b2c4ace71f9e3c2227ddc11a8148b4c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4702ccee1fe44aea3ee01d59e6152eb755da083f786f00947fec4437c064fe74\",\"dweb:/ipfs/QmQjFj5J7hrEM1dxJjFszzW2Cs7g7eMhYNBXonF2DXBstE\"]},\"src/libraries/trie/SecureMerkleTrie.sol\":{\"keccak256\":\"0xeaff8315cfd21197bc6bc859c2decf5d4f4838c9c357c502cdf2b1eac863d288\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://79dcdcaa560aea51d138da4f5dc553a1808b6de090b2dc1629f18375edbff681\",\"dweb:/ipfs/QmbE4pUPhf5fLKW4W6cEjhQs55gEDvHmbmoBqkW1yz3bnw\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@cwia/=lib/clones-with-immutable-args/src/",
+        "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        "@rari-capital/solmate/=lib/solmate/",
+        "clones-with-immutable-args/=lib/clones-with-immutable-args/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "safe-contracts/=lib/safe-contracts/contracts/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 999999
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/libraries/trie/SecureMerkleTrie.sol": "SecureMerkleTrie"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/libraries/Bytes.sol": {
+        "keccak256": "0x827f47d123b0fdf3b08816d5b33831811704dbf4e554e53f2269354f6bba8859",
+        "urls": [
+          "bzz-raw://3137ac7204d30a245a8b0d67aa6da5286f1bd8c90379daab561f84963b6db782",
+          "dweb:/ipfs/QmWRhisw3axJK833gUScs23ETh2MLFbVzzqzYVMKSDN3S9"
+        ],
+        "license": "MIT"
+      },
+      "src/libraries/rlp/RLPReader.sol": {
+        "keccak256": "0x9ba74a3b0a11693e622380807d213d5d1250d974e18b2cd768da9cbe719a6778",
+        "urls": [
+          "bzz-raw://0808d721ed9e05707526ee134faa051d707a95ee6b8bd6e0b1972275da8e5723",
+          "dweb:/ipfs/QmcTTPu9xgckfWdbFUAcr2RAgk3J6vzyR4FpV798TjFMeN"
+        ],
+        "license": "MIT"
+      },
+      "src/libraries/trie/MerkleTrie.sol": {
+        "keccak256": "0xf8ba770ee6666e73ae43184c700e9c704b2c4ace71f9e3c2227ddc11a8148b4c",
+        "urls": [
+          "bzz-raw://4702ccee1fe44aea3ee01d59e6152eb755da083f786f00947fec4437c064fe74",
+          "dweb:/ipfs/QmQjFj5J7hrEM1dxJjFszzW2Cs7g7eMhYNBXonF2DXBstE"
+        ],
+        "license": "MIT"
+      },
+      "src/libraries/trie/SecureMerkleTrie.sol": {
+        "keccak256": "0xeaff8315cfd21197bc6bc859c2decf5d4f4838c9c357c502cdf2b1eac863d288",
+        "urls": [
+          "bzz-raw://79dcdcaa560aea51d138da4f5dc553a1808b6de090b2dc1629f18375edbff681",
+          "dweb:/ipfs/QmbE4pUPhf5fLKW4W6cEjhQs55gEDvHmbmoBqkW1yz3bnw"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": {}
+  },
+  "userdoc": {
+    "version": 1,
+    "kind": "user",
+    "notice": "SecureMerkleTrie is a thin wrapper around the MerkleTrie library that hashes the input         keys. Ethereum's state trie hashes input keys before storing them."
+  },
+  "devdoc": {
+    "version": 1,
+    "kind": "dev",
+    "title": "SecureMerkleTrie"
+  },
+  "ast": {
+    "absolutePath": "src/libraries/trie/SecureMerkleTrie.sol",
+    "id": 72553,
+    "exportedSymbols": {
+      "MerkleTrie": [
+        72467
+      ],
+      "SecureMerkleTrie": [
+        72552
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2165:172",
+    "nodes": [
+      {
+        "id": 72469,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:172",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 72471,
+        "nodeType": "ImportDirective",
+        "src": "57:46:172",
+        "nodes": [],
+        "absolutePath": "src/libraries/trie/MerkleTrie.sol",
+        "file": "./MerkleTrie.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 72553,
+        "sourceUnit": 72468,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 72470,
+              "name": "MerkleTrie",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 72467,
+              "src": "66:10:172",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 72552,
+        "nodeType": "ContractDefinition",
+        "src": "311:1885:172",
+        "nodes": [
+          {
+            "id": 72504,
+            "nodeType": "FunctionDefinition",
+            "src": "1041:343:172",
+            "nodes": [],
+            "body": {
+              "id": 72503,
+              "nodeType": "Block",
+              "src": "1251:133:172",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    72488
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 72488,
+                      "mutability": "mutable",
+                      "name": "key",
+                      "nameLocation": "1274:3:172",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 72503,
+                      "src": "1261:16:172",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 72487,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1261:5:172",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 72492,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 72490,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 72475,
+                        "src": "1294:4:172",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 72489,
+                      "name": "_getSecureKey",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 72551,
+                      "src": "1280:13:172",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (bytes memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 72491,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1280:19:172",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1261:38:172"
+                },
+                {
+                  "expression": {
+                    "id": 72501,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 72493,
+                      "name": "valid_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 72485,
+                      "src": "1309:6:172",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 72496,
+                          "name": "key",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72488,
+                          "src": "1350:3:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        {
+                          "id": 72497,
+                          "name": "_value",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72477,
+                          "src": "1355:6:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        {
+                          "id": 72498,
+                          "name": "_proof",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72480,
+                          "src": "1363:6:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_bytes_memory_ptr_$dyn_memory_ptr",
+                            "typeString": "bytes memory[] memory"
+                          }
+                        },
+                        {
+                          "id": 72499,
+                          "name": "_root",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72482,
+                          "src": "1371:5:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          },
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_bytes_memory_ptr_$dyn_memory_ptr",
+                            "typeString": "bytes memory[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "expression": {
+                          "id": 72494,
+                          "name": "MerkleTrie",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72467,
+                          "src": "1318:10:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_MerkleTrie_$72467_$",
+                            "typeString": "type(library MerkleTrie)"
+                          }
+                        },
+                        "id": 72495,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "verifyInclusionProof",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 71972,
+                        "src": "1318:31:172",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$_t_bytes_memory_ptr_$_t_array$_t_bytes_memory_ptr_$dyn_memory_ptr_$_t_bytes32_$returns$_t_bool_$",
+                          "typeString": "function (bytes memory,bytes memory,bytes memory[] memory,bytes32) pure returns (bool)"
+                        }
+                      },
+                      "id": 72500,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1318:59:172",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1309:68:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 72502,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1309:68:172"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 72473,
+              "nodeType": "StructuredDocumentation",
+              "src": "342:694:172",
+              "text": "@notice Verifies a proof that a given key/value pair is present in the Merkle trie.\n @param _key   Key of the node to search for, as a hex string.\n @param _value Value of the node to search for, as a hex string.\n @param _proof Merkle trie inclusion proof for the desired node. Unlike traditional Merkle\n               trees, this proof is executed top-down and consists of a list of RLP-encoded\n               nodes that make a path down to the target node.\n @param _root  Known root of the Merkle trie. Used to verify that the included proof is\n               correctly constructed.\n @return valid_ Whether or not the proof is valid."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyInclusionProof",
+            "nameLocation": "1050:20:172",
+            "parameters": {
+              "id": 72483,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72475,
+                  "mutability": "mutable",
+                  "name": "_key",
+                  "nameLocation": "1093:4:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72504,
+                  "src": "1080:17:172",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 72474,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1080:5:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 72477,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "1120:6:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72504,
+                  "src": "1107:19:172",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 72476,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1107:5:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 72480,
+                  "mutability": "mutable",
+                  "name": "_proof",
+                  "nameLocation": "1151:6:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72504,
+                  "src": "1136:21:172",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "bytes[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 72478,
+                      "name": "bytes",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1136:5:172",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_storage_ptr",
+                        "typeString": "bytes"
+                      }
+                    },
+                    "id": 72479,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1136:7:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes_storage_$dyn_storage_ptr",
+                      "typeString": "bytes[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 72482,
+                  "mutability": "mutable",
+                  "name": "_root",
+                  "nameLocation": "1175:5:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72504,
+                  "src": "1167:13:172",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 72481,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1167:7:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1070:116:172"
+            },
+            "returnParameters": {
+              "id": 72486,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72485,
+                  "mutability": "mutable",
+                  "name": "valid_",
+                  "nameLocation": "1239:6:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72504,
+                  "src": "1234:11:172",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 72484,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1234:4:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1233:13:172"
+            },
+            "scope": 72552,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 72533,
+            "nodeType": "FunctionDefinition",
+            "src": "1680:222:172",
+            "nodes": [],
+            "body": {
+              "id": 72532,
+              "nodeType": "Block",
+              "src": "1794:108:172",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    72518
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 72518,
+                      "mutability": "mutable",
+                      "name": "key",
+                      "nameLocation": "1817:3:172",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 72532,
+                      "src": "1804:16:172",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 72517,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1804:5:172",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 72522,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 72520,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 72507,
+                        "src": "1837:4:172",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 72519,
+                      "name": "_getSecureKey",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 72551,
+                      "src": "1823:13:172",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (bytes memory) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 72521,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1823:19:172",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1804:38:172"
+                },
+                {
+                  "expression": {
+                    "id": 72530,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 72523,
+                      "name": "value_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 72515,
+                      "src": "1852:6:172",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 72526,
+                          "name": "key",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72518,
+                          "src": "1876:3:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        },
+                        {
+                          "id": 72527,
+                          "name": "_proof",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72510,
+                          "src": "1881:6:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_bytes_memory_ptr_$dyn_memory_ptr",
+                            "typeString": "bytes memory[] memory"
+                          }
+                        },
+                        {
+                          "id": 72528,
+                          "name": "_root",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72512,
+                          "src": "1889:5:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          },
+                          {
+                            "typeIdentifier": "t_array$_t_bytes_memory_ptr_$dyn_memory_ptr",
+                            "typeString": "bytes memory[] memory"
+                          },
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "expression": {
+                          "id": 72524,
+                          "name": "MerkleTrie",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 72467,
+                          "src": "1861:10:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_MerkleTrie_$72467_$",
+                            "typeString": "type(library MerkleTrie)"
+                          }
+                        },
+                        "id": 72525,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "get",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 72320,
+                        "src": "1861:14:172",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$_t_array$_t_bytes_memory_ptr_$dyn_memory_ptr_$_t_bytes32_$returns$_t_bytes_memory_ptr_$",
+                          "typeString": "function (bytes memory,bytes memory[] memory,bytes32) pure returns (bytes memory)"
+                        }
+                      },
+                      "id": 72529,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1861:34:172",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes memory"
+                      }
+                    },
+                    "src": "1852:43:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "id": 72531,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1852:43:172"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 72505,
+              "nodeType": "StructuredDocumentation",
+              "src": "1390:285:172",
+              "text": "@notice Retrieves the value associated with a given key.\n @param _key   Key to search for, as hex bytes.\n @param _proof Merkle trie inclusion proof for the key.\n @param _root  Known root of the Merkle trie.\n @return value_ Value of the key if it exists."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nameLocation": "1689:3:172",
+            "parameters": {
+              "id": 72513,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72507,
+                  "mutability": "mutable",
+                  "name": "_key",
+                  "nameLocation": "1706:4:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72533,
+                  "src": "1693:17:172",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 72506,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1693:5:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 72510,
+                  "mutability": "mutable",
+                  "name": "_proof",
+                  "nameLocation": "1727:6:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72533,
+                  "src": "1712:21:172",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "bytes[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 72508,
+                      "name": "bytes",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1712:5:172",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_storage_ptr",
+                        "typeString": "bytes"
+                      }
+                    },
+                    "id": 72509,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1712:7:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes_storage_$dyn_storage_ptr",
+                      "typeString": "bytes[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 72512,
+                  "mutability": "mutable",
+                  "name": "_root",
+                  "nameLocation": "1743:5:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72533,
+                  "src": "1735:13:172",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 72511,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1735:7:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1692:57:172"
+            },
+            "returnParameters": {
+              "id": 72516,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72515,
+                  "mutability": "mutable",
+                  "name": "value_",
+                  "nameLocation": "1786:6:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72533,
+                  "src": "1773:19:172",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 72514,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1773:5:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1772:21:172"
+            },
+            "scope": 72552,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 72551,
+            "nodeType": "FunctionDefinition",
+            "src": "2052:142:172",
+            "nodes": [],
+            "body": {
+              "id": 72550,
+              "nodeType": "Block",
+              "src": "2136:58:172",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 72548,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 72541,
+                      "name": "hash_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 72539,
+                      "src": "2146:5:172",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "id": 72545,
+                              "name": "_key",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 72536,
+                              "src": "2181:4:172",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "id": 72544,
+                            "name": "keccak256",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -8,
+                            "src": "2171:9:172",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                              "typeString": "function (bytes memory) pure returns (bytes32)"
+                            }
+                          },
+                          "id": 72546,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2171:15:172",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "expression": {
+                          "id": 72542,
+                          "name": "abi",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -1,
+                          "src": "2154:3:172",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_abi",
+                            "typeString": "abi"
+                          }
+                        },
+                        "id": 72543,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "encodePacked",
+                        "nodeType": "MemberAccess",
+                        "src": "2154:16:172",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_abiencodepacked_pure$__$returns$_t_bytes_memory_ptr_$",
+                          "typeString": "function () pure returns (bytes memory)"
+                        }
+                      },
+                      "id": 72547,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2154:33:172",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes memory"
+                      }
+                    },
+                    "src": "2146:41:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "id": 72549,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2146:41:172"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 72534,
+              "nodeType": "StructuredDocumentation",
+              "src": "1908:139:172",
+              "text": "@notice Computes the hashed version of the input key.\n @param _key Key to hash.\n @return hash_ Hashed version of the key."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_getSecureKey",
+            "nameLocation": "2061:13:172",
+            "parameters": {
+              "id": 72537,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72536,
+                  "mutability": "mutable",
+                  "name": "_key",
+                  "nameLocation": "2088:4:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72551,
+                  "src": "2075:17:172",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 72535,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2075:5:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2074:19:172"
+            },
+            "returnParameters": {
+              "id": 72540,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72539,
+                  "mutability": "mutable",
+                  "name": "hash_",
+                  "nameLocation": "2129:5:172",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72551,
+                  "src": "2116:18:172",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 72538,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2116:5:172",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2115:20:172"
+            },
+            "scope": 72552,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "private"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "SecureMerkleTrie",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 72472,
+          "nodeType": "StructuredDocumentation",
+          "src": "105:206:172",
+          "text": "@title SecureMerkleTrie\n @notice SecureMerkleTrie is a thin wrapper around the MerkleTrie library that hashes the input\n         keys. Ethereum's state trie hashes input keys before storing them."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          72552
+        ],
+        "name": "SecureMerkleTrie",
+        "nameLocation": "319:16:172",
+        "scope": 72553,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 172
+}

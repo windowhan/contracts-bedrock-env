@@ -1,0 +1,1555 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x602d6037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea164736f6c6343000815000a",
+    "sourceMap": "3745:491:58:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;3745:491:58;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea164736f6c6343000815000a",
+    "sourceMap": "3745:491:58:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"INVALID\":{\"details\":\"The VM has executed successfully and the outcome is invalid.\"},\"PANIC\":{\"details\":\"The VM has paniced.\"},\"UNFINISHED\":{\"details\":\"The VM execution is still in progress.\"},\"VALID\":{\"details\":\"The VM has executed successfully and the outcome is valid.\"}},\"title\":\"VMStatuses\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/libraries/DisputeTypes.sol\":\"VMStatuses\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[\":@cwia/=lib/clones-with-immutable-args/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@rari-capital/solmate/=lib/solmate/\",\":clones-with-immutable-args/=lib/clones-with-immutable-args/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":safe-contracts/=lib/safe-contracts/contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/dispute/interfaces/IBondManager.sol\":{\"keccak256\":\"0x31db84bf7a701125719c0bdaed316c8ec3d32e774a70b9bac3045d3ed272da8b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://35ef3970234b9a2d85ca800c5257398fd92a6959b0daa088b402a493ebf18d88\",\"dweb:/ipfs/QmWr1ZCBjRJPTUWyNcDv3G2Jb72cYG2p4rQA55WuUPUjao\"]},\"src/dispute/interfaces/IDisputeGame.sol\":{\"keccak256\":\"0xd9cebb758474716504ba281e8c9e007ead5be676a835729c236afec47dfb1e7f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fba945be8dbca576b6765fccc5fe8e31109562b0f2e9f943fc8b6c65fffc9829\",\"dweb:/ipfs/QmTWcBnmMhb3odqu2kkJbKZK7HNeiE7SvfD9tjKv8F4qWF\"]},\"src/dispute/interfaces/IInitializable.sol\":{\"keccak256\":\"0xf021b03c9e887e227102b037595e0917b76546e796bec7aa4fdced61090267ce\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bcfbad382815e37355b7cc318fa333b9b5b08223d4315951fd0881430ab8d3df\",\"dweb:/ipfs/QmRng31WWpYeApQUcXJXhSdqL797drdtBwvUD6D9giCyy2\"]},\"src/dispute/lib/LibClock.sol\":{\"keccak256\":\"0x4599b150b8a3d53a9db22698666320e62261765e3ad5b58105bc93097b1a4690\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a0ab2d277fd4607510a5cafb91235a0fc3e47c3c0cdb45b2c185188ce888a1c5\",\"dweb:/ipfs/QmQ2bM3YmZCbN8uhKigSBh6j9VKrfxg61tjihwY7fdpARs\"]},\"src/dispute/lib/LibGameId.sol\":{\"keccak256\":\"0xa61b8562def4834607b733240e8eb4f924a75250df45852c9af1aea628f6b58d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2853075b45f634db083ea5f495f0cb9c28eb2401e2c18fd5fb7bce2500ed78ad\",\"dweb:/ipfs/QmaJpEg5z6tZ3niZY6N3f8AZ89FRnUVZJHNUDs66sq97j6\"]},\"src/dispute/lib/LibHashing.sol\":{\"keccak256\":\"0x5a072cd028094eee55acb84ed8d08d7422b1fb46658b7e043e916781530a383b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b67e54f1318f1fd67b28b16c6861a56e27217c26a12aaea5c446e2ec53143920\",\"dweb:/ipfs/QmVLSTP3PwXzRkR3A4qV9fjZhca9v8J1EnEYuVGUsSirAq\"]},\"src/dispute/lib/LibPosition.sol\":{\"keccak256\":\"0xf85659fff6f178903482bc12b9e908440dca33fbcda2258b1a665d1746a03c33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0e51fb85a9f43c1b50c601d2e5cf343874ce3cb28d7823bea3f1ba5f23c28a9e\",\"dweb:/ipfs/QmcWQZsARwq6cfstzmCw8GnueH3QAkaPgdRpi7guQpKB6Q\"]},\"src/libraries/DisputeTypes.sol\":{\"keccak256\":\"0x23c8fbebc8a9fbe0b170ce45405cec5ec9bd71380d0e30f0a07144f420e9fdf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9fa6ad5d232e12fe7c575b86b00ff4164a0539bb017c0c7efea94d5a96013e05\",\"dweb:/ipfs/QmXoPqtjX4wJhikz7zjK7QQgjEB59ikxgPgM9wCBfJQbTE\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@cwia/=lib/clones-with-immutable-args/src/",
+        "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        "@rari-capital/solmate/=lib/solmate/",
+        "clones-with-immutable-args/=lib/clones-with-immutable-args/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "safe-contracts/=lib/safe-contracts/contracts/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 999999
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/libraries/DisputeTypes.sol": "VMStatuses"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/dispute/interfaces/IBondManager.sol": {
+        "keccak256": "0x31db84bf7a701125719c0bdaed316c8ec3d32e774a70b9bac3045d3ed272da8b",
+        "urls": [
+          "bzz-raw://35ef3970234b9a2d85ca800c5257398fd92a6959b0daa088b402a493ebf18d88",
+          "dweb:/ipfs/QmWr1ZCBjRJPTUWyNcDv3G2Jb72cYG2p4rQA55WuUPUjao"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/interfaces/IDisputeGame.sol": {
+        "keccak256": "0xd9cebb758474716504ba281e8c9e007ead5be676a835729c236afec47dfb1e7f",
+        "urls": [
+          "bzz-raw://fba945be8dbca576b6765fccc5fe8e31109562b0f2e9f943fc8b6c65fffc9829",
+          "dweb:/ipfs/QmTWcBnmMhb3odqu2kkJbKZK7HNeiE7SvfD9tjKv8F4qWF"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/interfaces/IInitializable.sol": {
+        "keccak256": "0xf021b03c9e887e227102b037595e0917b76546e796bec7aa4fdced61090267ce",
+        "urls": [
+          "bzz-raw://bcfbad382815e37355b7cc318fa333b9b5b08223d4315951fd0881430ab8d3df",
+          "dweb:/ipfs/QmRng31WWpYeApQUcXJXhSdqL797drdtBwvUD6D9giCyy2"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/lib/LibClock.sol": {
+        "keccak256": "0x4599b150b8a3d53a9db22698666320e62261765e3ad5b58105bc93097b1a4690",
+        "urls": [
+          "bzz-raw://a0ab2d277fd4607510a5cafb91235a0fc3e47c3c0cdb45b2c185188ce888a1c5",
+          "dweb:/ipfs/QmQ2bM3YmZCbN8uhKigSBh6j9VKrfxg61tjihwY7fdpARs"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/lib/LibGameId.sol": {
+        "keccak256": "0xa61b8562def4834607b733240e8eb4f924a75250df45852c9af1aea628f6b58d",
+        "urls": [
+          "bzz-raw://2853075b45f634db083ea5f495f0cb9c28eb2401e2c18fd5fb7bce2500ed78ad",
+          "dweb:/ipfs/QmaJpEg5z6tZ3niZY6N3f8AZ89FRnUVZJHNUDs66sq97j6"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/lib/LibHashing.sol": {
+        "keccak256": "0x5a072cd028094eee55acb84ed8d08d7422b1fb46658b7e043e916781530a383b",
+        "urls": [
+          "bzz-raw://b67e54f1318f1fd67b28b16c6861a56e27217c26a12aaea5c446e2ec53143920",
+          "dweb:/ipfs/QmVLSTP3PwXzRkR3A4qV9fjZhca9v8J1EnEYuVGUsSirAq"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/lib/LibPosition.sol": {
+        "keccak256": "0xf85659fff6f178903482bc12b9e908440dca33fbcda2258b1a665d1746a03c33",
+        "urls": [
+          "bzz-raw://0e51fb85a9f43c1b50c601d2e5cf343874ce3cb28d7823bea3f1ba5f23c28a9e",
+          "dweb:/ipfs/QmcWQZsARwq6cfstzmCw8GnueH3QAkaPgdRpi7guQpKB6Q"
+        ],
+        "license": "MIT"
+      },
+      "src/libraries/DisputeTypes.sol": {
+        "keccak256": "0x23c8fbebc8a9fbe0b170ce45405cec5ec9bd71380d0e30f0a07144f420e9fdf0",
+        "urls": [
+          "bzz-raw://9fa6ad5d232e12fe7c575b86b00ff4164a0539bb017c0c7efea94d5a96013e05",
+          "dweb:/ipfs/QmXoPqtjX4wJhikz7zjK7QQgjEB59ikxgPgM9wCBfJQbTE"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": {}
+  },
+  "userdoc": {
+    "version": 1,
+    "kind": "user"
+  },
+  "devdoc": {
+    "version": 1,
+    "kind": "dev",
+    "title": "VMStatuses"
+  },
+  "ast": {
+    "absolutePath": "src/libraries/DisputeTypes.sol",
+    "id": 37613,
+    "exportedSymbols": {
+      "BondAmount": [
+        37533
+      ],
+      "Claim": [
+        37529
+      ],
+      "ClaimHash": [
+        37531
+      ],
+      "Clock": [
+        37541
+      ],
+      "Duration": [
+        37537
+      ],
+      "GameId": [
+        37539
+      ],
+      "GameStatus": [
+        37552
+      ],
+      "GameType": [
+        37545
+      ],
+      "GameTypes": [
+        37578
+      ],
+      "Hash": [
+        37527
+      ],
+      "LibClock": [
+        36935
+      ],
+      "LibGameId": [
+        36977
+      ],
+      "LibHashing": [
+        36999
+      ],
+      "LibPosition": [
+        37157
+      ],
+      "Position": [
+        37543
+      ],
+      "Timestamp": [
+        37535
+      ],
+      "VMStatus": [
+        37547
+      ],
+      "VMStatuses": [
+        37612
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:4205:58",
+    "nodes": [
+      {
+        "id": 37501,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:58",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ]
+      },
+      {
+        "id": 37503,
+        "nodeType": "ImportDirective",
+        "src": "58:59:58",
+        "nodes": [],
+        "absolutePath": "src/dispute/lib/LibHashing.sol",
+        "file": "../dispute/lib/LibHashing.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37613,
+        "sourceUnit": 37000,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37502,
+              "name": "LibHashing",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36999,
+              "src": "67:10:58",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37505,
+        "nodeType": "ImportDirective",
+        "src": "118:61:58",
+        "nodes": [],
+        "absolutePath": "src/dispute/lib/LibPosition.sol",
+        "file": "../dispute/lib/LibPosition.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37613,
+        "sourceUnit": 37158,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37504,
+              "name": "LibPosition",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 37157,
+              "src": "127:11:58",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37507,
+        "nodeType": "ImportDirective",
+        "src": "180:55:58",
+        "nodes": [],
+        "absolutePath": "src/dispute/lib/LibClock.sol",
+        "file": "../dispute/lib/LibClock.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37613,
+        "sourceUnit": 36936,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37506,
+              "name": "LibClock",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36935,
+              "src": "189:8:58",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37509,
+        "nodeType": "ImportDirective",
+        "src": "236:57:58",
+        "nodes": [],
+        "absolutePath": "src/dispute/lib/LibGameId.sol",
+        "file": "../dispute/lib/LibGameId.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37613,
+        "sourceUnit": 36978,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37508,
+              "name": "LibGameId",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36977,
+              "src": "245:9:58",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37513,
+        "nodeType": "UsingForDirective",
+        "src": "295:34:58",
+        "nodes": [],
+        "global": true,
+        "libraryName": {
+          "id": 37510,
+          "name": "LibHashing",
+          "nameLocations": [
+            "301:10:58"
+          ],
+          "nodeType": "IdentifierPath",
+          "referencedDeclaration": 36999,
+          "src": "301:10:58"
+        },
+        "typeName": {
+          "id": 37512,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 37511,
+            "name": "Claim",
+            "nameLocations": [
+              "316:5:58"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 37529,
+            "src": "316:5:58"
+          },
+          "referencedDeclaration": 37529,
+          "src": "316:5:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+            "typeString": "Claim"
+          }
+        }
+      },
+      {
+        "id": 37517,
+        "nodeType": "UsingForDirective",
+        "src": "330:38:58",
+        "nodes": [],
+        "global": true,
+        "libraryName": {
+          "id": 37514,
+          "name": "LibPosition",
+          "nameLocations": [
+            "336:11:58"
+          ],
+          "nodeType": "IdentifierPath",
+          "referencedDeclaration": 37157,
+          "src": "336:11:58"
+        },
+        "typeName": {
+          "id": 37516,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 37515,
+            "name": "Position",
+            "nameLocations": [
+              "352:8:58"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 37543,
+            "src": "352:8:58"
+          },
+          "referencedDeclaration": 37543,
+          "src": "352:8:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_Position_$37543",
+            "typeString": "Position"
+          }
+        }
+      },
+      {
+        "id": 37521,
+        "nodeType": "UsingForDirective",
+        "src": "369:32:58",
+        "nodes": [],
+        "global": true,
+        "libraryName": {
+          "id": 37518,
+          "name": "LibClock",
+          "nameLocations": [
+            "375:8:58"
+          ],
+          "nodeType": "IdentifierPath",
+          "referencedDeclaration": 36935,
+          "src": "375:8:58"
+        },
+        "typeName": {
+          "id": 37520,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 37519,
+            "name": "Clock",
+            "nameLocations": [
+              "388:5:58"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 37541,
+            "src": "388:5:58"
+          },
+          "referencedDeclaration": 37541,
+          "src": "388:5:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_Clock_$37541",
+            "typeString": "Clock"
+          }
+        }
+      },
+      {
+        "id": 37525,
+        "nodeType": "UsingForDirective",
+        "src": "402:34:58",
+        "nodes": [],
+        "global": true,
+        "libraryName": {
+          "id": 37522,
+          "name": "LibGameId",
+          "nameLocations": [
+            "408:9:58"
+          ],
+          "nodeType": "IdentifierPath",
+          "referencedDeclaration": 36977,
+          "src": "408:9:58"
+        },
+        "typeName": {
+          "id": 37524,
+          "nodeType": "UserDefinedTypeName",
+          "pathNode": {
+            "id": 37523,
+            "name": "GameId",
+            "nameLocations": [
+              "422:6:58"
+            ],
+            "nodeType": "IdentifierPath",
+            "referencedDeclaration": 37539,
+            "src": "422:6:58"
+          },
+          "referencedDeclaration": 37539,
+          "src": "422:6:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_userDefinedValueType$_GameId_$37539",
+            "typeString": "GameId"
+          }
+        }
+      },
+      {
+        "id": 37527,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "484:21:58",
+        "nodes": [],
+        "canonicalName": "Hash",
+        "name": "Hash",
+        "nameLocation": "489:4:58",
+        "underlyingType": {
+          "id": 37526,
+          "name": "bytes32",
+          "nodeType": "ElementaryTypeName",
+          "src": "497:7:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_bytes32",
+            "typeString": "bytes32"
+          }
+        }
+      },
+      {
+        "id": 37529,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "601:22:58",
+        "nodes": [],
+        "canonicalName": "Claim",
+        "name": "Claim",
+        "nameLocation": "606:5:58",
+        "underlyingType": {
+          "id": 37528,
+          "name": "bytes32",
+          "nodeType": "ElementaryTypeName",
+          "src": "615:7:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_bytes32",
+            "typeString": "bytes32"
+          }
+        }
+      },
+      {
+        "id": 37531,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "775:26:58",
+        "nodes": [],
+        "canonicalName": "ClaimHash",
+        "name": "ClaimHash",
+        "nameLocation": "780:9:58",
+        "underlyingType": {
+          "id": 37530,
+          "name": "bytes32",
+          "nodeType": "ElementaryTypeName",
+          "src": "793:7:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_bytes32",
+            "typeString": "bytes32"
+          }
+        }
+      },
+      {
+        "id": 37533,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "902:27:58",
+        "nodes": [],
+        "canonicalName": "BondAmount",
+        "name": "BondAmount",
+        "nameLocation": "907:10:58",
+        "underlyingType": {
+          "id": 37532,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "921:7:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        }
+      },
+      {
+        "id": 37535,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "971:25:58",
+        "nodes": [],
+        "canonicalName": "Timestamp",
+        "name": "Timestamp",
+        "nameLocation": "976:9:58",
+        "underlyingType": {
+          "id": 37534,
+          "name": "uint64",
+          "nodeType": "ElementaryTypeName",
+          "src": "989:6:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint64",
+            "typeString": "uint64"
+          }
+        }
+      },
+      {
+        "id": 37537,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "1060:24:58",
+        "nodes": [],
+        "canonicalName": "Duration",
+        "name": "Duration",
+        "nameLocation": "1065:8:58",
+        "underlyingType": {
+          "id": 37536,
+          "name": "uint64",
+          "nodeType": "ElementaryTypeName",
+          "src": "1077:6:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint64",
+            "typeString": "uint64"
+          }
+        }
+      },
+      {
+        "id": 37539,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "1629:23:58",
+        "nodes": [],
+        "canonicalName": "GameId",
+        "name": "GameId",
+        "nameLocation": "1634:6:58",
+        "underlyingType": {
+          "id": 37538,
+          "name": "bytes32",
+          "nodeType": "ElementaryTypeName",
+          "src": "1644:7:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_bytes32",
+            "typeString": "bytes32"
+          }
+        }
+      },
+      {
+        "id": 37541,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "2198:22:58",
+        "nodes": [],
+        "canonicalName": "Clock",
+        "name": "Clock",
+        "nameLocation": "2203:5:58",
+        "underlyingType": {
+          "id": 37540,
+          "name": "uint128",
+          "nodeType": "ElementaryTypeName",
+          "src": "2212:7:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint128",
+            "typeString": "uint128"
+          }
+        }
+      },
+      {
+        "id": 37543,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "2584:25:58",
+        "nodes": [],
+        "canonicalName": "Position",
+        "name": "Position",
+        "nameLocation": "2589:8:58",
+        "underlyingType": {
+          "id": 37542,
+          "name": "uint128",
+          "nodeType": "ElementaryTypeName",
+          "src": "2601:7:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint128",
+            "typeString": "uint128"
+          }
+        }
+      },
+      {
+        "id": 37545,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "2678:23:58",
+        "nodes": [],
+        "canonicalName": "GameType",
+        "name": "GameType",
+        "nameLocation": "2683:8:58",
+        "underlyingType": {
+          "id": 37544,
+          "name": "uint8",
+          "nodeType": "ElementaryTypeName",
+          "src": "2695:5:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint8",
+            "typeString": "uint8"
+          }
+        }
+      },
+      {
+        "id": 37547,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "2769:23:58",
+        "nodes": [],
+        "canonicalName": "VMStatus",
+        "name": "VMStatus",
+        "nameLocation": "2774:8:58",
+        "underlyingType": {
+          "id": 37546,
+          "name": "uint8",
+          "nodeType": "ElementaryTypeName",
+          "src": "2786:5:58",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint8",
+            "typeString": "uint8"
+          }
+        }
+      },
+      {
+        "id": 37552,
+        "nodeType": "EnumDefinition",
+        "src": "2846:295:58",
+        "nodes": [],
+        "canonicalName": "GameStatus",
+        "documentation": {
+          "id": 37548,
+          "nodeType": "StructuredDocumentation",
+          "src": "2794:52:58",
+          "text": "@notice The current status of the dispute game."
+        },
+        "members": [
+          {
+            "id": 37549,
+            "name": "IN_PROGRESS",
+            "nameLocation": "2933:11:58",
+            "nodeType": "EnumValue",
+            "src": "2933:11:58"
+          },
+          {
+            "id": 37550,
+            "name": "CHALLENGER_WINS",
+            "nameLocation": "3030:15:58",
+            "nodeType": "EnumValue",
+            "src": "3030:15:58"
+          },
+          {
+            "id": 37551,
+            "name": "DEFENDER_WINS",
+            "nameLocation": "3126:13:58",
+            "nodeType": "EnumValue",
+            "src": "3126:13:58"
+          }
+        ],
+        "name": "GameStatus",
+        "nameLocation": "2851:10:58"
+      },
+      {
+        "id": 37578,
+        "nodeType": "ContractDefinition",
+        "src": "3236:485:58",
+        "nodes": [
+          {
+            "id": 37561,
+            "nodeType": "VariableDeclaration",
+            "src": "3351:51:58",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 37554,
+              "nodeType": "StructuredDocumentation",
+              "src": "3260:86:58",
+              "text": "@dev The game will use a `IDisputeGame` implementation that utilizes fault proofs."
+            },
+            "mutability": "constant",
+            "name": "FAULT",
+            "nameLocation": "3378:5:58",
+            "scope": 37578,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+              "typeString": "GameType"
+            },
+            "typeName": {
+              "id": 37556,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 37555,
+                "name": "GameType",
+                "nameLocations": [
+                  "3351:8:58"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 37545,
+                "src": "3351:8:58"
+              },
+              "referencedDeclaration": 37545,
+              "src": "3351:8:58",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+                "typeString": "GameType"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "30",
+                  "id": 37559,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "3400:1:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "expression": {
+                  "id": 37557,
+                  "name": "GameType",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 37545,
+                  "src": "3386:8:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_userDefinedValueType$_GameType_$37545_$",
+                    "typeString": "type(GameType)"
+                  }
+                },
+                "id": 37558,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "memberLocation": "3395:4:58",
+                "memberName": "wrap",
+                "nodeType": "MemberAccess",
+                "src": "3386:13:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_wrap_pure$_t_uint8_$returns$_t_userDefinedValueType$_GameType_$37545_$",
+                  "typeString": "function (uint8) pure returns (GameType)"
+                }
+              },
+              "id": 37560,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "3386:16:58",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+                "typeString": "GameType"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 37569,
+            "nodeType": "VariableDeclaration",
+            "src": "3503:54:58",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 37562,
+              "nodeType": "StructuredDocumentation",
+              "src": "3409:89:58",
+              "text": "@dev The game will use a `IDisputeGame` implementation that utilizes validity proofs."
+            },
+            "mutability": "constant",
+            "name": "VALIDITY",
+            "nameLocation": "3530:8:58",
+            "scope": 37578,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+              "typeString": "GameType"
+            },
+            "typeName": {
+              "id": 37564,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 37563,
+                "name": "GameType",
+                "nameLocations": [
+                  "3503:8:58"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 37545,
+                "src": "3503:8:58"
+              },
+              "referencedDeclaration": 37545,
+              "src": "3503:8:58",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+                "typeString": "GameType"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "31",
+                  "id": 37567,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "3555:1:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  },
+                  "value": "1"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  }
+                ],
+                "expression": {
+                  "id": 37565,
+                  "name": "GameType",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 37545,
+                  "src": "3541:8:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_userDefinedValueType$_GameType_$37545_$",
+                    "typeString": "type(GameType)"
+                  }
+                },
+                "id": 37566,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "memberLocation": "3550:4:58",
+                "memberName": "wrap",
+                "nodeType": "MemberAccess",
+                "src": "3541:13:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_wrap_pure$_t_uint8_$returns$_t_userDefinedValueType$_GameType_$37545_$",
+                  "typeString": "function (uint8) pure returns (GameType)"
+                }
+              },
+              "id": 37568,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "3541:16:58",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+                "typeString": "GameType"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 37577,
+            "nodeType": "VariableDeclaration",
+            "src": "3661:57:58",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 37570,
+              "nodeType": "StructuredDocumentation",
+              "src": "3564:92:58",
+              "text": "@dev The game will use a `IDisputeGame` implementation that utilizes attestation proofs."
+            },
+            "mutability": "constant",
+            "name": "ATTESTATION",
+            "nameLocation": "3688:11:58",
+            "scope": 37578,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+              "typeString": "GameType"
+            },
+            "typeName": {
+              "id": 37572,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 37571,
+                "name": "GameType",
+                "nameLocations": [
+                  "3661:8:58"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 37545,
+                "src": "3661:8:58"
+              },
+              "referencedDeclaration": 37545,
+              "src": "3661:8:58",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+                "typeString": "GameType"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "32",
+                  "id": 37575,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "3716:1:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_2_by_1",
+                    "typeString": "int_const 2"
+                  },
+                  "value": "2"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_2_by_1",
+                    "typeString": "int_const 2"
+                  }
+                ],
+                "expression": {
+                  "id": 37573,
+                  "name": "GameType",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 37545,
+                  "src": "3702:8:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_userDefinedValueType$_GameType_$37545_$",
+                    "typeString": "type(GameType)"
+                  }
+                },
+                "id": 37574,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "memberLocation": "3711:4:58",
+                "memberName": "wrap",
+                "nodeType": "MemberAccess",
+                "src": "3702:13:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_wrap_pure$_t_uint8_$returns$_t_userDefinedValueType$_GameType_$37545_$",
+                  "typeString": "function (uint8) pure returns (GameType)"
+                }
+              },
+              "id": 37576,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "3702:16:58",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_GameType_$37545",
+                "typeString": "GameType"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "GameTypes",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 37553,
+          "nodeType": "StructuredDocumentation",
+          "src": "3143:93:58",
+          "text": "@title GameTypes\n @notice A library that defines the IDs of games that can be played."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          37578
+        ],
+        "name": "GameTypes",
+        "nameLocation": "3244:9:58",
+        "scope": 37613,
+        "usedErrors": [],
+        "usedEvents": []
+      },
+      {
+        "id": 37612,
+        "nodeType": "ContractDefinition",
+        "src": "3745:491:58",
+        "nodes": [
+          {
+            "id": 37587,
+            "nodeType": "VariableDeclaration",
+            "src": "3842:51:58",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 37580,
+              "nodeType": "StructuredDocumentation",
+              "src": "3770:67:58",
+              "text": "@dev The VM has executed successfully and the outcome is valid."
+            },
+            "mutability": "constant",
+            "name": "VALID",
+            "nameLocation": "3869:5:58",
+            "scope": 37612,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+              "typeString": "VMStatus"
+            },
+            "typeName": {
+              "id": 37582,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 37581,
+                "name": "VMStatus",
+                "nameLocations": [
+                  "3842:8:58"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 37547,
+                "src": "3842:8:58"
+              },
+              "referencedDeclaration": 37547,
+              "src": "3842:8:58",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+                "typeString": "VMStatus"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "30",
+                  "id": 37585,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "3891:1:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "expression": {
+                  "id": 37583,
+                  "name": "VMStatus",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 37547,
+                  "src": "3877:8:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_userDefinedValueType$_VMStatus_$37547_$",
+                    "typeString": "type(VMStatus)"
+                  }
+                },
+                "id": 37584,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "memberLocation": "3886:4:58",
+                "memberName": "wrap",
+                "nodeType": "MemberAccess",
+                "src": "3877:13:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_wrap_pure$_t_uint8_$returns$_t_userDefinedValueType$_VMStatus_$37547_$",
+                  "typeString": "function (uint8) pure returns (VMStatus)"
+                }
+              },
+              "id": 37586,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "3877:16:58",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+                "typeString": "VMStatus"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 37595,
+            "nodeType": "VariableDeclaration",
+            "src": "3974:53:58",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 37588,
+              "nodeType": "StructuredDocumentation",
+              "src": "3900:69:58",
+              "text": "@dev The VM has executed successfully and the outcome is invalid."
+            },
+            "mutability": "constant",
+            "name": "INVALID",
+            "nameLocation": "4001:7:58",
+            "scope": 37612,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+              "typeString": "VMStatus"
+            },
+            "typeName": {
+              "id": 37590,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 37589,
+                "name": "VMStatus",
+                "nameLocations": [
+                  "3974:8:58"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 37547,
+                "src": "3974:8:58"
+              },
+              "referencedDeclaration": 37547,
+              "src": "3974:8:58",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+                "typeString": "VMStatus"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "31",
+                  "id": 37593,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "4025:1:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  },
+                  "value": "1"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_1_by_1",
+                    "typeString": "int_const 1"
+                  }
+                ],
+                "expression": {
+                  "id": 37591,
+                  "name": "VMStatus",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 37547,
+                  "src": "4011:8:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_userDefinedValueType$_VMStatus_$37547_$",
+                    "typeString": "type(VMStatus)"
+                  }
+                },
+                "id": 37592,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "memberLocation": "4020:4:58",
+                "memberName": "wrap",
+                "nodeType": "MemberAccess",
+                "src": "4011:13:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_wrap_pure$_t_uint8_$returns$_t_userDefinedValueType$_VMStatus_$37547_$",
+                  "typeString": "function (uint8) pure returns (VMStatus)"
+                }
+              },
+              "id": 37594,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "4011:16:58",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+                "typeString": "VMStatus"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 37603,
+            "nodeType": "VariableDeclaration",
+            "src": "4067:51:58",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 37596,
+              "nodeType": "StructuredDocumentation",
+              "src": "4034:28:58",
+              "text": "@dev The VM has paniced."
+            },
+            "mutability": "constant",
+            "name": "PANIC",
+            "nameLocation": "4094:5:58",
+            "scope": 37612,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+              "typeString": "VMStatus"
+            },
+            "typeName": {
+              "id": 37598,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 37597,
+                "name": "VMStatus",
+                "nameLocations": [
+                  "4067:8:58"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 37547,
+                "src": "4067:8:58"
+              },
+              "referencedDeclaration": 37547,
+              "src": "4067:8:58",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+                "typeString": "VMStatus"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "32",
+                  "id": 37601,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "4116:1:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_2_by_1",
+                    "typeString": "int_const 2"
+                  },
+                  "value": "2"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_2_by_1",
+                    "typeString": "int_const 2"
+                  }
+                ],
+                "expression": {
+                  "id": 37599,
+                  "name": "VMStatus",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 37547,
+                  "src": "4102:8:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_userDefinedValueType$_VMStatus_$37547_$",
+                    "typeString": "type(VMStatus)"
+                  }
+                },
+                "id": 37600,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "memberLocation": "4111:4:58",
+                "memberName": "wrap",
+                "nodeType": "MemberAccess",
+                "src": "4102:13:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_wrap_pure$_t_uint8_$returns$_t_userDefinedValueType$_VMStatus_$37547_$",
+                  "typeString": "function (uint8) pure returns (VMStatus)"
+                }
+              },
+              "id": 37602,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "4102:16:58",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+                "typeString": "VMStatus"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 37611,
+            "nodeType": "VariableDeclaration",
+            "src": "4177:56:58",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 37604,
+              "nodeType": "StructuredDocumentation",
+              "src": "4125:47:58",
+              "text": "@dev The VM execution is still in progress."
+            },
+            "mutability": "constant",
+            "name": "UNFINISHED",
+            "nameLocation": "4204:10:58",
+            "scope": 37612,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+              "typeString": "VMStatus"
+            },
+            "typeName": {
+              "id": 37606,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 37605,
+                "name": "VMStatus",
+                "nameLocations": [
+                  "4177:8:58"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 37547,
+                "src": "4177:8:58"
+              },
+              "referencedDeclaration": 37547,
+              "src": "4177:8:58",
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+                "typeString": "VMStatus"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "33",
+                  "id": 37609,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "4231:1:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_3_by_1",
+                    "typeString": "int_const 3"
+                  },
+                  "value": "3"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_3_by_1",
+                    "typeString": "int_const 3"
+                  }
+                ],
+                "expression": {
+                  "id": 37607,
+                  "name": "VMStatus",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 37547,
+                  "src": "4217:8:58",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_userDefinedValueType$_VMStatus_$37547_$",
+                    "typeString": "type(VMStatus)"
+                  }
+                },
+                "id": 37608,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "memberLocation": "4226:4:58",
+                "memberName": "wrap",
+                "nodeType": "MemberAccess",
+                "src": "4217:13:58",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_wrap_pure$_t_uint8_$returns$_t_userDefinedValueType$_VMStatus_$37547_$",
+                  "typeString": "function (uint8) pure returns (VMStatus)"
+                }
+              },
+              "id": 37610,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "4217:16:58",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_userDefinedValueType$_VMStatus_$37547",
+                "typeString": "VMStatus"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "VMStatuses",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 37579,
+          "nodeType": "StructuredDocumentation",
+          "src": "3723:22:58",
+          "text": "@title VMStatuses"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          37612
+        ],
+        "name": "VMStatuses",
+        "nameLocation": "3753:10:58",
+        "scope": 37613,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 58
+}

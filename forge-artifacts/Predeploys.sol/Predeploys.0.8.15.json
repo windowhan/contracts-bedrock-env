@@ -1,0 +1,1152 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x602d6037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea164736f6c634300080f000a",
+    "sourceMap": "173:3852:166:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;173:3852:166;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea164736f6c634300080f000a",
+    "sourceMap": "173:3852:166:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"DEPLOYER_WHITELIST\":{\"custom:legacy\":\"@notice Address of the DeployerWhitelist predeploy. No longer active.\"},\"L1_BLOCK_NUMBER\":{\"custom:legacy\":\"@notice Address of the L1BlockNumber predeploy. Deprecated. Use the L1Block predeploy         instead, which exposes more information about the L1 state.\"},\"L1_MESSAGE_SENDER\":{\"custom:legacy\":\"@notice Address of the L1MessageSender predeploy. Deprecated. Use L2CrossDomainMessenger         or access tx.origin (or msg.sender) in a L1 to L2 transaction instead.\"},\"LEGACY_ERC20_ETH\":{\"custom:legacy\":\"@notice Address of the LegacyERC20ETH predeploy. Deprecated. Balances are migrated to the         state trie as of the Bedrock upgrade. Contract has been locked and write functions         can no longer be accessed.\"},\"LEGACY_MESSAGE_PASSER\":{\"custom:legacy\":\"@notice Address of the LegacyMessagePasser predeploy. Deprecate. Use the updated         L2ToL1MessagePasser contract instead.\"}},\"title\":\"Predeploys\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Contains constant addresses for contracts that are pre-deployed to the L2 system.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/libraries/Predeploys.sol\":\"Predeploys\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[\":@cwia/=lib/clones-with-immutable-args/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@rari-capital/solmate/=lib/solmate/\",\":clones-with-immutable-args/=lib/clones-with-immutable-args/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":safe-contracts/=lib/safe-contracts/contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/libraries/Predeploys.sol\":{\"keccak256\":\"0x5af3a849f68f7c9108858ebac5c769da8f1c0309b5c0cb42eb5cbb15e3fe6058\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ffe76429a96d274577be66627eddad5cd05ad36d0cb6b9b3c3f9fa8a609dd7e\",\"dweb:/ipfs/QmVhWnB7Avg684TEQ9BExWqSN1YfLehUTWoqpjymeQEQHm\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@cwia/=lib/clones-with-immutable-args/src/",
+        "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        "@rari-capital/solmate/=lib/solmate/",
+        "clones-with-immutable-args/=lib/clones-with-immutable-args/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "safe-contracts/=lib/safe-contracts/contracts/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 999999
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/libraries/Predeploys.sol": "Predeploys"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/libraries/Predeploys.sol": {
+        "keccak256": "0x5af3a849f68f7c9108858ebac5c769da8f1c0309b5c0cb42eb5cbb15e3fe6058",
+        "urls": [
+          "bzz-raw://6ffe76429a96d274577be66627eddad5cd05ad36d0cb6b9b3c3f9fa8a609dd7e",
+          "dweb:/ipfs/QmVhWnB7Avg684TEQ9BExWqSN1YfLehUTWoqpjymeQEQHm"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": {}
+  },
+  "userdoc": {
+    "version": 1,
+    "kind": "user",
+    "notice": "Contains constant addresses for contracts that are pre-deployed to the L2 system."
+  },
+  "devdoc": {
+    "version": 1,
+    "kind": "dev",
+    "title": "Predeploys"
+  },
+  "ast": {
+    "absolutePath": "src/libraries/Predeploys.sol",
+    "id": 70728,
+    "exportedSymbols": {
+      "Predeploys": [
+        70727
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:3994:166",
+    "nodes": [
+      {
+        "id": 70646,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:166",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 70727,
+        "nodeType": "ContractDefinition",
+        "src": "173:3852:166",
+        "nodes": [
+          {
+            "id": 70651,
+            "nodeType": "VariableDeclaration",
+            "src": "260:94:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70648,
+              "nodeType": "StructuredDocumentation",
+              "src": "198:57:166",
+              "text": "@notice Address of the L2ToL1MessagePasser predeploy."
+            },
+            "mutability": "constant",
+            "name": "L2_TO_L1_MESSAGE_PASSER",
+            "nameLocation": "286:23:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70649,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "260:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303136",
+              "id": 70650,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "312:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000016"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70655,
+            "nodeType": "VariableDeclaration",
+            "src": "426:96:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70652,
+              "nodeType": "StructuredDocumentation",
+              "src": "361:60:166",
+              "text": "@notice Address of the L2CrossDomainMessenger predeploy."
+            },
+            "mutability": "constant",
+            "name": "L2_CROSS_DOMAIN_MESSENGER",
+            "nameLocation": "452:25:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70653,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "426:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303037",
+              "id": 70654,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "480:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000007"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70659,
+            "nodeType": "VariableDeclaration",
+            "src": "588:89:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70656,
+              "nodeType": "StructuredDocumentation",
+              "src": "529:54:166",
+              "text": "@notice Address of the L2StandardBridge predeploy."
+            },
+            "mutability": "constant",
+            "name": "L2_STANDARD_BRIDGE",
+            "nameLocation": "614:18:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70657,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "588:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303130",
+              "id": 70658,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "635:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000010"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70663,
+            "nodeType": "VariableDeclaration",
+            "src": "741:87:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70660,
+              "nodeType": "StructuredDocumentation",
+              "src": "684:52:166",
+              "text": "@notice Address of the L2ERC721Bridge predeploy."
+            },
+            "mutability": "constant",
+            "name": "L2_ERC721_BRIDGE",
+            "nameLocation": "767:16:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70661,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "741:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303134",
+              "id": 70662,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "786:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000014"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70666,
+            "nodeType": "VariableDeclaration",
+            "src": "897:91:166",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "SEQUENCER_FEE_WALLET",
+            "nameLocation": "923:20:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70664,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "897:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303131",
+              "id": 70665,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "946:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000011"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70670,
+            "nodeType": "VariableDeclaration",
+            "src": "1066:102:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70667,
+              "nodeType": "StructuredDocumentation",
+              "src": "995:66:166",
+              "text": "@notice Address of the OptimismMintableERC20Factory predeploy."
+            },
+            "mutability": "constant",
+            "name": "OPTIMISM_MINTABLE_ERC20_FACTORY",
+            "nameLocation": "1092:31:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70668,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1066:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303132",
+              "id": 70669,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1126:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000012"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70674,
+            "nodeType": "VariableDeclaration",
+            "src": "1247:103:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70671,
+              "nodeType": "StructuredDocumentation",
+              "src": "1175:67:166",
+              "text": "@notice Address of the OptimismMintableERC721Factory predeploy."
+            },
+            "mutability": "constant",
+            "name": "OPTIMISM_MINTABLE_ERC721_FACTORY",
+            "nameLocation": "1273:32:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70672,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1247:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303137",
+              "id": 70673,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1308:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000017"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70678,
+            "nodeType": "VariableDeclaration",
+            "src": "1407:90:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70675,
+              "nodeType": "StructuredDocumentation",
+              "src": "1357:45:166",
+              "text": "@notice Address of the L1Block predeploy."
+            },
+            "mutability": "constant",
+            "name": "L1_BLOCK_ATTRIBUTES",
+            "nameLocation": "1433:19:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70676,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1407:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303135",
+              "id": 70677,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1455:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000015"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70682,
+            "nodeType": "VariableDeclaration",
+            "src": "1667:87:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70679,
+              "nodeType": "StructuredDocumentation",
+              "src": "1504:158:166",
+              "text": "@notice Address of the GasPriceOracle predeploy. Includes fee information\n         and helpers for computing the L1 portion of the transaction fee."
+            },
+            "mutability": "constant",
+            "name": "GAS_PRICE_ORACLE",
+            "nameLocation": "1693:16:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70680,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1667:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303046",
+              "id": 70681,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1712:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x420000000000000000000000000000000000000F"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70686,
+            "nodeType": "VariableDeclaration",
+            "src": "1968:88:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70683,
+              "nodeType": "StructuredDocumentation",
+              "src": "1761:202:166",
+              "text": "@custom:legacy\n @notice Address of the L1MessageSender predeploy. Deprecated. Use L2CrossDomainMessenger\n         or access tx.origin (or msg.sender) in a L1 to L2 transaction instead."
+            },
+            "mutability": "constant",
+            "name": "L1_MESSAGE_SENDER",
+            "nameLocation": "1994:17:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70684,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1968:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303031",
+              "id": 70685,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2014:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000001"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70690,
+            "nodeType": "VariableDeclaration",
+            "src": "2164:89:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70687,
+              "nodeType": "StructuredDocumentation",
+              "src": "2063:96:166",
+              "text": "@custom:legacy\n @notice Address of the DeployerWhitelist predeploy. No longer active."
+            },
+            "mutability": "constant",
+            "name": "DEPLOYER_WHITELIST",
+            "nameLocation": "2190:18:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70688,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2164:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303032",
+              "id": 70689,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2211:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000002"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70694,
+            "nodeType": "VariableDeclaration",
+            "src": "2523:87:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70691,
+              "nodeType": "StructuredDocumentation",
+              "src": "2260:258:166",
+              "text": "@custom:legacy\n @notice Address of the LegacyERC20ETH predeploy. Deprecated. Balances are migrated to the\n         state trie as of the Bedrock upgrade. Contract has been locked and write functions\n         can no longer be accessed."
+            },
+            "mutability": "constant",
+            "name": "LEGACY_ERC20_ETH",
+            "nameLocation": "2549:16:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70692,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2523:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307844656164446541646465416464454164646561644445614444454164446561444465414430303030",
+              "id": 70693,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2568:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70698,
+            "nodeType": "VariableDeclaration",
+            "src": "2810:86:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70695,
+              "nodeType": "StructuredDocumentation",
+              "src": "2617:188:166",
+              "text": "@custom:legacy\n @notice Address of the L1BlockNumber predeploy. Deprecated. Use the L1Block predeploy\n         instead, which exposes more information about the L1 state."
+            },
+            "mutability": "constant",
+            "name": "L1_BLOCK_NUMBER",
+            "nameLocation": "2836:15:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70696,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2810:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303133",
+              "id": 70697,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2854:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000013"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70702,
+            "nodeType": "VariableDeclaration",
+            "src": "3069:92:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70699,
+              "nodeType": "StructuredDocumentation",
+              "src": "2903:161:166",
+              "text": "@custom:legacy\n @notice Address of the LegacyMessagePasser predeploy. Deprecate. Use the updated\n         L2ToL1MessagePasser contract instead."
+            },
+            "mutability": "constant",
+            "name": "LEGACY_MESSAGE_PASSER",
+            "nameLocation": "3095:21:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70700,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "3069:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303030",
+              "id": 70701,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3119:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70706,
+            "nodeType": "VariableDeclaration",
+            "src": "3221:82:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70703,
+              "nodeType": "StructuredDocumentation",
+              "src": "3168:48:166",
+              "text": "@notice Address of the ProxyAdmin predeploy."
+            },
+            "mutability": "constant",
+            "name": "PROXY_ADMIN",
+            "nameLocation": "3247:11:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70704,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "3221:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303138",
+              "id": 70705,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3261:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000018"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70710,
+            "nodeType": "VariableDeclaration",
+            "src": "3365:85:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70707,
+              "nodeType": "StructuredDocumentation",
+              "src": "3310:50:166",
+              "text": "@notice Address of the BaseFeeVault predeploy."
+            },
+            "mutability": "constant",
+            "name": "BASE_FEE_VAULT",
+            "nameLocation": "3391:14:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70708,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "3365:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303139",
+              "id": 70709,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3408:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000019"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70714,
+            "nodeType": "VariableDeclaration",
+            "src": "3510:83:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70711,
+              "nodeType": "StructuredDocumentation",
+              "src": "3457:48:166",
+              "text": "@notice Address of the L1FeeVault predeploy."
+            },
+            "mutability": "constant",
+            "name": "L1_FEE_VAULT",
+            "nameLocation": "3536:12:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70712,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "3510:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303141",
+              "id": 70713,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3551:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x420000000000000000000000000000000000001A"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70718,
+            "nodeType": "VariableDeclaration",
+            "src": "3658:87:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70715,
+              "nodeType": "StructuredDocumentation",
+              "src": "3600:53:166",
+              "text": "@notice Address of the GovernanceToken predeploy."
+            },
+            "mutability": "constant",
+            "name": "GOVERNANCE_TOKEN",
+            "nameLocation": "3684:16:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70716,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "3658:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303432",
+              "id": 70717,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3703:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000042"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70722,
+            "nodeType": "VariableDeclaration",
+            "src": "3809:86:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70719,
+              "nodeType": "StructuredDocumentation",
+              "src": "3752:52:166",
+              "text": "@notice Address of the SchemaRegistry predeploy."
+            },
+            "mutability": "constant",
+            "name": "SCHEMA_REGISTRY",
+            "nameLocation": "3835:15:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70720,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "3809:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303230",
+              "id": 70721,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3853:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000020"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 70726,
+            "nodeType": "VariableDeclaration",
+            "src": "3948:74:166",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 70723,
+              "nodeType": "StructuredDocumentation",
+              "src": "3902:41:166",
+              "text": "@notice Address of the EAS predeploy."
+            },
+            "mutability": "constant",
+            "name": "EAS",
+            "nameLocation": "3974:3:166",
+            "scope": 70727,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 70724,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "3948:7:166",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834323030303030303030303030303030303030303030303030303030303030303030303030303231",
+              "id": 70725,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "3980:42:166",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4200000000000000000000000000000000000021"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Predeploys",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 70647,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:116:166",
+          "text": "@title Predeploys\n @notice Contains constant addresses for contracts that are pre-deployed to the L2 system."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          70727
+        ],
+        "name": "Predeploys",
+        "nameLocation": "181:10:166",
+        "scope": 70728,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 166
+}

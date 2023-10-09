@@ -1,0 +1,961 @@
+{
+  "abi": [
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "inputs": [],
+      "name": "getL1BlockNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610219806100206000396000f3fe60806040526004361061002d5760003560e01c806354fd4d5014610052578063b9b3efe9146100b157610048565b3661004857600061003c6100d4565b90508060005260206000f35b600061003c6100d4565b34801561005e57600080fd5b5061009b6040518060400160405280600581526020017f312e312e3000000000000000000000000000000000000000000000000000000081525081565b6040516100a89190610168565b60405180910390f35b3480156100bd57600080fd5b506100c66100d4565b6040519081526020016100a8565b600073420000000000000000000000000000000000001573ffffffffffffffffffffffffffffffffffffffff16638381f58a6040518163ffffffff1660e01b8152600401602060405180830381865afa158015610135573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061015991906101db565b67ffffffffffffffff16905090565b600060208083528351808285015260005b8181101561019557858101830151858201604001528201610179565b818111156101a7576000604083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016929092016040019392505050565b6000602082840312156101ed57600080fd5b815167ffffffffffffffff8116811461020557600080fd5b939250505056fea164736f6c634300080f000a",
+    "sourceMap": "668:888:150:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x60806040526004361061002d5760003560e01c806354fd4d5014610052578063b9b3efe9146100b157610048565b3661004857600061003c6100d4565b90508060005260206000f35b600061003c6100d4565b34801561005e57600080fd5b5061009b6040518060400160405280600581526020017f312e312e3000000000000000000000000000000000000000000000000000000081525081565b6040516100a89190610168565b60405180910390f35b3480156100bd57600080fd5b506100c66100d4565b6040519081526020016100a8565b600073420000000000000000000000000000000000001573ffffffffffffffffffffffffffffffffffffffff16638381f58a6040518163ffffffff1660e01b8152600401602060405180830381865afa158015610135573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061015991906101db565b67ffffffffffffffff16905090565b600060208083528351808285015260005b8181101561019557858101830151858201604001528201610179565b818111156101a7576000604083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016929092016040019392505050565b6000602082840312156101ed57600080fd5b815167ffffffffffffffff8116811461020557600080fd5b939250505056fea164736f6c634300080f000a",
+    "sourceMap": "668:888:150:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;900:21;924:18;:16;:18::i;:::-;900:42;;985:13;982:1;975:24;1022:2;1019:1;1012:13;668:888;1183:21;1207:18;:16;:18::i;771:40::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;1424:130;;;;;;;;;;;;;:::i;:::-;;;821:25:283;;;809:2;794:18;1424:130:150;675:177:283;1424:130:150;1473:7;1455:42:166;1499:46:150;;;:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1492:55;;;;1424:130;:::o;14:656:283:-;126:4;155:2;184;173:9;166:21;216:6;210:13;259:6;254:2;243:9;239:18;232:34;284:1;294:140;308:6;305:1;302:13;294:140;;;403:14;;;399:23;;393:30;369:17;;;388:2;365:26;358:66;323:10;;294:140;;;452:6;449:1;446:13;443:91;;;522:1;517:2;508:6;497:9;493:22;489:31;482:42;443:91;-1:-1:-1;586:2:283;574:15;591:66;570:88;555:104;;;;661:2;551:113;;14:656;-1:-1:-1;;;14:656:283:o;857:288::-;926:6;979:2;967:9;958:7;954:23;950:32;947:52;;;995:1;992;985:12;947:52;1027:9;1021:16;1077:18;1070:5;1066:30;1059:5;1056:41;1046:69;;1111:1;1108;1101:12;1046:69;1134:5;857:288;-1:-1:-1;;;857:288:283:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getL1BlockNumber()": "b9b3efe9",
+    "version()": "54fd4d50"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"getL1BlockNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"custom:legacy\":\"@custom:proxied\",\"custom:predeploy\":\"0x4200000000000000000000000000000000000013\",\"kind\":\"dev\",\"methods\":{\"getL1BlockNumber()\":{\"returns\":{\"_0\":\"Latest L1 block number.\"}}},\"stateVariables\":{\"version\":{\"custom:semver\":\"1.1.0\"}},\"title\":\"L1BlockNumber\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getL1BlockNumber()\":{\"notice\":\"Retrieves the latest L1 block number.\"},\"version()\":{\"notice\":\"Semantic version.\"}},\"notice\":\"L1BlockNumber is a legacy contract that fills the roll of the OVM_L1BlockNumber contract        in the old version of the Optimism system. Only necessary for backwards compatibility.        If you want to access the L1 block number going forward, you should use the L1Block        contract instead.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/legacy/L1BlockNumber.sol\":\"L1BlockNumber\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[\":@cwia/=lib/clones-with-immutable-args/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@rari-capital/solmate/=lib/solmate/\",\":clones-with-immutable-args/=lib/clones-with-immutable-args/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":safe-contracts/=lib/safe-contracts/contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/L2/L1Block.sol\":{\"keccak256\":\"0xddae019af0b1bbf7643d4c81cc39d5080323519b4d0f5f6243f15e3856c5944e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4d70190c2d6289b402cbe46be6e36639f215d95359451e21c5f6ae4bbd8f6a7f\",\"dweb:/ipfs/QmSA6jvTKT7CZUyBEZPKzBYjpkKeuSu4VXrTuL1Gpb9s4s\"]},\"src/legacy/L1BlockNumber.sol\":{\"keccak256\":\"0x8e06af231b51f9f03fdc5f75d25b3417ca78b65fb2494bd12d093f85e76293be\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://271d5d918fdda81ca011113ede99029c6b67630b296fa27c022e7baed9272caa\",\"dweb:/ipfs/QmeoKKv3DtEXPzrddEzibwn4vnEzA9H4Ew7K2zBQbUDtUH\"]},\"src/libraries/Predeploys.sol\":{\"keccak256\":\"0x5af3a849f68f7c9108858ebac5c769da8f1c0309b5c0cb42eb5cbb15e3fe6058\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6ffe76429a96d274577be66627eddad5cd05ad36d0cb6b9b3c3f9fa8a609dd7e\",\"dweb:/ipfs/QmVhWnB7Avg684TEQ9BExWqSN1YfLehUTWoqpjymeQEQHm\"]},\"src/universal/ISemver.sol\":{\"keccak256\":\"0xba34562a8026f59886d2e07d1d58d90b9691d00e0788c6263cef6c22740cab44\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0826f998632f83c103c3085bf2e872db79a69022b6d2e0444c83a64ca5283c2a\",\"dweb:/ipfs/QmcJ7PNqkAfKqbjFGRordtAg1v9DvcBSKvdTkVvciLyvQR\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "payable",
+          "type": "fallback"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getL1BlockNumber",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "version",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "payable",
+          "type": "receive"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getL1BlockNumber()": {
+            "returns": {
+              "_0": "Latest L1 block number."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getL1BlockNumber()": {
+            "notice": "Retrieves the latest L1 block number."
+          },
+          "version()": {
+            "notice": "Semantic version."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@cwia/=lib/clones-with-immutable-args/src/",
+        "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        "@rari-capital/solmate/=lib/solmate/",
+        "clones-with-immutable-args/=lib/clones-with-immutable-args/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "safe-contracts/=lib/safe-contracts/contracts/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 999999
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/legacy/L1BlockNumber.sol": "L1BlockNumber"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/L2/L1Block.sol": {
+        "keccak256": "0xddae019af0b1bbf7643d4c81cc39d5080323519b4d0f5f6243f15e3856c5944e",
+        "urls": [
+          "bzz-raw://4d70190c2d6289b402cbe46be6e36639f215d95359451e21c5f6ae4bbd8f6a7f",
+          "dweb:/ipfs/QmSA6jvTKT7CZUyBEZPKzBYjpkKeuSu4VXrTuL1Gpb9s4s"
+        ],
+        "license": "MIT"
+      },
+      "src/legacy/L1BlockNumber.sol": {
+        "keccak256": "0x8e06af231b51f9f03fdc5f75d25b3417ca78b65fb2494bd12d093f85e76293be",
+        "urls": [
+          "bzz-raw://271d5d918fdda81ca011113ede99029c6b67630b296fa27c022e7baed9272caa",
+          "dweb:/ipfs/QmeoKKv3DtEXPzrddEzibwn4vnEzA9H4Ew7K2zBQbUDtUH"
+        ],
+        "license": "MIT"
+      },
+      "src/libraries/Predeploys.sol": {
+        "keccak256": "0x5af3a849f68f7c9108858ebac5c769da8f1c0309b5c0cb42eb5cbb15e3fe6058",
+        "urls": [
+          "bzz-raw://6ffe76429a96d274577be66627eddad5cd05ad36d0cb6b9b3c3f9fa8a609dd7e",
+          "dweb:/ipfs/QmVhWnB7Avg684TEQ9BExWqSN1YfLehUTWoqpjymeQEQHm"
+        ],
+        "license": "MIT"
+      },
+      "src/universal/ISemver.sol": {
+        "keccak256": "0xba34562a8026f59886d2e07d1d58d90b9691d00e0788c6263cef6c22740cab44",
+        "urls": [
+          "bzz-raw://0826f998632f83c103c3085bf2e872db79a69022b6d2e0444c83a64ca5283c2a",
+          "dweb:/ipfs/QmcJ7PNqkAfKqbjFGRordtAg1v9DvcBSKvdTkVvciLyvQR"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": {}
+  },
+  "userdoc": {
+    "version": 1,
+    "kind": "user",
+    "methods": {
+      "getL1BlockNumber()": {
+        "notice": "Retrieves the latest L1 block number."
+      },
+      "version()": {
+        "notice": "Semantic version."
+      }
+    },
+    "notice": "L1BlockNumber is a legacy contract that fills the roll of the OVM_L1BlockNumber contract        in the old version of the Optimism system. Only necessary for backwards compatibility.        If you want to access the L1 block number going forward, you should use the L1Block        contract instead."
+  },
+  "devdoc": {
+    "version": 1,
+    "kind": "dev",
+    "methods": {
+      "getL1BlockNumber()": {
+        "returns": {
+          "_0": "Latest L1 block number."
+        }
+      }
+    },
+    "title": "L1BlockNumber"
+  },
+  "ast": {
+    "absolutePath": "src/legacy/L1BlockNumber.sol",
+    "id": 68718,
+    "exportedSymbols": {
+      "ISemver": [
+        75927
+      ],
+      "L1Block": [
+        62286
+      ],
+      "L1BlockNumber": [
+        68717
+      ],
+      "Predeploys": [
+        70727
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1525:150",
+    "nodes": [
+      {
+        "id": 68667,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:150",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".15"
+        ]
+      },
+      {
+        "id": 68669,
+        "nodeType": "ImportDirective",
+        "src": "57:45:150",
+        "nodes": [],
+        "absolutePath": "src/L2/L1Block.sol",
+        "file": "src/L2/L1Block.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 68718,
+        "sourceUnit": 62287,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 68668,
+              "name": "L1Block",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 62286,
+              "src": "66:7:150",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 68671,
+        "nodeType": "ImportDirective",
+        "src": "103:58:150",
+        "nodes": [],
+        "absolutePath": "src/libraries/Predeploys.sol",
+        "file": "src/libraries/Predeploys.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 68718,
+        "sourceUnit": 70728,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 68670,
+              "name": "Predeploys",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 70727,
+              "src": "112:10:150",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 68673,
+        "nodeType": "ImportDirective",
+        "src": "162:52:150",
+        "nodes": [],
+        "absolutePath": "src/universal/ISemver.sol",
+        "file": "src/universal/ISemver.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 68718,
+        "sourceUnit": 75928,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 68672,
+              "name": "ISemver",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 75927,
+              "src": "171:7:150",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 68717,
+        "nodeType": "ContractDefinition",
+        "src": "668:888:150",
+        "nodes": [
+          {
+            "id": 68680,
+            "nodeType": "VariableDeclaration",
+            "src": "771:40:150",
+            "nodes": [],
+            "baseFunctions": [
+              75926
+            ],
+            "constant": true,
+            "documentation": {
+              "id": 68677,
+              "nodeType": "StructuredDocumentation",
+              "src": "708:58:150",
+              "text": "@notice Semantic version.\n @custom:semver 1.1.0"
+            },
+            "functionSelector": "54fd4d50",
+            "mutability": "constant",
+            "name": "version",
+            "nameLocation": "794:7:150",
+            "scope": 68717,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 68678,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "771:6:150",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "hexValue": "312e312e30",
+              "id": 68679,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "804:7:150",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_6815ba53416ba06aff1932cc76b3832272bafab9bc8e066be382e32b06ba5546",
+                "typeString": "literal_string \"1.1.0\""
+              },
+              "value": "1.1.0"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 68691,
+            "nodeType": "FunctionDefinition",
+            "src": "863:178:150",
+            "nodes": [],
+            "body": {
+              "id": 68690,
+              "nodeType": "Block",
+              "src": "890:151:150",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    68685
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 68685,
+                      "mutability": "mutable",
+                      "name": "l1BlockNumber",
+                      "nameLocation": "908:13:150",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 68690,
+                      "src": "900:21:150",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 68684,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "900:7:150",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 68688,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 68686,
+                      "name": "getL1BlockNumber",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 68716,
+                      "src": "924:16:150",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view returns (uint256)"
+                      }
+                    },
+                    "id": 68687,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "924:18:150",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "900:42:150"
+                },
+                {
+                  "AST": {
+                    "nodeType": "YulBlock",
+                    "src": "961:74:150",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "982:1:150",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "name": "l1BlockNumber",
+                              "nodeType": "YulIdentifier",
+                              "src": "985:13:150"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "mstore",
+                            "nodeType": "YulIdentifier",
+                            "src": "975:6:150"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "975:24:150"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "975:24:150"
+                      },
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1019:1:150",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1022:2:150",
+                              "type": "",
+                              "value": "32"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "return",
+                            "nodeType": "YulIdentifier",
+                            "src": "1012:6:150"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "1012:13:150"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "1012:13:150"
+                      }
+                    ]
+                  },
+                  "evmVersion": "london",
+                  "externalReferences": [
+                    {
+                      "declaration": 68685,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "985:13:150",
+                      "valueSize": 1
+                    }
+                  ],
+                  "id": 68689,
+                  "nodeType": "InlineAssembly",
+                  "src": "952:83:150"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 68681,
+              "nodeType": "StructuredDocumentation",
+              "src": "818:40:150",
+              "text": "@notice Returns the L1 block number."
+            },
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 68682,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "870:2:150"
+            },
+            "returnParameters": {
+              "id": 68683,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "890:0:150"
+            },
+            "scope": 68717,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 68702,
+            "nodeType": "FunctionDefinition",
+            "src": "1145:179:150",
+            "nodes": [],
+            "body": {
+              "id": 68701,
+              "nodeType": "Block",
+              "src": "1173:151:150",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    68696
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 68696,
+                      "mutability": "mutable",
+                      "name": "l1BlockNumber",
+                      "nameLocation": "1191:13:150",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 68701,
+                      "src": "1183:21:150",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 68695,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1183:7:150",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 68699,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 68697,
+                      "name": "getL1BlockNumber",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 68716,
+                      "src": "1207:16:150",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view returns (uint256)"
+                      }
+                    },
+                    "id": 68698,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1207:18:150",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1183:42:150"
+                },
+                {
+                  "AST": {
+                    "nodeType": "YulBlock",
+                    "src": "1244:74:150",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1265:1:150",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "name": "l1BlockNumber",
+                              "nodeType": "YulIdentifier",
+                              "src": "1268:13:150"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "mstore",
+                            "nodeType": "YulIdentifier",
+                            "src": "1258:6:150"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "1258:24:150"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "1258:24:150"
+                      },
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1302:1:150",
+                              "type": "",
+                              "value": "0"
+                            },
+                            {
+                              "kind": "number",
+                              "nodeType": "YulLiteral",
+                              "src": "1305:2:150",
+                              "type": "",
+                              "value": "32"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "return",
+                            "nodeType": "YulIdentifier",
+                            "src": "1295:6:150"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "1295:13:150"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "1295:13:150"
+                      }
+                    ]
+                  },
+                  "evmVersion": "london",
+                  "externalReferences": [
+                    {
+                      "declaration": 68696,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "1268:13:150",
+                      "valueSize": 1
+                    }
+                  ],
+                  "id": 68700,
+                  "nodeType": "InlineAssembly",
+                  "src": "1235:83:150"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 68692,
+              "nodeType": "StructuredDocumentation",
+              "src": "1047:40:150",
+              "text": "@notice Returns the L1 block number."
+            },
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 68693,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1153:2:150"
+            },
+            "returnParameters": {
+              "id": 68694,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1173:0:150"
+            },
+            "scope": 68717,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 68716,
+            "nodeType": "FunctionDefinition",
+            "src": "1424:130:150",
+            "nodes": [],
+            "body": {
+              "id": 68715,
+              "nodeType": "Block",
+              "src": "1482:72:150",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "expression": {
+                              "id": 68709,
+                              "name": "Predeploys",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 70727,
+                              "src": "1507:10:150",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_Predeploys_$70727_$",
+                                "typeString": "type(library Predeploys)"
+                              }
+                            },
+                            "id": 68710,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "L1_BLOCK_ATTRIBUTES",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 70678,
+                            "src": "1507:30:150",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 68708,
+                          "name": "L1Block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 62286,
+                          "src": "1499:7:150",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_L1Block_$62286_$",
+                            "typeString": "type(contract L1Block)"
+                          }
+                        },
+                        "id": 68711,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1499:39:150",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_L1Block_$62286",
+                          "typeString": "contract L1Block"
+                        }
+                      },
+                      "id": 68712,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "number",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 62199,
+                      "src": "1499:46:150",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint64_$",
+                        "typeString": "function () view external returns (uint64)"
+                      }
+                    },
+                    "id": 68713,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1499:48:150",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "functionReturnParameters": 68707,
+                  "id": 68714,
+                  "nodeType": "Return",
+                  "src": "1492:55:150"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 68703,
+              "nodeType": "StructuredDocumentation",
+              "src": "1330:89:150",
+              "text": "@notice Retrieves the latest L1 block number.\n @return Latest L1 block number."
+            },
+            "functionSelector": "b9b3efe9",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getL1BlockNumber",
+            "nameLocation": "1433:16:150",
+            "parameters": {
+              "id": 68704,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1449:2:150"
+            },
+            "returnParameters": {
+              "id": 68707,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 68706,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 68716,
+                  "src": "1473:7:150",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 68705,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1473:7:150",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1472:9:150"
+            },
+            "scope": 68717,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 68675,
+              "name": "ISemver",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 75927,
+              "src": "694:7:150"
+            },
+            "id": 68676,
+            "nodeType": "InheritanceSpecifier",
+            "src": "694:7:150"
+          }
+        ],
+        "canonicalName": "L1BlockNumber",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 68674,
+          "nodeType": "StructuredDocumentation",
+          "src": "216:452:150",
+          "text": "@custom:legacy\n @custom:proxied\n @custom:predeploy 0x4200000000000000000000000000000000000013\n @title L1BlockNumber\n @notice L1BlockNumber is a legacy contract that fills the roll of the OVM_L1BlockNumber contract\n        in the old version of the Optimism system. Only necessary for backwards compatibility.\n        If you want to access the L1 block number going forward, you should use the L1Block\n        contract instead."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          68717,
+          75927
+        ],
+        "name": "L1BlockNumber",
+        "nameLocation": "677:13:150",
+        "scope": 68718,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 150
+}

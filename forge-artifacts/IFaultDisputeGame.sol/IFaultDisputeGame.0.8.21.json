@@ -1,0 +1,2407 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "parentIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "Claim",
+          "name": "claim",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "claimant",
+          "type": "address"
+        }
+      ],
+      "name": "Move",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "enum GameStatus",
+          "name": "status",
+          "type": "uint8"
+        }
+      ],
+      "name": "Resolved",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_ident",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_partOffset",
+          "type": "uint256"
+        }
+      ],
+      "name": "addLocalData",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_parentIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "Claim",
+          "name": "_claim",
+          "type": "bytes32"
+        }
+      ],
+      "name": "attack",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "bondManager",
+      "outputs": [
+        {
+          "internalType": "contract IBondManager",
+          "name": "bondManager_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "createdAt",
+      "outputs": [
+        {
+          "internalType": "Timestamp",
+          "name": "createdAt_",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_parentIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "Claim",
+          "name": "_claim",
+          "type": "bytes32"
+        }
+      ],
+      "name": "defend",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "extraData",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "extraData_",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "gameData",
+      "outputs": [
+        {
+          "internalType": "GameType",
+          "name": "gameType_",
+          "type": "uint8"
+        },
+        {
+          "internalType": "Claim",
+          "name": "rootClaim_",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "extraData_",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "gameType",
+      "outputs": [
+        {
+          "internalType": "GameType",
+          "name": "gameType_",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "l1BlockNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "l1BlockNumber_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "l1Head",
+      "outputs": [
+        {
+          "internalType": "Hash",
+          "name": "l1Head_",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "l2BlockNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "l2BlockNumber_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "resolve",
+      "outputs": [
+        {
+          "internalType": "enum GameStatus",
+          "name": "status_",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_claimIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "resolveClaim",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rootClaim",
+      "outputs": [
+        {
+          "internalType": "Claim",
+          "name": "rootClaim_",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "status",
+      "outputs": [
+        {
+          "internalType": "enum GameStatus",
+          "name": "status_",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_claimIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_isAttack",
+          "type": "bool"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_stateData",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_proof",
+          "type": "bytes"
+        }
+      ],
+      "name": "step",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addLocalData(uint256,uint256)": "1e27052a",
+    "attack(uint256,bytes32)": "c55cd0c7",
+    "bondManager()": "363cc427",
+    "createdAt()": "cf09e0d0",
+    "defend(uint256,bytes32)": "35fef567",
+    "extraData()": "609d3334",
+    "gameData()": "fa24f743",
+    "gameType()": "bbdc02db",
+    "initialize()": "8129fc1c",
+    "l1BlockNumber()": "298c9005",
+    "l1Head()": "6361506d",
+    "l2BlockNumber()": "8b85902b",
+    "resolve()": "2810e1d6",
+    "resolveClaim(uint256)": "fdffbb28",
+    "rootClaim()": "bcef3b55",
+    "status()": "200d2ed2",
+    "step(uint256,bool,bytes,bytes)": "d8cc1a3c"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"parentIndex\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"Claim\",\"name\":\"claim\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"claimant\",\"type\":\"address\"}],\"name\":\"Move\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"enum GameStatus\",\"name\":\"status\",\"type\":\"uint8\"}],\"name\":\"Resolved\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_ident\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_partOffset\",\"type\":\"uint256\"}],\"name\":\"addLocalData\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_parentIndex\",\"type\":\"uint256\"},{\"internalType\":\"Claim\",\"name\":\"_claim\",\"type\":\"bytes32\"}],\"name\":\"attack\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bondManager\",\"outputs\":[{\"internalType\":\"contract IBondManager\",\"name\":\"bondManager_\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"createdAt\",\"outputs\":[{\"internalType\":\"Timestamp\",\"name\":\"createdAt_\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_parentIndex\",\"type\":\"uint256\"},{\"internalType\":\"Claim\",\"name\":\"_claim\",\"type\":\"bytes32\"}],\"name\":\"defend\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"extraData\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"extraData_\",\"type\":\"bytes\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"gameData\",\"outputs\":[{\"internalType\":\"GameType\",\"name\":\"gameType_\",\"type\":\"uint8\"},{\"internalType\":\"Claim\",\"name\":\"rootClaim_\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"extraData_\",\"type\":\"bytes\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"gameType\",\"outputs\":[{\"internalType\":\"GameType\",\"name\":\"gameType_\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l1BlockNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"l1BlockNumber_\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l1Head\",\"outputs\":[{\"internalType\":\"Hash\",\"name\":\"l1Head_\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l2BlockNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"l2BlockNumber_\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"resolve\",\"outputs\":[{\"internalType\":\"enum GameStatus\",\"name\":\"status_\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_claimIndex\",\"type\":\"uint256\"}],\"name\":\"resolveClaim\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rootClaim\",\"outputs\":[{\"internalType\":\"Claim\",\"name\":\"rootClaim_\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"status\",\"outputs\":[{\"internalType\":\"enum GameStatus\",\"name\":\"status_\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_claimIndex\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_isAttack\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"_stateData\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"_proof\",\"type\":\"bytes\"}],\"name\":\"step\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Move(uint256,bytes32,address)\":{\"params\":{\"claim\":\"The claim being added\",\"claimant\":\"The address of the claimant\",\"parentIndex\":\"The index within the `claimData` array of the parent claim\"}},\"Resolved(uint8)\":{\"params\":{\"status\":\"The status of the game after resolution.\"}}},\"kind\":\"dev\",\"methods\":{\"addLocalData(uint256,uint256)\":{\"params\":{\"_ident\":\"The local identifier of the data to post.\",\"_partOffset\":\"The offset of the data to post.\"}},\"attack(uint256,bytes32)\":{\"params\":{\"_claim\":\"The `Claim` at the relative attack position.\",\"_parentIndex\":\"Index of the `Claim` to attack in the `claimData` array.\"}},\"bondManager()\":{\"returns\":{\"bondManager_\":\"The address of the `BondManager` used.\"}},\"createdAt()\":{\"returns\":{\"createdAt_\":\"The timestamp that the DisputeGame contract was created at.\"}},\"defend(uint256,bytes32)\":{\"params\":{\"_claim\":\"The `Claim` at the relative defense position.\",\"_parentIndex\":\"Index of the claim to defend in the `claimData` array.\"}},\"extraData()\":{\"details\":\"`clones-with-immutable-args` argument #2\",\"returns\":{\"extraData_\":\"Any extra data supplied to the dispute game contract by the creator.\"}},\"gameData()\":{\"returns\":{\"extraData_\":\"Any extra data supplied to the dispute game contract by the creator.\",\"gameType_\":\"The type of proof system being used.\",\"rootClaim_\":\"The root claim of the DisputeGame.\"}},\"gameType()\":{\"details\":\"The reference impl should be entirely different depending on the type (fault, validity)      i.e. The game type should indicate the security model.\",\"returns\":{\"gameType_\":\"The type of proof system being used.\"}},\"initialize()\":{\"details\":\"This function may only be called once.\"},\"resolve()\":{\"details\":\"May only be called if the `status` is `IN_PROGRESS`.\",\"returns\":{\"status_\":\"The status of the game after resolution.\"}},\"resolveClaim(uint256)\":{\"details\":\"This function must be called bottom-up in the DAG      A subgame is a tree of claims that has a maximum depth of 1.      A subgame root claims is valid if, and only if, all of its child claims are invalid.      At the deepest level in the DAG, a claim is invalid if there's a successful step against it.\",\"params\":{\"_claimIndex\":\"The index of the subgame root claim to resolve.\"}},\"rootClaim()\":{\"details\":\"`clones-with-immutable-args` argument #1\",\"returns\":{\"rootClaim_\":\"The root claim of the DisputeGame.\"}},\"status()\":{\"returns\":{\"status_\":\"The current status of the game.\"}},\"step(uint256,bool,bytes,bytes)\":{\"details\":\"This function should point to a fault proof processor in order to execute      a step in the fault proof program on-chain. The interface of the fault proof      processor contract should adhere to the `IBigStepper` interface.\",\"params\":{\"_claimIndex\":\"The index of the challenged claim within `claimData`.\",\"_isAttack\":\"Whether or not the step is an attack or a defense.\",\"_proof\":\"Proof to access memory nodes in the VM's merkle state tree.\",\"_stateData\":\"The stateData of the step is the preimage of the claim at the given        prestate, which is at `_stateIndex` if the move is an attack and `_claimIndex` if        the move is a defense. If the step is an attack on the first instruction, it is        the absolute prestate of the fault proof VM.\"}}},\"title\":\"IFaultDisputeGame\",\"version\":1},\"userdoc\":{\"events\":{\"Move(uint256,bytes32,address)\":{\"notice\":\"Emitted when a new claim is added to the DAG by `claimant`\"},\"Resolved(uint8)\":{\"notice\":\"Emitted when the game is resolved.\"}},\"kind\":\"user\",\"methods\":{\"addLocalData(uint256,uint256)\":{\"notice\":\"Posts the requested local data to the VM's `PreimageOralce`.\"},\"attack(uint256,bytes32)\":{\"notice\":\"Attack a disagreed upon `Claim`.\"},\"bondManager()\":{\"notice\":\"Returns the address of the `BondManager` used.\"},\"createdAt()\":{\"notice\":\"Returns the timestamp that the DisputeGame contract was created at.\"},\"defend(uint256,bytes32)\":{\"notice\":\"Defend an agreed upon `Claim`.\"},\"extraData()\":{\"notice\":\"Getter for the extra data.\"},\"gameData()\":{\"notice\":\"A compliant implementation of this interface should return the components of the         game UUID's preimage provided in the cwia payload. The preimage of the UUID is         constructed as `keccak256(gameType . rootClaim . extraData)` where `.` denotes         concatenation.\"},\"gameType()\":{\"notice\":\"Getter for the game type.\"},\"initialize()\":{\"notice\":\"Initializes the contract.\"},\"l1BlockNumber()\":{\"notice\":\"The l1BlockNumber that Cannon was ran from to generate the root claim.\"},\"l1Head()\":{\"notice\":\"An L1 block hash that contains the disputed output root, fetched from the         `BlockOracle` and verified by referencing the timestamp associated with the         first L2 Output Proposal in the `L2OutputOracle` that contains the disputed         L2 block number.\"},\"l2BlockNumber()\":{\"notice\":\"The l2BlockNumber of the disputed output root in the `L2OutputOracle`.\"},\"resolve()\":{\"notice\":\"If all necessary information has been gathered, this function should mark the game         status as either `CHALLENGER_WINS` or `DEFENDER_WINS` and return the status of         the resolved game. It is at this stage that the bonds should be awarded to the         necessary parties.\"},\"resolveClaim(uint256)\":{\"notice\":\"Resolves the subgame rooted at the given claim index.\"},\"rootClaim()\":{\"notice\":\"Getter for the root claim.\"},\"status()\":{\"notice\":\"Returns the current status of the game.\"},\"step(uint256,bool,bytes,bytes)\":{\"notice\":\"Perform an instruction step via an on-chain fault proof processor.\"}},\"notice\":\"The interface for a fault proof backed dispute game.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/dispute/interfaces/IFaultDisputeGame.sol\":\"IFaultDisputeGame\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[\":@cwia/=lib/clones-with-immutable-args/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@rari-capital/solmate/=lib/solmate/\",\":clones-with-immutable-args/=lib/clones-with-immutable-args/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":safe-contracts/=lib/safe-contracts/contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"src/dispute/interfaces/IBondManager.sol\":{\"keccak256\":\"0x31db84bf7a701125719c0bdaed316c8ec3d32e774a70b9bac3045d3ed272da8b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://35ef3970234b9a2d85ca800c5257398fd92a6959b0daa088b402a493ebf18d88\",\"dweb:/ipfs/QmWr1ZCBjRJPTUWyNcDv3G2Jb72cYG2p4rQA55WuUPUjao\"]},\"src/dispute/interfaces/IDisputeGame.sol\":{\"keccak256\":\"0xd9cebb758474716504ba281e8c9e007ead5be676a835729c236afec47dfb1e7f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fba945be8dbca576b6765fccc5fe8e31109562b0f2e9f943fc8b6c65fffc9829\",\"dweb:/ipfs/QmTWcBnmMhb3odqu2kkJbKZK7HNeiE7SvfD9tjKv8F4qWF\"]},\"src/dispute/interfaces/IFaultDisputeGame.sol\":{\"keccak256\":\"0x5a519ab642dee1bb456bc37cb6d9e6a5516f653bff467ad00a97b0bfc07972cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6d187db5ab905adfedc415b36b35ac2d247e2e788f235256fd4789d95836fbdb\",\"dweb:/ipfs/QmQnixGzzx8ELxhepUZXSFTLj2eGAszRVkQDQgEHgbJgRY\"]},\"src/dispute/interfaces/IInitializable.sol\":{\"keccak256\":\"0xf021b03c9e887e227102b037595e0917b76546e796bec7aa4fdced61090267ce\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bcfbad382815e37355b7cc318fa333b9b5b08223d4315951fd0881430ab8d3df\",\"dweb:/ipfs/QmRng31WWpYeApQUcXJXhSdqL797drdtBwvUD6D9giCyy2\"]},\"src/dispute/lib/LibClock.sol\":{\"keccak256\":\"0x4599b150b8a3d53a9db22698666320e62261765e3ad5b58105bc93097b1a4690\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a0ab2d277fd4607510a5cafb91235a0fc3e47c3c0cdb45b2c185188ce888a1c5\",\"dweb:/ipfs/QmQ2bM3YmZCbN8uhKigSBh6j9VKrfxg61tjihwY7fdpARs\"]},\"src/dispute/lib/LibGameId.sol\":{\"keccak256\":\"0xa61b8562def4834607b733240e8eb4f924a75250df45852c9af1aea628f6b58d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2853075b45f634db083ea5f495f0cb9c28eb2401e2c18fd5fb7bce2500ed78ad\",\"dweb:/ipfs/QmaJpEg5z6tZ3niZY6N3f8AZ89FRnUVZJHNUDs66sq97j6\"]},\"src/dispute/lib/LibHashing.sol\":{\"keccak256\":\"0x5a072cd028094eee55acb84ed8d08d7422b1fb46658b7e043e916781530a383b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b67e54f1318f1fd67b28b16c6861a56e27217c26a12aaea5c446e2ec53143920\",\"dweb:/ipfs/QmVLSTP3PwXzRkR3A4qV9fjZhca9v8J1EnEYuVGUsSirAq\"]},\"src/dispute/lib/LibPosition.sol\":{\"keccak256\":\"0xf85659fff6f178903482bc12b9e908440dca33fbcda2258b1a665d1746a03c33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0e51fb85a9f43c1b50c601d2e5cf343874ce3cb28d7823bea3f1ba5f23c28a9e\",\"dweb:/ipfs/QmcWQZsARwq6cfstzmCw8GnueH3QAkaPgdRpi7guQpKB6Q\"]},\"src/libraries/DisputeTypes.sol\":{\"keccak256\":\"0x23c8fbebc8a9fbe0b170ce45405cec5ec9bd71380d0e30f0a07144f420e9fdf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9fa6ad5d232e12fe7c575b86b00ff4164a0539bb017c0c7efea94d5a96013e05\",\"dweb:/ipfs/QmXoPqtjX4wJhikz7zjK7QQgjEB59ikxgPgM9wCBfJQbTE\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "parentIndex",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "Claim",
+              "name": "claim",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "claimant",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Move",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "enum GameStatus",
+              "name": "status",
+              "type": "uint8",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "Resolved",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_ident",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_partOffset",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addLocalData"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_parentIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "Claim",
+              "name": "_claim",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "attack"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "bondManager",
+          "outputs": [
+            {
+              "internalType": "contract IBondManager",
+              "name": "bondManager_",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "createdAt",
+          "outputs": [
+            {
+              "internalType": "Timestamp",
+              "name": "createdAt_",
+              "type": "uint64"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_parentIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "Claim",
+              "name": "_claim",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "defend"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "extraData",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "extraData_",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "gameData",
+          "outputs": [
+            {
+              "internalType": "GameType",
+              "name": "gameType_",
+              "type": "uint8"
+            },
+            {
+              "internalType": "Claim",
+              "name": "rootClaim_",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraData_",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "gameType",
+          "outputs": [
+            {
+              "internalType": "GameType",
+              "name": "gameType_",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "initialize"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "l1BlockNumber",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "l1BlockNumber_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "l1Head",
+          "outputs": [
+            {
+              "internalType": "Hash",
+              "name": "l1Head_",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "l2BlockNumber",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "l2BlockNumber_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "resolve",
+          "outputs": [
+            {
+              "internalType": "enum GameStatus",
+              "name": "status_",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_claimIndex",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "resolveClaim"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "rootClaim",
+          "outputs": [
+            {
+              "internalType": "Claim",
+              "name": "rootClaim_",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "status",
+          "outputs": [
+            {
+              "internalType": "enum GameStatus",
+              "name": "status_",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_claimIndex",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "_isAttack",
+              "type": "bool"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_stateData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_proof",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "step"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "addLocalData(uint256,uint256)": {
+            "params": {
+              "_ident": "The local identifier of the data to post.",
+              "_partOffset": "The offset of the data to post."
+            }
+          },
+          "attack(uint256,bytes32)": {
+            "params": {
+              "_claim": "The `Claim` at the relative attack position.",
+              "_parentIndex": "Index of the `Claim` to attack in the `claimData` array."
+            }
+          },
+          "bondManager()": {
+            "returns": {
+              "bondManager_": "The address of the `BondManager` used."
+            }
+          },
+          "createdAt()": {
+            "returns": {
+              "createdAt_": "The timestamp that the DisputeGame contract was created at."
+            }
+          },
+          "defend(uint256,bytes32)": {
+            "params": {
+              "_claim": "The `Claim` at the relative defense position.",
+              "_parentIndex": "Index of the claim to defend in the `claimData` array."
+            }
+          },
+          "extraData()": {
+            "details": "`clones-with-immutable-args` argument #2",
+            "returns": {
+              "extraData_": "Any extra data supplied to the dispute game contract by the creator."
+            }
+          },
+          "gameData()": {
+            "returns": {
+              "extraData_": "Any extra data supplied to the dispute game contract by the creator.",
+              "gameType_": "The type of proof system being used.",
+              "rootClaim_": "The root claim of the DisputeGame."
+            }
+          },
+          "gameType()": {
+            "details": "The reference impl should be entirely different depending on the type (fault, validity)      i.e. The game type should indicate the security model.",
+            "returns": {
+              "gameType_": "The type of proof system being used."
+            }
+          },
+          "initialize()": {
+            "details": "This function may only be called once."
+          },
+          "resolve()": {
+            "details": "May only be called if the `status` is `IN_PROGRESS`.",
+            "returns": {
+              "status_": "The status of the game after resolution."
+            }
+          },
+          "resolveClaim(uint256)": {
+            "details": "This function must be called bottom-up in the DAG      A subgame is a tree of claims that has a maximum depth of 1.      A subgame root claims is valid if, and only if, all of its child claims are invalid.      At the deepest level in the DAG, a claim is invalid if there's a successful step against it.",
+            "params": {
+              "_claimIndex": "The index of the subgame root claim to resolve."
+            }
+          },
+          "rootClaim()": {
+            "details": "`clones-with-immutable-args` argument #1",
+            "returns": {
+              "rootClaim_": "The root claim of the DisputeGame."
+            }
+          },
+          "status()": {
+            "returns": {
+              "status_": "The current status of the game."
+            }
+          },
+          "step(uint256,bool,bytes,bytes)": {
+            "details": "This function should point to a fault proof processor in order to execute      a step in the fault proof program on-chain. The interface of the fault proof      processor contract should adhere to the `IBigStepper` interface.",
+            "params": {
+              "_claimIndex": "The index of the challenged claim within `claimData`.",
+              "_isAttack": "Whether or not the step is an attack or a defense.",
+              "_proof": "Proof to access memory nodes in the VM's merkle state tree.",
+              "_stateData": "The stateData of the step is the preimage of the claim at the given        prestate, which is at `_stateIndex` if the move is an attack and `_claimIndex` if        the move is a defense. If the step is an attack on the first instruction, it is        the absolute prestate of the fault proof VM."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "addLocalData(uint256,uint256)": {
+            "notice": "Posts the requested local data to the VM's `PreimageOralce`."
+          },
+          "attack(uint256,bytes32)": {
+            "notice": "Attack a disagreed upon `Claim`."
+          },
+          "bondManager()": {
+            "notice": "Returns the address of the `BondManager` used."
+          },
+          "createdAt()": {
+            "notice": "Returns the timestamp that the DisputeGame contract was created at."
+          },
+          "defend(uint256,bytes32)": {
+            "notice": "Defend an agreed upon `Claim`."
+          },
+          "extraData()": {
+            "notice": "Getter for the extra data."
+          },
+          "gameData()": {
+            "notice": "A compliant implementation of this interface should return the components of the         game UUID's preimage provided in the cwia payload. The preimage of the UUID is         constructed as `keccak256(gameType . rootClaim . extraData)` where `.` denotes         concatenation."
+          },
+          "gameType()": {
+            "notice": "Getter for the game type."
+          },
+          "initialize()": {
+            "notice": "Initializes the contract."
+          },
+          "l1BlockNumber()": {
+            "notice": "The l1BlockNumber that Cannon was ran from to generate the root claim."
+          },
+          "l1Head()": {
+            "notice": "An L1 block hash that contains the disputed output root, fetched from the         `BlockOracle` and verified by referencing the timestamp associated with the         first L2 Output Proposal in the `L2OutputOracle` that contains the disputed         L2 block number."
+          },
+          "l2BlockNumber()": {
+            "notice": "The l2BlockNumber of the disputed output root in the `L2OutputOracle`."
+          },
+          "resolve()": {
+            "notice": "If all necessary information has been gathered, this function should mark the game         status as either `CHALLENGER_WINS` or `DEFENDER_WINS` and return the status of         the resolved game. It is at this stage that the bonds should be awarded to the         necessary parties."
+          },
+          "resolveClaim(uint256)": {
+            "notice": "Resolves the subgame rooted at the given claim index."
+          },
+          "rootClaim()": {
+            "notice": "Getter for the root claim."
+          },
+          "status()": {
+            "notice": "Returns the current status of the game."
+          },
+          "step(uint256,bool,bytes,bytes)": {
+            "notice": "Perform an instruction step via an on-chain fault proof processor."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@cwia/=lib/clones-with-immutable-args/src/",
+        "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        "@rari-capital/solmate/=lib/solmate/",
+        "clones-with-immutable-args/=lib/clones-with-immutable-args/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "safe-contracts/=lib/safe-contracts/contracts/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 999999
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/dispute/interfaces/IFaultDisputeGame.sol": "IFaultDisputeGame"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/dispute/interfaces/IBondManager.sol": {
+        "keccak256": "0x31db84bf7a701125719c0bdaed316c8ec3d32e774a70b9bac3045d3ed272da8b",
+        "urls": [
+          "bzz-raw://35ef3970234b9a2d85ca800c5257398fd92a6959b0daa088b402a493ebf18d88",
+          "dweb:/ipfs/QmWr1ZCBjRJPTUWyNcDv3G2Jb72cYG2p4rQA55WuUPUjao"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/interfaces/IDisputeGame.sol": {
+        "keccak256": "0xd9cebb758474716504ba281e8c9e007ead5be676a835729c236afec47dfb1e7f",
+        "urls": [
+          "bzz-raw://fba945be8dbca576b6765fccc5fe8e31109562b0f2e9f943fc8b6c65fffc9829",
+          "dweb:/ipfs/QmTWcBnmMhb3odqu2kkJbKZK7HNeiE7SvfD9tjKv8F4qWF"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/interfaces/IFaultDisputeGame.sol": {
+        "keccak256": "0x5a519ab642dee1bb456bc37cb6d9e6a5516f653bff467ad00a97b0bfc07972cf",
+        "urls": [
+          "bzz-raw://6d187db5ab905adfedc415b36b35ac2d247e2e788f235256fd4789d95836fbdb",
+          "dweb:/ipfs/QmQnixGzzx8ELxhepUZXSFTLj2eGAszRVkQDQgEHgbJgRY"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/interfaces/IInitializable.sol": {
+        "keccak256": "0xf021b03c9e887e227102b037595e0917b76546e796bec7aa4fdced61090267ce",
+        "urls": [
+          "bzz-raw://bcfbad382815e37355b7cc318fa333b9b5b08223d4315951fd0881430ab8d3df",
+          "dweb:/ipfs/QmRng31WWpYeApQUcXJXhSdqL797drdtBwvUD6D9giCyy2"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/lib/LibClock.sol": {
+        "keccak256": "0x4599b150b8a3d53a9db22698666320e62261765e3ad5b58105bc93097b1a4690",
+        "urls": [
+          "bzz-raw://a0ab2d277fd4607510a5cafb91235a0fc3e47c3c0cdb45b2c185188ce888a1c5",
+          "dweb:/ipfs/QmQ2bM3YmZCbN8uhKigSBh6j9VKrfxg61tjihwY7fdpARs"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/lib/LibGameId.sol": {
+        "keccak256": "0xa61b8562def4834607b733240e8eb4f924a75250df45852c9af1aea628f6b58d",
+        "urls": [
+          "bzz-raw://2853075b45f634db083ea5f495f0cb9c28eb2401e2c18fd5fb7bce2500ed78ad",
+          "dweb:/ipfs/QmaJpEg5z6tZ3niZY6N3f8AZ89FRnUVZJHNUDs66sq97j6"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/lib/LibHashing.sol": {
+        "keccak256": "0x5a072cd028094eee55acb84ed8d08d7422b1fb46658b7e043e916781530a383b",
+        "urls": [
+          "bzz-raw://b67e54f1318f1fd67b28b16c6861a56e27217c26a12aaea5c446e2ec53143920",
+          "dweb:/ipfs/QmVLSTP3PwXzRkR3A4qV9fjZhca9v8J1EnEYuVGUsSirAq"
+        ],
+        "license": "MIT"
+      },
+      "src/dispute/lib/LibPosition.sol": {
+        "keccak256": "0xf85659fff6f178903482bc12b9e908440dca33fbcda2258b1a665d1746a03c33",
+        "urls": [
+          "bzz-raw://0e51fb85a9f43c1b50c601d2e5cf343874ce3cb28d7823bea3f1ba5f23c28a9e",
+          "dweb:/ipfs/QmcWQZsARwq6cfstzmCw8GnueH3QAkaPgdRpi7guQpKB6Q"
+        ],
+        "license": "MIT"
+      },
+      "src/libraries/DisputeTypes.sol": {
+        "keccak256": "0x23c8fbebc8a9fbe0b170ce45405cec5ec9bd71380d0e30f0a07144f420e9fdf0",
+        "urls": [
+          "bzz-raw://9fa6ad5d232e12fe7c575b86b00ff4164a0539bb017c0c7efea94d5a96013e05",
+          "dweb:/ipfs/QmXoPqtjX4wJhikz7zjK7QQgjEB59ikxgPgM9wCBfJQbTE"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": {}
+  },
+  "userdoc": {
+    "version": 1,
+    "kind": "user",
+    "methods": {
+      "addLocalData(uint256,uint256)": {
+        "notice": "Posts the requested local data to the VM's `PreimageOralce`."
+      },
+      "attack(uint256,bytes32)": {
+        "notice": "Attack a disagreed upon `Claim`."
+      },
+      "bondManager()": {
+        "notice": "Returns the address of the `BondManager` used."
+      },
+      "createdAt()": {
+        "notice": "Returns the timestamp that the DisputeGame contract was created at."
+      },
+      "defend(uint256,bytes32)": {
+        "notice": "Defend an agreed upon `Claim`."
+      },
+      "extraData()": {
+        "notice": "Getter for the extra data."
+      },
+      "gameData()": {
+        "notice": "A compliant implementation of this interface should return the components of the         game UUID's preimage provided in the cwia payload. The preimage of the UUID is         constructed as `keccak256(gameType . rootClaim . extraData)` where `.` denotes         concatenation."
+      },
+      "gameType()": {
+        "notice": "Getter for the game type."
+      },
+      "initialize()": {
+        "notice": "Initializes the contract."
+      },
+      "l1BlockNumber()": {
+        "notice": "The l1BlockNumber that Cannon was ran from to generate the root claim."
+      },
+      "l1Head()": {
+        "notice": "An L1 block hash that contains the disputed output root, fetched from the         `BlockOracle` and verified by referencing the timestamp associated with the         first L2 Output Proposal in the `L2OutputOracle` that contains the disputed         L2 block number."
+      },
+      "l2BlockNumber()": {
+        "notice": "The l2BlockNumber of the disputed output root in the `L2OutputOracle`."
+      },
+      "resolve()": {
+        "notice": "If all necessary information has been gathered, this function should mark the game         status as either `CHALLENGER_WINS` or `DEFENDER_WINS` and return the status of         the resolved game. It is at this stage that the bonds should be awarded to the         necessary parties."
+      },
+      "resolveClaim(uint256)": {
+        "notice": "Resolves the subgame rooted at the given claim index."
+      },
+      "rootClaim()": {
+        "notice": "Getter for the root claim."
+      },
+      "status()": {
+        "notice": "Returns the current status of the game."
+      },
+      "step(uint256,bool,bytes,bytes)": {
+        "notice": "Perform an instruction step via an on-chain fault proof processor."
+      }
+    },
+    "events": {
+      "Move(uint256,bytes32,address)": {
+        "notice": "Emitted when a new claim is added to the DAG by `claimant`"
+      },
+      "Resolved(uint8)": {
+        "notice": "Emitted when the game is resolved."
+      }
+    },
+    "notice": "The interface for a fault proof backed dispute game."
+  },
+  "devdoc": {
+    "version": 1,
+    "kind": "dev",
+    "methods": {
+      "addLocalData(uint256,uint256)": {
+        "params": {
+          "_ident": "The local identifier of the data to post.",
+          "_partOffset": "The offset of the data to post."
+        }
+      },
+      "attack(uint256,bytes32)": {
+        "params": {
+          "_claim": "The `Claim` at the relative attack position.",
+          "_parentIndex": "Index of the `Claim` to attack in the `claimData` array."
+        }
+      },
+      "bondManager()": {
+        "returns": {
+          "bondManager_": "The address of the `BondManager` used."
+        }
+      },
+      "createdAt()": {
+        "returns": {
+          "createdAt_": "The timestamp that the DisputeGame contract was created at."
+        }
+      },
+      "defend(uint256,bytes32)": {
+        "params": {
+          "_claim": "The `Claim` at the relative defense position.",
+          "_parentIndex": "Index of the claim to defend in the `claimData` array."
+        }
+      },
+      "extraData()": {
+        "details": "`clones-with-immutable-args` argument #2",
+        "returns": {
+          "extraData_": "Any extra data supplied to the dispute game contract by the creator."
+        }
+      },
+      "gameData()": {
+        "returns": {
+          "extraData_": "Any extra data supplied to the dispute game contract by the creator.",
+          "gameType_": "The type of proof system being used.",
+          "rootClaim_": "The root claim of the DisputeGame."
+        }
+      },
+      "gameType()": {
+        "details": "The reference impl should be entirely different depending on the type (fault, validity)      i.e. The game type should indicate the security model.",
+        "returns": {
+          "gameType_": "The type of proof system being used."
+        }
+      },
+      "initialize()": {
+        "details": "This function may only be called once."
+      },
+      "resolve()": {
+        "details": "May only be called if the `status` is `IN_PROGRESS`.",
+        "returns": {
+          "status_": "The status of the game after resolution."
+        }
+      },
+      "resolveClaim(uint256)": {
+        "details": "This function must be called bottom-up in the DAG      A subgame is a tree of claims that has a maximum depth of 1.      A subgame root claims is valid if, and only if, all of its child claims are invalid.      At the deepest level in the DAG, a claim is invalid if there's a successful step against it.",
+        "params": {
+          "_claimIndex": "The index of the subgame root claim to resolve."
+        }
+      },
+      "rootClaim()": {
+        "details": "`clones-with-immutable-args` argument #1",
+        "returns": {
+          "rootClaim_": "The root claim of the DisputeGame."
+        }
+      },
+      "status()": {
+        "returns": {
+          "status_": "The current status of the game."
+        }
+      },
+      "step(uint256,bool,bytes,bytes)": {
+        "details": "This function should point to a fault proof processor in order to execute      a step in the fault proof program on-chain. The interface of the fault proof      processor contract should adhere to the `IBigStepper` interface.",
+        "params": {
+          "_claimIndex": "The index of the challenged claim within `claimData`.",
+          "_isAttack": "Whether or not the step is an attack or a defense.",
+          "_proof": "Proof to access memory nodes in the VM's merkle state tree.",
+          "_stateData": "The stateData of the step is the preimage of the claim at the given        prestate, which is at `_stateIndex` if the move is an attack and `_claimIndex` if        the move is a defense. If the step is an attack on the first instruction, it is        the absolute prestate of the fault proof VM."
+        }
+      }
+    },
+    "events": {
+      "Move(uint256,bytes32,address)": {
+        "params": {
+          "claim": "The claim being added",
+          "claimant": "The address of the claimant",
+          "parentIndex": "The index within the `claimData` array of the parent claim"
+        }
+      },
+      "Resolved(uint8)": {
+        "params": {
+          "status": "The status of the game after resolution."
+        }
+      }
+    },
+    "title": "IFaultDisputeGame"
+  },
+  "ast": {
+    "absolutePath": "src/dispute/interfaces/IFaultDisputeGame.sol",
+    "id": 36884,
+    "exportedSymbols": {
+      "BondAmount": [
+        37533
+      ],
+      "Claim": [
+        37529
+      ],
+      "ClaimHash": [
+        37531
+      ],
+      "Clock": [
+        37541
+      ],
+      "Duration": [
+        37537
+      ],
+      "GameId": [
+        37539
+      ],
+      "GameStatus": [
+        37552
+      ],
+      "GameType": [
+        37545
+      ],
+      "GameTypes": [
+        37578
+      ],
+      "Hash": [
+        37527
+      ],
+      "IDisputeGame": [
+        36654
+      ],
+      "IFaultDisputeGame": [
+        36883
+      ],
+      "LibClock": [
+        36935
+      ],
+      "LibGameId": [
+        36977
+      ],
+      "LibHashing": [
+        36999
+      ],
+      "LibPosition": [
+        37157
+      ],
+      "Position": [
+        37543
+      ],
+      "Timestamp": [
+        37535
+      ],
+      "VMStatus": [
+        37547
+      ],
+      "VMStatuses": [
+        37612
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:5057:49",
+    "nodes": [
+      {
+        "id": 36771,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:49",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".15"
+        ]
+      },
+      {
+        "id": 36773,
+        "nodeType": "ImportDirective",
+        "src": "58:50:49",
+        "nodes": [],
+        "absolutePath": "src/dispute/interfaces/IDisputeGame.sol",
+        "file": "./IDisputeGame.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36884,
+        "sourceUnit": 36655,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36772,
+              "name": "IDisputeGame",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36654,
+              "src": "67:12:49",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36774,
+        "nodeType": "ImportDirective",
+        "src": "110:40:49",
+        "nodes": [],
+        "absolutePath": "src/libraries/DisputeTypes.sol",
+        "file": "src/libraries/DisputeTypes.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36884,
+        "sourceUnit": 37613,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 36883,
+        "nodeType": "ContractDefinition",
+        "src": "246:4842:49",
+        "nodes": [
+          {
+            "id": 36792,
+            "nodeType": "StructDefinition",
+            "src": "432:145:49",
+            "nodes": [],
+            "canonicalName": "IFaultDisputeGame.ClaimData",
+            "documentation": {
+              "id": 36778,
+              "nodeType": "StructuredDocumentation",
+              "src": "296:131:49",
+              "text": "@notice The `ClaimData` struct represents the data associated with a Claim.\n @dev TODO(clabby): Add bond ID information."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 36780,
+                "mutability": "mutable",
+                "name": "parentIndex",
+                "nameLocation": "466:11:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36792,
+                "src": "459:18:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 36779,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "459:6:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36782,
+                "mutability": "mutable",
+                "name": "countered",
+                "nameLocation": "492:9:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36792,
+                "src": "487:14:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 36781,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "487:4:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36785,
+                "mutability": "mutable",
+                "name": "claim",
+                "nameLocation": "517:5:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36792,
+                "src": "511:11:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+                  "typeString": "Claim"
+                },
+                "typeName": {
+                  "id": 36784,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 36783,
+                    "name": "Claim",
+                    "nameLocations": [
+                      "511:5:49"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 37529,
+                    "src": "511:5:49"
+                  },
+                  "referencedDeclaration": 37529,
+                  "src": "511:5:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+                    "typeString": "Claim"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36788,
+                "mutability": "mutable",
+                "name": "position",
+                "nameLocation": "541:8:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36792,
+                "src": "532:17:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_Position_$37543",
+                  "typeString": "Position"
+                },
+                "typeName": {
+                  "id": 36787,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 36786,
+                    "name": "Position",
+                    "nameLocations": [
+                      "532:8:49"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 37543,
+                    "src": "532:8:49"
+                  },
+                  "referencedDeclaration": 37543,
+                  "src": "532:8:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Position_$37543",
+                    "typeString": "Position"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36791,
+                "mutability": "mutable",
+                "name": "clock",
+                "nameLocation": "565:5:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36792,
+                "src": "559:11:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_Clock_$37541",
+                  "typeString": "Clock"
+                },
+                "typeName": {
+                  "id": 36790,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 36789,
+                    "name": "Clock",
+                    "nameLocations": [
+                      "559:5:49"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 37541,
+                    "src": "559:5:49"
+                  },
+                  "referencedDeclaration": 37541,
+                  "src": "559:5:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Clock_$37541",
+                    "typeString": "Clock"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ClaimData",
+            "nameLocation": "439:9:49",
+            "scope": 36883,
+            "visibility": "public"
+          },
+          {
+            "id": 36801,
+            "nodeType": "StructDefinition",
+            "src": "731:108:49",
+            "nodes": [],
+            "canonicalName": "IFaultDisputeGame.OutputProposal",
+            "documentation": {
+              "id": 36793,
+              "nodeType": "StructuredDocumentation",
+              "src": "583:143:49",
+              "text": "@notice The `OutputProposal` struct contains information about an output proposal in\n         the `L2OutputOracle` at a given index."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 36795,
+                "mutability": "mutable",
+                "name": "index",
+                "nameLocation": "771:5:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36801,
+                "src": "763:13:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 36794,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "763:7:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36797,
+                "mutability": "mutable",
+                "name": "l2BlockNumber",
+                "nameLocation": "794:13:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36801,
+                "src": "786:21:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                },
+                "typeName": {
+                  "id": 36796,
+                  "name": "uint128",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "786:7:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36800,
+                "mutability": "mutable",
+                "name": "outputRoot",
+                "nameLocation": "822:10:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36801,
+                "src": "817:15:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_userDefinedValueType$_Hash_$37527",
+                  "typeString": "Hash"
+                },
+                "typeName": {
+                  "id": 36799,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 36798,
+                    "name": "Hash",
+                    "nameLocations": [
+                      "817:4:49"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 37527,
+                    "src": "817:4:49"
+                  },
+                  "referencedDeclaration": 37527,
+                  "src": "817:4:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Hash_$37527",
+                    "typeString": "Hash"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "OutputProposal",
+            "nameLocation": "738:14:49",
+            "scope": 36883,
+            "visibility": "public"
+          },
+          {
+            "id": 36809,
+            "nodeType": "StructDefinition",
+            "src": "1529:96:49",
+            "nodes": [],
+            "canonicalName": "IFaultDisputeGame.OutputProposals",
+            "documentation": {
+              "id": 36802,
+              "nodeType": "StructuredDocumentation",
+              "src": "845:679:49",
+              "text": "@notice A container for two consecutive `OutputProposal`s, used to store the starting\n         and disputed output proposals for a given dispute game. The starting output\n         proposal will be used to determine where the off chain agents should begin\n         running their fault proof program, and the disputed output proposal will be\n         fed into the program and treated as disputed state. The program's exit code\n         expresses its opinion on the validity of the state transition from the starting,\n         trusted output proposal to the disputed output proposal, and ultimately resolves\n         the dispute."
+            },
+            "members": [
+              {
+                "constant": false,
+                "id": 36805,
+                "mutability": "mutable",
+                "name": "starting",
+                "nameLocation": "1577:8:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36809,
+                "src": "1562:23:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_OutputProposal_$36801_storage_ptr",
+                  "typeString": "struct IFaultDisputeGame.OutputProposal"
+                },
+                "typeName": {
+                  "id": 36804,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 36803,
+                    "name": "OutputProposal",
+                    "nameLocations": [
+                      "1562:14:49"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 36801,
+                    "src": "1562:14:49"
+                  },
+                  "referencedDeclaration": 36801,
+                  "src": "1562:14:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_OutputProposal_$36801_storage_ptr",
+                    "typeString": "struct IFaultDisputeGame.OutputProposal"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36808,
+                "mutability": "mutable",
+                "name": "disputed",
+                "nameLocation": "1610:8:49",
+                "nodeType": "VariableDeclaration",
+                "scope": 36809,
+                "src": "1595:23:49",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_OutputProposal_$36801_storage_ptr",
+                  "typeString": "struct IFaultDisputeGame.OutputProposal"
+                },
+                "typeName": {
+                  "id": 36807,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 36806,
+                    "name": "OutputProposal",
+                    "nameLocations": [
+                      "1595:14:49"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 36801,
+                    "src": "1595:14:49"
+                  },
+                  "referencedDeclaration": 36801,
+                  "src": "1595:14:49",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_OutputProposal_$36801_storage_ptr",
+                    "typeString": "struct IFaultDisputeGame.OutputProposal"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "OutputProposals",
+            "nameLocation": "1536:15:49",
+            "scope": 36883,
+            "visibility": "public"
+          },
+          {
+            "id": 36819,
+            "nodeType": "EventDefinition",
+            "src": "1887:87:49",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 36810,
+              "nodeType": "StructuredDocumentation",
+              "src": "1631:251:49",
+              "text": "@notice Emitted when a new claim is added to the DAG by `claimant`\n @param parentIndex The index within the `claimData` array of the parent claim\n @param claim The claim being added\n @param claimant The address of the claimant"
+            },
+            "eventSelector": "9b3245740ec3b155098a55be84957a4da13eaf7f14a8bc6f53126c0b9350f2be",
+            "name": "Move",
+            "nameLocation": "1893:4:49",
+            "parameters": {
+              "id": 36818,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36812,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "parentIndex",
+                  "nameLocation": "1914:11:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36819,
+                  "src": "1898:27:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36811,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1898:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36815,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "claim",
+                  "nameLocation": "1941:5:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36819,
+                  "src": "1927:19:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+                    "typeString": "Claim"
+                  },
+                  "typeName": {
+                    "id": 36814,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36813,
+                      "name": "Claim",
+                      "nameLocations": [
+                        "1927:5:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 37529,
+                      "src": "1927:5:49"
+                    },
+                    "referencedDeclaration": 37529,
+                    "src": "1927:5:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+                      "typeString": "Claim"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36817,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "claimant",
+                  "nameLocation": "1964:8:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36819,
+                  "src": "1948:24:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36816,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1948:7:49",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1897:76:49"
+            }
+          },
+          {
+            "id": 36828,
+            "nodeType": "FunctionDefinition",
+            "src": "2181:69:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36820,
+              "nodeType": "StructuredDocumentation",
+              "src": "1980:196:49",
+              "text": "@notice Attack a disagreed upon `Claim`.\n @param _parentIndex Index of the `Claim` to attack in the `claimData` array.\n @param _claim The `Claim` at the relative attack position."
+            },
+            "functionSelector": "c55cd0c7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "attack",
+            "nameLocation": "2190:6:49",
+            "parameters": {
+              "id": 36826,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36822,
+                  "mutability": "mutable",
+                  "name": "_parentIndex",
+                  "nameLocation": "2205:12:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36828,
+                  "src": "2197:20:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36821,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2197:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36825,
+                  "mutability": "mutable",
+                  "name": "_claim",
+                  "nameLocation": "2225:6:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36828,
+                  "src": "2219:12:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+                    "typeString": "Claim"
+                  },
+                  "typeName": {
+                    "id": 36824,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36823,
+                      "name": "Claim",
+                      "nameLocations": [
+                        "2219:5:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 37529,
+                      "src": "2219:5:49"
+                    },
+                    "referencedDeclaration": 37529,
+                    "src": "2219:5:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+                      "typeString": "Claim"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2196:36:49"
+            },
+            "returnParameters": {
+              "id": 36827,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2249:0:49"
+            },
+            "scope": 36883,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36837,
+            "nodeType": "FunctionDefinition",
+            "src": "2454:69:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36829,
+              "nodeType": "StructuredDocumentation",
+              "src": "2256:193:49",
+              "text": "@notice Defend an agreed upon `Claim`.\n @param _parentIndex Index of the claim to defend in the `claimData` array.\n @param _claim The `Claim` at the relative defense position."
+            },
+            "functionSelector": "35fef567",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "defend",
+            "nameLocation": "2463:6:49",
+            "parameters": {
+              "id": 36835,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36831,
+                  "mutability": "mutable",
+                  "name": "_parentIndex",
+                  "nameLocation": "2478:12:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36837,
+                  "src": "2470:20:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36830,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2470:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36834,
+                  "mutability": "mutable",
+                  "name": "_claim",
+                  "nameLocation": "2498:6:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36837,
+                  "src": "2492:12:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+                    "typeString": "Claim"
+                  },
+                  "typeName": {
+                    "id": 36833,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36832,
+                      "name": "Claim",
+                      "nameLocations": [
+                        "2492:5:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 37529,
+                      "src": "2492:5:49"
+                    },
+                    "referencedDeclaration": 37529,
+                    "src": "2492:5:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Claim_$37529",
+                      "typeString": "Claim"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2469:36:49"
+            },
+            "returnParameters": {
+              "id": 36836,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2522:0:49"
+            },
+            "scope": 36883,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36849,
+            "nodeType": "FunctionDefinition",
+            "src": "3452:110:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36838,
+              "nodeType": "StructuredDocumentation",
+              "src": "2529:918:49",
+              "text": "@notice Perform an instruction step via an on-chain fault proof processor.\n @dev This function should point to a fault proof processor in order to execute\n      a step in the fault proof program on-chain. The interface of the fault proof\n      processor contract should adhere to the `IBigStepper` interface.\n @param _claimIndex The index of the challenged claim within `claimData`.\n @param _isAttack Whether or not the step is an attack or a defense.\n @param _stateData The stateData of the step is the preimage of the claim at the given\n        prestate, which is at `_stateIndex` if the move is an attack and `_claimIndex` if\n        the move is a defense. If the step is an attack on the first instruction, it is\n        the absolute prestate of the fault proof VM.\n @param _proof Proof to access memory nodes in the VM's merkle state tree."
+            },
+            "functionSelector": "d8cc1a3c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "step",
+            "nameLocation": "3461:4:49",
+            "parameters": {
+              "id": 36847,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36840,
+                  "mutability": "mutable",
+                  "name": "_claimIndex",
+                  "nameLocation": "3474:11:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36849,
+                  "src": "3466:19:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36839,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3466:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36842,
+                  "mutability": "mutable",
+                  "name": "_isAttack",
+                  "nameLocation": "3492:9:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36849,
+                  "src": "3487:14:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 36841,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3487:4:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36844,
+                  "mutability": "mutable",
+                  "name": "_stateData",
+                  "nameLocation": "3518:10:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36849,
+                  "src": "3503:25:49",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 36843,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3503:5:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36846,
+                  "mutability": "mutable",
+                  "name": "_proof",
+                  "nameLocation": "3545:6:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36849,
+                  "src": "3530:21:49",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 36845,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3530:5:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3465:87:49"
+            },
+            "returnParameters": {
+              "id": 36848,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3561:0:49"
+            },
+            "scope": 36883,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36857,
+            "nodeType": "FunctionDefinition",
+            "src": "3768:68:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36850,
+              "nodeType": "StructuredDocumentation",
+              "src": "3568:195:49",
+              "text": "@notice Posts the requested local data to the VM's `PreimageOralce`.\n @param _ident The local identifier of the data to post.\n @param _partOffset The offset of the data to post."
+            },
+            "functionSelector": "1e27052a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addLocalData",
+            "nameLocation": "3777:12:49",
+            "parameters": {
+              "id": 36855,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36852,
+                  "mutability": "mutable",
+                  "name": "_ident",
+                  "nameLocation": "3798:6:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36857,
+                  "src": "3790:14:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36851,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3790:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36854,
+                  "mutability": "mutable",
+                  "name": "_partOffset",
+                  "nameLocation": "3814:11:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36857,
+                  "src": "3806:19:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36853,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3806:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3789:37:49"
+            },
+            "returnParameters": {
+              "id": 36856,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3835:0:49"
+            },
+            "scope": 36883,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36863,
+            "nodeType": "FunctionDefinition",
+            "src": "4328:60:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36858,
+              "nodeType": "StructuredDocumentation",
+              "src": "3842:481:49",
+              "text": "@notice Resolves the subgame rooted at the given claim index.\n @dev This function must be called bottom-up in the DAG\n      A subgame is a tree of claims that has a maximum depth of 1.\n      A subgame root claims is valid if, and only if, all of its child claims are invalid.\n      At the deepest level in the DAG, a claim is invalid if there's a successful step against it.\n @param _claimIndex The index of the subgame root claim to resolve."
+            },
+            "functionSelector": "fdffbb28",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "resolveClaim",
+            "nameLocation": "4337:12:49",
+            "parameters": {
+              "id": 36861,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36860,
+                  "mutability": "mutable",
+                  "name": "_claimIndex",
+                  "nameLocation": "4358:11:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36863,
+                  "src": "4350:19:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36859,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4350:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4349:21:49"
+            },
+            "returnParameters": {
+              "id": 36862,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4387:0:49"
+            },
+            "scope": 36883,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36870,
+            "nodeType": "FunctionDefinition",
+            "src": "4701:55:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36864,
+              "nodeType": "StructuredDocumentation",
+              "src": "4394:302:49",
+              "text": "@notice An L1 block hash that contains the disputed output root, fetched from the\n         `BlockOracle` and verified by referencing the timestamp associated with the\n         first L2 Output Proposal in the `L2OutputOracle` that contains the disputed\n         L2 block number."
+            },
+            "functionSelector": "6361506d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "l1Head",
+            "nameLocation": "4710:6:49",
+            "parameters": {
+              "id": 36865,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4716:2:49"
+            },
+            "returnParameters": {
+              "id": 36869,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36868,
+                  "mutability": "mutable",
+                  "name": "l1Head_",
+                  "nameLocation": "4747:7:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36870,
+                  "src": "4742:12:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_Hash_$37527",
+                    "typeString": "Hash"
+                  },
+                  "typeName": {
+                    "id": 36867,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36866,
+                      "name": "Hash",
+                      "nameLocations": [
+                        "4742:4:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 37527,
+                      "src": "4742:4:49"
+                    },
+                    "referencedDeclaration": 37527,
+                    "src": "4742:4:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_Hash_$37527",
+                      "typeString": "Hash"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4741:14:49"
+            },
+            "scope": 36883,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36876,
+            "nodeType": "FunctionDefinition",
+            "src": "4849:72:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36871,
+              "nodeType": "StructuredDocumentation",
+              "src": "4762:82:49",
+              "text": "@notice The l2BlockNumber of the disputed output root in the `L2OutputOracle`."
+            },
+            "functionSelector": "8b85902b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "l2BlockNumber",
+            "nameLocation": "4858:13:49",
+            "parameters": {
+              "id": 36872,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4871:2:49"
+            },
+            "returnParameters": {
+              "id": 36875,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36874,
+                  "mutability": "mutable",
+                  "name": "l2BlockNumber_",
+                  "nameLocation": "4905:14:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36876,
+                  "src": "4897:22:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36873,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4897:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4896:24:49"
+            },
+            "scope": 36883,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36882,
+            "nodeType": "FunctionDefinition",
+            "src": "5014:72:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36877,
+              "nodeType": "StructuredDocumentation",
+              "src": "4927:82:49",
+              "text": "@notice The l1BlockNumber that Cannon was ran from to generate the root claim."
+            },
+            "functionSelector": "298c9005",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "l1BlockNumber",
+            "nameLocation": "5023:13:49",
+            "parameters": {
+              "id": 36878,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5036:2:49"
+            },
+            "returnParameters": {
+              "id": 36881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36880,
+                  "mutability": "mutable",
+                  "name": "l1BlockNumber_",
+                  "nameLocation": "5070:14:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36882,
+                  "src": "5062:22:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36879,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5062:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5061:24:49"
+            },
+            "scope": 36883,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 36776,
+              "name": "IDisputeGame",
+              "nameLocations": [
+                "277:12:49"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 36654,
+              "src": "277:12:49"
+            },
+            "id": 36777,
+            "nodeType": "InheritanceSpecifier",
+            "src": "277:12:49"
+          }
+        ],
+        "canonicalName": "IFaultDisputeGame",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 36775,
+          "nodeType": "StructuredDocumentation",
+          "src": "152:94:49",
+          "text": "@title IFaultDisputeGame\n @notice The interface for a fault proof backed dispute game."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          36883,
+          36654,
+          36891
+        ],
+        "name": "IFaultDisputeGame",
+        "nameLocation": "256:17:49",
+        "scope": 36884,
+        "usedErrors": [],
+        "usedEvents": [
+          36593,
+          36819
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 49
+}

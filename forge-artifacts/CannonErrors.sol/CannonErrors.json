@@ -1,0 +1,58 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/cannon/libraries/CannonErrors.sol",
+    "id": 65988,
+    "exportedSymbols": {
+      "PartOffsetOOB": [
+        65987
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:111:132",
+    "nodes": [
+      {
+        "id": 65984,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:132",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".15"
+        ]
+      },
+      {
+        "id": 65987,
+        "nodeType": "ErrorDefinition",
+        "src": "120:22:132",
+        "nodes": [],
+        "documentation": {
+          "id": 65985,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:63:132",
+          "text": "@notice Thrown when a passed part offset is out of bounds."
+        },
+        "errorSelector": "fe254987",
+        "name": "PartOffsetOOB",
+        "nameLocation": "126:13:132",
+        "parameters": {
+          "id": 65986,
+          "nodeType": "ParameterList",
+          "parameters": [],
+          "src": "139:2:132"
+        }
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 132
+}

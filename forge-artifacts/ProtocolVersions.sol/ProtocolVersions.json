@@ -1,0 +1,3970 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "version",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "enum ProtocolVersions.UpdateType",
+          "name": "updateType",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "ConfigUpdate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "RECOMMENDED_SLOT",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "REQUIRED_SLOT",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "VERSION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "ProtocolVersion",
+          "name": "_required",
+          "type": "uint256"
+        },
+        {
+          "internalType": "ProtocolVersion",
+          "name": "_recommended",
+          "type": "uint256"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "recommended",
+      "outputs": [
+        {
+          "internalType": "ProtocolVersion",
+          "name": "out_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "required",
+      "outputs": [
+        {
+          "internalType": "ProtocolVersion",
+          "name": "out_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ProtocolVersion",
+          "name": "_recommended",
+          "type": "uint256"
+        }
+      ],
+      "name": "setRecommended",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "ProtocolVersion",
+          "name": "_required",
+          "type": "uint256"
+        }
+      ],
+      "name": "setRequired",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60806040523480156200001157600080fd5b506200002261dead60008062000028565b620004b5565b600054600290610100900460ff161580156200004b575060005460ff8083169116105b620000b45760405162461bcd60e51b815260206004820152602e60248201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160448201526d191e481a5b9a5d1a585b1a5e995960921b60648201526084015b60405180910390fd5b6000805461ffff191660ff831617610100179055620000d26200013a565b620000dd84620001a2565b620000e88362000221565b620000f382620002c0565b6000805461ff001916905560405160ff821681527f7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb38474024989060200160405180910390a150505050565b600054610100900460ff16620001965760405162461bcd60e51b815260206004820152602b602482015260008051602062000e7e83398151915260448201526a6e697469616c697a696e6760a81b6064820152608401620000ab565b620001a062000322565b565b620001ac62000389565b6001600160a01b038116620002135760405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608401620000ab565b6200021e81620003e5565b50565b62000256816200025360017f4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace162000437565b55565b6000816040516020016200026c91815260200190565b60408051601f19818403018152919052905060005b60007f1d2b0bda21d56b8bd12d4f94ebacffdfb35f5e226f84b461103bb8beab6353be83604051620002b491906200045d565b60405180910390a35050565b620002f2816200025360017fe314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b62000437565b6000816040516020016200030891815260200190565b60408051601f198184030181529190529050600162000281565b600054610100900460ff166200037e5760405162461bcd60e51b815260206004820152602b602482015260008051602062000e7e83398151915260448201526a6e697469616c697a696e6760a81b6064820152608401620000ab565b620001a033620003e5565b6033546001600160a01b03163314620001a05760405162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152606401620000ab565b603380546001600160a01b038381166001600160a01b0319831681179093556040519116919082907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e090600090a35050565b6000828210156200045857634e487b7160e01b600052601160045260246000fd5b500390565b600060208083528351808285015260005b818110156200048c578581018301518582016040015282016200046e565b818111156200049f576000604083870101525b50601f01601f1916929092016040019392505050565b6109b980620004c56000396000f3fe608060405234801561001057600080fd5b50600436106100d45760003560e01c80638da5cb5b11610081578063f2fde38b1161005b578063f2fde38b146101b8578063f7d12760146101cb578063ffa1ad74146101d357600080fd5b80638da5cb5b14610180578063d798b1ac146101a8578063dc8452cd146101b057600080fd5b80635fd579af116100b25780635fd579af14610152578063715018a6146101655780637a1ac61e1461016d57600080fd5b80630457d6f2146100d9578063206a8300146100ee57806354fd4d5014610109575b600080fd5b6100ec6100e7366004610859565b6101db565b005b6100f66101ef565b6040519081526020015b60405180910390f35b6101456040518060400160405280600581526020017f302e312e3000000000000000000000000000000000000000000000000000000081525081565b60405161010091906108dd565b6100ec610160366004610859565b61021d565b6100ec61022e565b6100ec61017b366004610920565b610242565b60335460405173ffffffffffffffffffffffffffffffffffffffff9091168152602001610100565b6100f66103ad565b6100f66103e6565b6100ec6101c6366004610953565b610416565b6100f66104ca565b6100f6600081565b6101e36104f5565b6101ec81610576565b50565b61021a60017f4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace161096e565b81565b6102256104f5565b6101ec8161062d565b6102366104f5565b61024060006106a8565b565b600054600290610100900460ff16158015610264575060005460ff8083169116105b6102f5576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602e60248201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160448201527f647920696e697469616c697a656400000000000000000000000000000000000060648201526084015b60405180910390fd5b600080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00001660ff83161761010017905561032e61071f565b61033784610416565b61034083610576565b6103498261062d565b600080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00ff16905560405160ff821681527f7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb38474024989060200160405180910390a150505050565b60006103e16103dd60017fe314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b61096e565b5490565b905090565b60006103e16103dd60017f4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace161096e565b61041e6104f5565b73ffffffffffffffffffffffffffffffffffffffff81166104c1576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201527f646472657373000000000000000000000000000000000000000000000000000060648201526084016102ec565b6101ec816106a8565b61021a60017fe314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b61096e565b60335473ffffffffffffffffffffffffffffffffffffffff163314610240576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102ec565b6105a8816105a560017f4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace161096e565b55565b6000816040516020016105bd91815260200190565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152919052905060005b60007f1d2b0bda21d56b8bd12d4f94ebacffdfb35f5e226f84b461103bb8beab6353be8360405161062191906108dd565b60405180910390a35050565b61065c816105a560017fe314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b61096e565b60008160405160200161067191815260200190565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152919052905060016105f0565b6033805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681179093556040519116919082907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e090600090a35050565b600054610100900460ff166107b6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602b60248201527f496e697469616c697a61626c653a20636f6e7472616374206973206e6f74206960448201527f6e697469616c697a696e6700000000000000000000000000000000000000000060648201526084016102ec565b610240600054610100900460ff16610850576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602b60248201527f496e697469616c697a61626c653a20636f6e7472616374206973206e6f74206960448201527f6e697469616c697a696e6700000000000000000000000000000000000000000060648201526084016102ec565b610240336106a8565b60006020828403121561086b57600080fd5b5035919050565b6000815180845260005b818110156108985760208185018101518683018201520161087c565b818111156108aa576000602083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0169290920160200192915050565b6020815260006108f06020830184610872565b9392505050565b803573ffffffffffffffffffffffffffffffffffffffff8116811461091b57600080fd5b919050565b60008060006060848603121561093557600080fd5b61093e846108f7565b95602085013595506040909401359392505050565b60006020828403121561096557600080fd5b6108f0826108f7565b6000828210156109a7577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b50039056fea164736f6c634300080f000a496e697469616c697a61626c653a20636f6e7472616374206973206e6f742069",
+    "sourceMap": "455:5209:113:-:0;;;2067:207;;;;;;;;;-1:-1:-1;2091:176:113;2132:6;2193:1;;2091:10;:176::i;:::-;455:5209;;2548:307;4418:13:20;;2708:1:113;;4418:13:20;;;;;4417:14;:40;;;;-1:-1:-1;4435:12:20;;:22;;;;:12;;:22;4417:40;4409:99;;;;-1:-1:-1;;;4409:99:20;;216:2:283;4409:99:20;;;198:21:283;255:2;235:18;;;228:30;294:34;274:18;;;267:62;-1:-1:-1;;;345:18:283;;;338:44;399:19;;4409:99:20;;;;;;;;;4518:12;:22;;-1:-1:-1;;4550:20:20;4518:22;;;4550:20;4518:22;4550:20;;;2725:16:113::1;:14;:16::i;:::-;2751:25;2769:6:::0;2751:17:::1;:25::i;:::-;2786:23;2799:9:::0;2786:12:::1;:23::i;:::-;2819:29;2835:12:::0;2819:15:::1;:29::i;:::-;4607:5:20::0;4591:21;;-1:-1:-1;;4591:21:20;;;4627:20;;601:4:283;589:17;;571:36;;4627:20:20;;559:2:283;544:18;4627:20:20;;;;;;;2548:307:113;;;;:::o;1003:95:19:-;4910:13:20;;;;;;;4902:69;;;;-1:-1:-1;;;4902:69:20;;820:2:283;4902:69:20;;;802:21:283;859:2;839:18;;;832:30;-1:-1:-1;;;;;;;;;;;878:18:283;;;871:62;-1:-1:-1;;;949:18:283;;;942:41;1000:19;;4902:69:20;618:407:283;4902:69:20;1065:26:19::1;:24;:26::i;:::-;1003:95::o:0;2321:198::-;1334:13;:11;:13::i;:::-;-1:-1:-1;;;;;2409:22:19;::::1;2401:73;;;::::0;-1:-1:-1;;;2401:73:19;;1232:2:283;2401:73:19::1;::::0;::::1;1214:21:283::0;1271:2;1251:18;;;1244:30;1310:34;1290:18;;;1283:62;-1:-1:-1;;;1361:18:283;;;1354:36;1407:19;;2401:73:19::1;1030:402:283::0;2401:73:19::1;2484:28;2503:8:::0;2484:18:::1;:28::i;:::-;2321:198:::0;:::o;4422:252:113:-;4490:45;4510:9;1139:50;1188:1;1147:37;1139:50;:::i;:::-;3707:23;3595:151;4490:45;4546:17;4577:9;4566:21;;;;;;1847:25:283;;1835:2;1820:18;;1664:214;4566:21:113;;;;-1:-1:-1;;4566:21:113;;;;;;;;;;-1:-1:-1;4624:36:113;4602:65;1005:1;4602:65;4662:4;4602:65;;;;;;:::i;:::-;;;;;;;;4480:194;4422:252;:::o;5392:270::-;5466:51;5486:12;1329:53;1381:1;1337:40;1329:53;:::i;5466:51::-;5528:17;5559:12;5548:24;;;;;;1847:25:283;;1835:2;1820:18;;1664:214;5548:24:113;;;;-1:-1:-1;;5548:24:113;;;;;;;;;;-1:-1:-1;5609:39:113;5587:68;;1104:111:19;4910:13:20;;;;;;;4902:69;;;;-1:-1:-1;;;4902:69:20;;820:2:283;4902:69:20;;;802:21:283;859:2;839:18;;;832:30;-1:-1:-1;;;;;;;;;;;878:18:283;;;871:62;-1:-1:-1;;;949:18:283;;;942:41;1000:19;;4902:69:20;618:407:283;4902:69:20;1176:32:19::1;929:10:27::0;1176:18:19::1;:32::i;1599:130::-:0;1513:6;;-1:-1:-1;;;;;1513:6:19;929:10:27;1662:23:19;1654:68;;;;-1:-1:-1;;;1654:68:19;;2817:2:283;1654:68:19;;;2799:21:283;;;2836:18;;;2829:30;2895:34;2875:18;;;2868:62;2947:18;;1654:68:19;2615:356:283;2673:187:19;2765:6;;;-1:-1:-1;;;;;2781:17:19;;;-1:-1:-1;;;;;;2781:17:19;;;;;;;2813:40;;2765:6;;;2781:17;2765:6;;2813:40;;2746:16;;2813:40;2736:124;2673:187;:::o;1437:222:283:-;1477:4;1505:1;1502;1499:8;1496:131;;;1549:10;1544:3;1540:20;1537:1;1530:31;1584:4;1581:1;1574:15;1612:4;1609:1;1602:15;1496:131;-1:-1:-1;1644:9:283;;1437:222::o;2015:595::-;2125:4;2154:2;2183;2172:9;2165:21;2215:6;2209:13;2258:6;2253:2;2242:9;2238:18;2231:34;2283:1;2293:140;2307:6;2304:1;2301:13;2293:140;;;2402:14;;;2398:23;;2392:30;2368:17;;;2387:2;2364:26;2357:66;2322:10;;2293:140;;;2451:6;2448:1;2445:13;2442:91;;;2521:1;2516:2;2507:6;2496:9;2492:22;2488:31;2481:42;2442:91;-1:-1:-1;2594:2:283;2573:15;-1:-1:-1;;2569:29:283;2554:45;;;;2601:2;2550:54;;2015:595;-1:-1:-1;;;2015:595:283:o;2615:356::-;455:5209:113;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100d45760003560e01c80638da5cb5b11610081578063f2fde38b1161005b578063f2fde38b146101b8578063f7d12760146101cb578063ffa1ad74146101d357600080fd5b80638da5cb5b14610180578063d798b1ac146101a8578063dc8452cd146101b057600080fd5b80635fd579af116100b25780635fd579af14610152578063715018a6146101655780637a1ac61e1461016d57600080fd5b80630457d6f2146100d9578063206a8300146100ee57806354fd4d5014610109575b600080fd5b6100ec6100e7366004610859565b6101db565b005b6100f66101ef565b6040519081526020015b60405180910390f35b6101456040518060400160405280600581526020017f302e312e3000000000000000000000000000000000000000000000000000000081525081565b60405161010091906108dd565b6100ec610160366004610859565b61021d565b6100ec61022e565b6100ec61017b366004610920565b610242565b60335460405173ffffffffffffffffffffffffffffffffffffffff9091168152602001610100565b6100f66103ad565b6100f66103e6565b6100ec6101c6366004610953565b610416565b6100f66104ca565b6100f6600081565b6101e36104f5565b6101ec81610576565b50565b61021a60017f4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace161096e565b81565b6102256104f5565b6101ec8161062d565b6102366104f5565b61024060006106a8565b565b600054600290610100900460ff16158015610264575060005460ff8083169116105b6102f5576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602e60248201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160448201527f647920696e697469616c697a656400000000000000000000000000000000000060648201526084015b60405180910390fd5b600080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00001660ff83161761010017905561032e61071f565b61033784610416565b61034083610576565b6103498261062d565b600080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00ff16905560405160ff821681527f7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb38474024989060200160405180910390a150505050565b60006103e16103dd60017fe314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b61096e565b5490565b905090565b60006103e16103dd60017f4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace161096e565b61041e6104f5565b73ffffffffffffffffffffffffffffffffffffffff81166104c1576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201527f646472657373000000000000000000000000000000000000000000000000000060648201526084016102ec565b6101ec816106a8565b61021a60017fe314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b61096e565b60335473ffffffffffffffffffffffffffffffffffffffff163314610240576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657260448201526064016102ec565b6105a8816105a560017f4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace161096e565b55565b6000816040516020016105bd91815260200190565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152919052905060005b60007f1d2b0bda21d56b8bd12d4f94ebacffdfb35f5e226f84b461103bb8beab6353be8360405161062191906108dd565b60405180910390a35050565b61065c816105a560017fe314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b61096e565b60008160405160200161067191815260200190565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152919052905060016105f0565b6033805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681179093556040519116919082907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e090600090a35050565b600054610100900460ff166107b6576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602b60248201527f496e697469616c697a61626c653a20636f6e7472616374206973206e6f74206960448201527f6e697469616c697a696e6700000000000000000000000000000000000000000060648201526084016102ec565b610240600054610100900460ff16610850576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602b60248201527f496e697469616c697a61626c653a20636f6e7472616374206973206e6f74206960448201527f6e697469616c697a696e6700000000000000000000000000000000000000000060648201526084016102ec565b610240336106a8565b60006020828403121561086b57600080fd5b5035919050565b6000815180845260005b818110156108985760208185018101518683018201520161087c565b818111156108aa576000602083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0169290920160200192915050565b6020815260006108f06020830184610872565b9392505050565b803573ffffffffffffffffffffffffffffffffffffffff8116811461091b57600080fd5b919050565b60008060006060848603121561093557600080fd5b61093e846108f7565b95602085013595506040909401359392505050565b60006020828403121561096557600080fd5b6108f0826108f7565b6000828210156109a7577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b50039056fea164736f6c634300080f000a",
+    "sourceMap": "455:5209:113:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4175:107;;;;;;:::i;:::-;;:::i;:::-;;1091:99;;;:::i;:::-;;;382:25:283;;;370:2;355:18;1091:99:113;;;;;;;;1741:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;5124:119::-;;;;;;:::i;:::-;;:::i;2071:101:19:-;;;:::i;2548:307:113:-;;;;;;:::i;:::-;;:::i;1441:85:19:-;1513:6;;1441:85;;1513:6;;;;1927:74:283;;1915:2;1900:18;1441:85:19;1781:226:283;4836:129:113;;;:::i;3902:123::-;;;:::i;2321:198:19:-;;;;;;:::i;:::-;;:::i;1278:105:113:-;;;:::i;971:35::-;;1005:1;971:35;;4175:107;1334:13:19;:11;:13::i;:::-;4252:23:113::1;4265:9;4252:12;:23::i;:::-;4175:107:::0;:::o;1091:99::-;1139:50;1188:1;1147:37;1139:50;:::i;:::-;1091:99;:::o;5124:119::-;1334:13:19;:11;:13::i;:::-;5207:29:113::1;5223:12;5207:15;:29::i;2071:101:19:-:0;1334:13;:11;:13::i;:::-;2135:30:::1;2162:1;2135:18;:30::i;:::-;2071:101::o:0;2548:307:113:-;4418:13:20;;2708:1:113;;4418:13:20;;;;;4417:14;:40;;;;-1:-1:-1;4435:12:20;;:22;;;;:12;;:22;4417:40;4409:99;;;;;;;3090:2:283;4409:99:20;;;3072:21:283;3129:2;3109:18;;;3102:30;3168:34;3148:18;;;3141:62;3239:16;3219:18;;;3212:44;3273:19;;4409:99:20;;;;;;;;;4518:12;:22;;4550:20;;4518:22;;;4550:20;4518:22;4550:20;;;2725:16:113::1;:14;:16::i;:::-;2751:25;2769:6;2751:17;:25::i;:::-;2786:23;2799:9;2786:12;:23::i;:::-;2819:29;2835:12;2819:15;:29::i;:::-;4607:5:20::0;4591:21;;;;;;4627:20;;3475:4:283;3463:17;;3445:36;;4627:20:20;;3433:2:283;3418:18;4627:20:20;;;;;;;2548:307:113;;;;:::o;4836:129::-;4882:20;4921:37;1329:53;1381:1;1337:40;1329:53;:::i;:::-;3226:12;;3096:158;4921:37;4914:44;;4836:129;:::o;3902:123::-;3945:20;3984:34;1139:50;1188:1;1147:37;1139:50;:::i;2321:198:19:-;1334:13;:11;:13::i;:::-;2409:22:::1;::::0;::::1;2401:73;;;::::0;::::1;::::0;;3694:2:283;2401:73:19::1;::::0;::::1;3676:21:283::0;3733:2;3713:18;;;3706:30;3772:34;3752:18;;;3745:62;3843:8;3823:18;;;3816:36;3869:19;;2401:73:19::1;3492:402:283::0;2401:73:19::1;2484:28;2503:8;2484:18;:28::i;1278:105:113:-:0;1329:53;1381:1;1337:40;1329:53;:::i;1599:130:19:-;1513:6;;1662:23;1513:6;929:10:27;1662:23:19;1654:68;;;;;;;4101:2:283;1654:68:19;;;4083:21:283;;;4120:18;;;4113:30;4179:34;4159:18;;;4152:62;4231:18;;1654:68:19;3899:356:283;4422:252:113;4490:45;4510:9;1139:50;1188:1;1147:37;1139:50;:::i;:::-;3707:23;3595:151;4490:45;4546:17;4577:9;4566:21;;;;;;382:25:283;;370:2;355:18;;236:177;4566:21:113;;;;;;;;;;;;;;;-1:-1:-1;4624:36:113;4602:65;1005:1;4602:65;4662:4;4602:65;;;;;;:::i;:::-;;;;;;;;4480:194;4422:252;:::o;5392:270::-;5466:51;5486:12;1329:53;1381:1;1337:40;1329:53;:::i;5466:51::-;5528:17;5559:12;5548:24;;;;;;382:25:283;;370:2;355:18;;236:177;5548:24:113;;;;;;;;;;;;;;;-1:-1:-1;5609:39:113;5587:68;;2673:187:19;2765:6;;;;2781:17;;;;;;;;;;;2813:40;;2765:6;;;2781:17;2765:6;;2813:40;;2746:16;;2813:40;2736:124;2673:187;:::o;1003:95::-;4910:13:20;;;;;;;4902:69;;;;;;;4874:2:283;4902:69:20;;;4856:21:283;4913:2;4893:18;;;4886:30;4952:34;4932:18;;;4925:62;5023:13;5003:18;;;4996:41;5054:19;;4902:69:20;4672:407:283;4902:69:20;1065:26:19::1;4910:13:20::0;;;;;;;4902:69;;;;;;;4874:2:283;4902:69:20;;;4856:21:283;4913:2;4893:18;;;4886:30;4952:34;4932:18;;;4925:62;5023:13;5003:18;;;4996:41;5054:19;;4902:69:20;4672:407:283;4902:69:20;1176:32:19::1;929:10:27::0;1176:18:19::1;:32::i;14:217:283:-:0;110:6;163:2;151:9;142:7;138:23;134:32;131:52;;;179:1;176;169:12;131:52;-1:-1:-1;202:23:283;;14:217;-1:-1:-1;14:217:283:o;418:531::-;460:3;498:5;492:12;525:6;520:3;513:19;550:1;560:162;574:6;571:1;568:13;560:162;;;636:4;692:13;;;688:22;;682:29;664:11;;;660:20;;653:59;589:12;560:162;;;740:6;737:1;734:13;731:87;;;806:1;799:4;790:6;785:3;781:16;777:27;770:38;731:87;-1:-1:-1;863:2:283;851:15;868:66;847:88;838:98;;;;938:4;834:109;;418:531;-1:-1:-1;;418:531:283:o;954:220::-;1103:2;1092:9;1085:21;1066:4;1123:45;1164:2;1153:9;1149:18;1141:6;1123:45;:::i;:::-;1115:53;954:220;-1:-1:-1;;;954:220:283:o;1179:196::-;1247:20;;1307:42;1296:54;;1286:65;;1276:93;;1365:1;1362;1355:12;1276:93;1179:196;;;:::o;1380:396::-;1531:6;1539;1547;1600:2;1588:9;1579:7;1575:23;1571:32;1568:52;;;1616:1;1613;1606:12;1568:52;1639:29;1658:9;1639:29;:::i;:::-;1629:39;1715:2;1700:18;;1687:32;;-1:-1:-1;1766:2:283;1751:18;;;1738:32;;1380:396;-1:-1:-1;;;1380:396:283:o;2231:186::-;2290:6;2343:2;2331:9;2322:7;2318:23;2314:32;2311:52;;;2359:1;2356;2349:12;2311:52;2382:29;2401:9;2382:29;:::i;2604:279::-;2644:4;2672:1;2669;2666:8;2663:188;;;2707:77;2704:1;2697:88;2808:4;2805:1;2798:15;2836:4;2833:1;2826:15;2663:188;-1:-1:-1;2868:9:283;;2604:279::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "RECOMMENDED_SLOT()": "f7d12760",
+    "REQUIRED_SLOT()": "206a8300",
+    "VERSION()": "ffa1ad74",
+    "initialize(address,uint256,uint256)": "7a1ac61e",
+    "owner()": "8da5cb5b",
+    "recommended()": "d798b1ac",
+    "renounceOwnership()": "715018a6",
+    "required()": "dc8452cd",
+    "setRecommended(uint256)": "5fd579af",
+    "setRequired(uint256)": "0457d6f2",
+    "transferOwnership(address)": "f2fde38b",
+    "version()": "54fd4d50"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"version\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"enum ProtocolVersions.UpdateType\",\"name\":\"updateType\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"ConfigUpdate\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"RECOMMENDED_SLOT\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REQUIRED_SLOT\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VERSION\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"ProtocolVersion\",\"name\":\"_required\",\"type\":\"uint256\"},{\"internalType\":\"ProtocolVersion\",\"name\":\"_recommended\",\"type\":\"uint256\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"recommended\",\"outputs\":[{\"internalType\":\"ProtocolVersion\",\"name\":\"out_\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"required\",\"outputs\":[{\"internalType\":\"ProtocolVersion\",\"name\":\"out_\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"ProtocolVersion\",\"name\":\"_recommended\",\"type\":\"uint256\"}],\"name\":\"setRecommended\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"ProtocolVersion\",\"name\":\"_required\",\"type\":\"uint256\"}],\"name\":\"setRequired\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"version\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"ConfigUpdate(uint256,uint8,bytes)\":{\"params\":{\"data\":\"Encoded update data.\",\"updateType\":\"Type of update.\",\"version\":\"ProtocolVersion version.\"}}},\"kind\":\"dev\",\"methods\":{\"initialize(address,uint256,uint256)\":{\"params\":{\"_owner\":\"Initial owner of the contract.\",\"_recommended\":\"Recommended protocol version to operate on thi chain.\",\"_required\":\"Required protocol version to operate on this chain.\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"recommended()\":{\"returns\":{\"out_\":\"Recommended protocol version to sync to the head of the chain.\"}},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"required()\":{\"returns\":{\"out_\":\"Required protocol version to sync to the head of the chain.\"}},\"setRecommended(uint256)\":{\"params\":{\"_recommended\":\"New recommended protocol version.\"}},\"setRequired(uint256)\":{\"params\":{\"_required\":\"New required protocol version.\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"stateVariables\":{\"version\":{\"custom:semver\":\"0.1.0\"}},\"title\":\"ProtocolVersions\",\"version\":1},\"userdoc\":{\"events\":{\"ConfigUpdate(uint256,uint8,bytes)\":{\"notice\":\"Emitted when configuration is updated.\"}},\"kind\":\"user\",\"methods\":{\"RECOMMENDED_SLOT()\":{\"notice\":\"Storage slot that the recommended protocol version is stored at.\"},\"REQUIRED_SLOT()\":{\"notice\":\"Storage slot that the required protocol version is stored at.\"},\"VERSION()\":{\"notice\":\"Version identifier, used for upgrades.\"},\"constructor\":{\"notice\":\"Constructs the ProtocolVersion contract. Cannot set         the owner to `address(0)` due to the Ownable contract's         implementation, so set it to `address(0xdEaD)`         A zero version is considered empty and is ignored by nodes.\"},\"initialize(address,uint256,uint256)\":{\"notice\":\"Initializer.\"},\"recommended()\":{\"notice\":\"High level getter for the recommended protocol version.\"},\"required()\":{\"notice\":\"High level getter for the required protocol version.\"},\"setRecommended(uint256)\":{\"notice\":\"Updates the recommended protocol version. Can only be called by the owner.\"},\"setRequired(uint256)\":{\"notice\":\"Updates the required protocol version. Can only be called by the owner.\"},\"version()\":{\"notice\":\"Semantic version.\"}},\"notice\":\"The ProtocolVersions contract is used to manage superchain protocol version information.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/L1/ProtocolVersions.sol\":\"ProtocolVersions\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[\":@cwia/=lib/clones-with-immutable-args/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":@rari-capital/solmate/=lib/solmate/\",\":clones-with-immutable-args/=lib/clones-with-immutable-args/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":safe-contracts/=lib/safe-contracts/contracts/\",\":solmate/=lib/solmate/src/\"]},\"sources\":{\"lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x247c62047745915c0af6b955470a72d1696ebad4352d7d3011aef1a2463cd888\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d7fc8396619de513c96b6e00301b88dd790e83542aab918425633a5f7297a15a\",\"dweb:/ipfs/QmXbP4kiZyp7guuS7xe8KaybnwkRPGrBc2Kbi3vhcTfpxb\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x0203dcadc5737d9ef2c211d6fa15d18ebc3b30dfa51903b64870b01a062b0b4e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6eb2fd1e9894dbe778f4b8131adecebe570689e63cf892f4e21257bfe1252497\",\"dweb:/ipfs/QmXgUGNfZvrn6N2miv3nooSs7Jm34A41qz94fu2GtDFcx8\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x611aa3f23e59cfdd1863c536776407b3e33d695152a266fa7cfb34440a29a8a3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9b4b2110b7f2b3eb32951bc08046fa90feccffa594e1176cb91cdfb0e94726b4\",\"dweb:/ipfs/QmSxLwYjicf9zWFuieRc8WQwE4FisA1Um5jp1iSa731TGt\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]},\"src/L1/ProtocolVersions.sol\":{\"keccak256\":\"0x004007b30d1621fd78cdf81a760809d925f0bf3b6d841b6f7ceaf716b0abf3b9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://75c3858b3c4bd906cbfd8df1c06aa0e4b7349f1ddbfeb9c0fa70ac09b74180a3\",\"dweb:/ipfs/QmQrWrdix2oPBFjPoUP9cjvL8b2kXW2LqPBinoh7dQ74h5\"]},\"src/universal/ISemver.sol\":{\"keccak256\":\"0xba34562a8026f59886d2e07d1d58d90b9691d00e0788c6263cef6c22740cab44\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0826f998632f83c103c3085bf2e872db79a69022b6d2e0444c83a64ca5283c2a\",\"dweb:/ipfs/QmcJ7PNqkAfKqbjFGRordtAg1v9DvcBSKvdTkVvciLyvQR\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.15+commit.e14f2714"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "version",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "enum ProtocolVersions.UpdateType",
+              "name": "updateType",
+              "type": "uint8",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ConfigUpdate",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Initialized",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "OwnershipTransferred",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "RECOMMENDED_SLOT",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "REQUIRED_SLOT",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "VERSION",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_owner",
+              "type": "address"
+            },
+            {
+              "internalType": "ProtocolVersion",
+              "name": "_required",
+              "type": "uint256"
+            },
+            {
+              "internalType": "ProtocolVersion",
+              "name": "_recommended",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "initialize"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "recommended",
+          "outputs": [
+            {
+              "internalType": "ProtocolVersion",
+              "name": "out_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "renounceOwnership"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "required",
+          "outputs": [
+            {
+              "internalType": "ProtocolVersion",
+              "name": "out_",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "ProtocolVersion",
+              "name": "_recommended",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setRecommended"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "ProtocolVersion",
+              "name": "_required",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setRequired"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferOwnership"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "version",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "initialize(address,uint256,uint256)": {
+            "params": {
+              "_owner": "Initial owner of the contract.",
+              "_recommended": "Recommended protocol version to operate on thi chain.",
+              "_required": "Required protocol version to operate on this chain."
+            }
+          },
+          "owner()": {
+            "details": "Returns the address of the current owner."
+          },
+          "recommended()": {
+            "returns": {
+              "out_": "Recommended protocol version to sync to the head of the chain."
+            }
+          },
+          "renounceOwnership()": {
+            "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+          },
+          "required()": {
+            "returns": {
+              "out_": "Required protocol version to sync to the head of the chain."
+            }
+          },
+          "setRecommended(uint256)": {
+            "params": {
+              "_recommended": "New recommended protocol version."
+            }
+          },
+          "setRequired(uint256)": {
+            "params": {
+              "_required": "New required protocol version."
+            }
+          },
+          "transferOwnership(address)": {
+            "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "RECOMMENDED_SLOT()": {
+            "notice": "Storage slot that the recommended protocol version is stored at."
+          },
+          "REQUIRED_SLOT()": {
+            "notice": "Storage slot that the required protocol version is stored at."
+          },
+          "VERSION()": {
+            "notice": "Version identifier, used for upgrades."
+          },
+          "constructor": {
+            "notice": "Constructs the ProtocolVersion contract. Cannot set         the owner to `address(0)` due to the Ownable contract's         implementation, so set it to `address(0xdEaD)`         A zero version is considered empty and is ignored by nodes."
+          },
+          "initialize(address,uint256,uint256)": {
+            "notice": "Initializer."
+          },
+          "recommended()": {
+            "notice": "High level getter for the recommended protocol version."
+          },
+          "required()": {
+            "notice": "High level getter for the required protocol version."
+          },
+          "setRecommended(uint256)": {
+            "notice": "Updates the recommended protocol version. Can only be called by the owner."
+          },
+          "setRequired(uint256)": {
+            "notice": "Updates the required protocol version. Can only be called by the owner."
+          },
+          "version()": {
+            "notice": "Semantic version."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@cwia/=lib/clones-with-immutable-args/src/",
+        "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        "@rari-capital/solmate/=lib/solmate/",
+        "clones-with-immutable-args/=lib/clones-with-immutable-args/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "safe-contracts/=lib/safe-contracts/contracts/",
+        "solmate/=lib/solmate/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 999999
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/L1/ProtocolVersions.sol": "ProtocolVersions"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol": {
+        "keccak256": "0x247c62047745915c0af6b955470a72d1696ebad4352d7d3011aef1a2463cd888",
+        "urls": [
+          "bzz-raw://d7fc8396619de513c96b6e00301b88dd790e83542aab918425633a5f7297a15a",
+          "dweb:/ipfs/QmXbP4kiZyp7guuS7xe8KaybnwkRPGrBc2Kbi3vhcTfpxb"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol": {
+        "keccak256": "0x0203dcadc5737d9ef2c211d6fa15d18ebc3b30dfa51903b64870b01a062b0b4e",
+        "urls": [
+          "bzz-raw://6eb2fd1e9894dbe778f4b8131adecebe570689e63cf892f4e21257bfe1252497",
+          "dweb:/ipfs/QmXgUGNfZvrn6N2miv3nooSs7Jm34A41qz94fu2GtDFcx8"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol": {
+        "keccak256": "0x611aa3f23e59cfdd1863c536776407b3e33d695152a266fa7cfb34440a29a8a3",
+        "urls": [
+          "bzz-raw://9b4b2110b7f2b3eb32951bc08046fa90feccffa594e1176cb91cdfb0e94726b4",
+          "dweb:/ipfs/QmSxLwYjicf9zWFuieRc8WQwE4FisA1Um5jp1iSa731TGt"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol": {
+        "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+        "urls": [
+          "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+          "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+        ],
+        "license": "MIT"
+      },
+      "src/L1/ProtocolVersions.sol": {
+        "keccak256": "0x004007b30d1621fd78cdf81a760809d925f0bf3b6d841b6f7ceaf716b0abf3b9",
+        "urls": [
+          "bzz-raw://75c3858b3c4bd906cbfd8df1c06aa0e4b7349f1ddbfeb9c0fa70ac09b74180a3",
+          "dweb:/ipfs/QmQrWrdix2oPBFjPoUP9cjvL8b2kXW2LqPBinoh7dQ74h5"
+        ],
+        "license": "MIT"
+      },
+      "src/universal/ISemver.sol": {
+        "keccak256": "0xba34562a8026f59886d2e07d1d58d90b9691d00e0788c6263cef6c22740cab44",
+        "urls": [
+          "bzz-raw://0826f998632f83c103c3085bf2e872db79a69022b6d2e0444c83a64ca5283c2a",
+          "dweb:/ipfs/QmcJ7PNqkAfKqbjFGRordtAg1v9DvcBSKvdTkVvciLyvQR"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 29536,
+        "contract": "src/L1/ProtocolVersions.sol:ProtocolVersions",
+        "label": "_initialized",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint8"
+      },
+      {
+        "astId": 29539,
+        "contract": "src/L1/ProtocolVersions.sol:ProtocolVersions",
+        "label": "_initializing",
+        "offset": 1,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 31067,
+        "contract": "src/L1/ProtocolVersions.sol:ProtocolVersions",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_uint256)50_storage"
+      },
+      {
+        "astId": 29408,
+        "contract": "src/L1/ProtocolVersions.sol:ProtocolVersions",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "51",
+        "type": "t_address"
+      },
+      {
+        "astId": 29528,
+        "contract": "src/L1/ProtocolVersions.sol:ProtocolVersions",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "52",
+        "type": "t_array(t_uint256)49_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_uint256)49_storage": {
+        "encoding": "inplace",
+        "label": "uint256[49]",
+        "numberOfBytes": "1568",
+        "base": "t_uint256"
+      },
+      "t_array(t_uint256)50_storage": {
+        "encoding": "inplace",
+        "label": "uint256[50]",
+        "numberOfBytes": "1600",
+        "base": "t_uint256"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint8": {
+        "encoding": "inplace",
+        "label": "uint8",
+        "numberOfBytes": "1"
+      }
+    }
+  },
+  "userdoc": {
+    "version": 1,
+    "kind": "user",
+    "methods": {
+      "RECOMMENDED_SLOT()": {
+        "notice": "Storage slot that the recommended protocol version is stored at."
+      },
+      "REQUIRED_SLOT()": {
+        "notice": "Storage slot that the required protocol version is stored at."
+      },
+      "VERSION()": {
+        "notice": "Version identifier, used for upgrades."
+      },
+      "constructor": {
+        "notice": "Constructs the ProtocolVersion contract. Cannot set         the owner to `address(0)` due to the Ownable contract's         implementation, so set it to `address(0xdEaD)`         A zero version is considered empty and is ignored by nodes."
+      },
+      "initialize(address,uint256,uint256)": {
+        "notice": "Initializer."
+      },
+      "recommended()": {
+        "notice": "High level getter for the recommended protocol version."
+      },
+      "required()": {
+        "notice": "High level getter for the required protocol version."
+      },
+      "setRecommended(uint256)": {
+        "notice": "Updates the recommended protocol version. Can only be called by the owner."
+      },
+      "setRequired(uint256)": {
+        "notice": "Updates the required protocol version. Can only be called by the owner."
+      },
+      "version()": {
+        "notice": "Semantic version."
+      }
+    },
+    "events": {
+      "ConfigUpdate(uint256,uint8,bytes)": {
+        "notice": "Emitted when configuration is updated."
+      }
+    },
+    "notice": "The ProtocolVersions contract is used to manage superchain protocol version information."
+  },
+  "devdoc": {
+    "version": 1,
+    "kind": "dev",
+    "methods": {
+      "initialize(address,uint256,uint256)": {
+        "params": {
+          "_owner": "Initial owner of the contract.",
+          "_recommended": "Recommended protocol version to operate on thi chain.",
+          "_required": "Required protocol version to operate on this chain."
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "recommended()": {
+        "returns": {
+          "out_": "Recommended protocol version to sync to the head of the chain."
+        }
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "required()": {
+        "returns": {
+          "out_": "Required protocol version to sync to the head of the chain."
+        }
+      },
+      "setRecommended(uint256)": {
+        "params": {
+          "_recommended": "New recommended protocol version."
+        }
+      },
+      "setRequired(uint256)": {
+        "params": {
+          "_required": "New required protocol version."
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "events": {
+      "ConfigUpdate(uint256,uint8,bytes)": {
+        "params": {
+          "data": "Encoded update data.",
+          "updateType": "Type of update.",
+          "version": "ProtocolVersion version."
+        }
+      }
+    },
+    "title": "ProtocolVersions"
+  },
+  "ast": {
+    "absolutePath": "src/L1/ProtocolVersions.sol",
+    "id": 60638,
+    "exportedSymbols": {
+      "ISemver": [
+        75927
+      ],
+      "OwnableUpgradeable": [
+        29529
+      ],
+      "ProtocolVersion": [
+        60393
+      ],
+      "ProtocolVersions": [
+        60637
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:5633:113",
+    "nodes": [
+      {
+        "id": 60387,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:113",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".15"
+        ]
+      },
+      {
+        "id": 60389,
+        "nodeType": "ImportDirective",
+        "src": "57:103:113",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts-upgradeable/contracts/access/OwnableUpgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 60638,
+        "sourceUnit": 29530,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 60388,
+              "name": "OwnableUpgradeable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 29529,
+              "src": "66:18:113",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 60391,
+        "nodeType": "ImportDirective",
+        "src": "161:52:113",
+        "nodes": [],
+        "absolutePath": "src/universal/ISemver.sol",
+        "file": "src/universal/ISemver.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 60638,
+        "sourceUnit": 75928,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 60390,
+              "name": "ISemver",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 75927,
+              "src": "170:7:113",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 60393,
+        "nodeType": "UserDefinedValueTypeDefinition",
+        "src": "292:32:113",
+        "nodes": [],
+        "canonicalName": "ProtocolVersion",
+        "name": "ProtocolVersion",
+        "nameLocation": "297:15:113",
+        "underlyingType": {
+          "id": 60392,
+          "name": "uint256",
+          "nodeType": "ElementaryTypeName",
+          "src": "316:7:113",
+          "typeDescriptions": {
+            "typeIdentifier": "t_uint256",
+            "typeString": "uint256"
+          }
+        }
+      },
+      {
+        "id": 60637,
+        "nodeType": "ContractDefinition",
+        "src": "455:5209:113",
+        "nodes": [
+          {
+            "id": 60401,
+            "nodeType": "EnumDefinition",
+            "src": "815:95:113",
+            "nodes": [],
+            "canonicalName": "ProtocolVersions.UpdateType",
+            "members": [
+              {
+                "id": 60399,
+                "name": "REQUIRED_PROTOCOL_VERSION",
+                "nameLocation": "841:25:113",
+                "nodeType": "EnumValue",
+                "src": "841:25:113"
+              },
+              {
+                "id": 60400,
+                "name": "RECOMMENDED_PROTOCOL_VERSION",
+                "nameLocation": "876:28:113",
+                "nodeType": "EnumValue",
+                "src": "876:28:113"
+              }
+            ],
+            "name": "UpdateType",
+            "nameLocation": "820:10:113"
+          },
+          {
+            "id": 60405,
+            "nodeType": "VariableDeclaration",
+            "src": "971:35:113",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 60402,
+              "nodeType": "StructuredDocumentation",
+              "src": "916:50:113",
+              "text": "@notice Version identifier, used for upgrades."
+            },
+            "functionSelector": "ffa1ad74",
+            "mutability": "constant",
+            "name": "VERSION",
+            "nameLocation": "995:7:113",
+            "scope": 60637,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 60403,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "971:7:113",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "30",
+              "id": 60404,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1005:1:113",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 60419,
+            "nodeType": "VariableDeclaration",
+            "src": "1091:99:113",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 60406,
+              "nodeType": "StructuredDocumentation",
+              "src": "1013:73:113",
+              "text": "@notice Storage slot that the required protocol version is stored at."
+            },
+            "functionSelector": "206a8300",
+            "mutability": "constant",
+            "name": "REQUIRED_SLOT",
+            "nameLocation": "1115:13:113",
+            "scope": 60637,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 60407,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1091:7:113",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "commonType": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "id": 60417,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "leftExpression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "70726f746f636f6c76657273696f6e2e7265717569726564",
+                            "id": 60413,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1157:26:113",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace1",
+                              "typeString": "literal_string \"protocolversion.required\""
+                            },
+                            "value": "protocolversion.required"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_4aaefe95bd84fd3f32700cf3b7566bc944b73138e41958b5785826df2aecace1",
+                              "typeString": "literal_string \"protocolversion.required\""
+                            }
+                          ],
+                          "id": 60412,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -8,
+                          "src": "1147:9:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 60414,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1147:37:113",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 60411,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1139:7:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": {
+                        "id": 60410,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1139:7:113",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 60415,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1139:46:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "BinaryOperation",
+                  "operator": "-",
+                  "rightExpression": {
+                    "hexValue": "31",
+                    "id": 60416,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1188:1:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_1_by_1",
+                      "typeString": "int_const 1"
+                    },
+                    "value": "1"
+                  },
+                  "src": "1139:50:113",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                ],
+                "id": 60409,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "1131:7:113",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_bytes32_$",
+                  "typeString": "type(bytes32)"
+                },
+                "typeName": {
+                  "id": 60408,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1131:7:113",
+                  "typeDescriptions": {}
+                }
+              },
+              "id": 60418,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1131:59:113",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 60433,
+            "nodeType": "VariableDeclaration",
+            "src": "1278:105:113",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 60420,
+              "nodeType": "StructuredDocumentation",
+              "src": "1197:76:113",
+              "text": "@notice Storage slot that the recommended protocol version is stored at."
+            },
+            "functionSelector": "f7d12760",
+            "mutability": "constant",
+            "name": "RECOMMENDED_SLOT",
+            "nameLocation": "1302:16:113",
+            "scope": 60637,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 60421,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1278:7:113",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "commonType": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "id": 60431,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "leftExpression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "70726f746f636f6c76657273696f6e2e7265636f6d6d656e646564",
+                            "id": 60427,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1347:29:113",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_e314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b",
+                              "typeString": "literal_string \"protocolversion.recommended\""
+                            },
+                            "value": "protocolversion.recommended"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_e314dfc40f0025322aacc0ba8ef420b62fb3b702cf01e0cdf3d829117ac2ff1b",
+                              "typeString": "literal_string \"protocolversion.recommended\""
+                            }
+                          ],
+                          "id": 60426,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -8,
+                          "src": "1337:9:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 60428,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1337:40:113",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 60425,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1329:7:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": {
+                        "id": 60424,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1329:7:113",
+                        "typeDescriptions": {}
+                      }
+                    },
+                    "id": 60429,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1329:49:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "BinaryOperation",
+                  "operator": "-",
+                  "rightExpression": {
+                    "hexValue": "31",
+                    "id": 60430,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1381:1:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_1_by_1",
+                      "typeString": "int_const 1"
+                    },
+                    "value": "1"
+                  },
+                  "src": "1329:53:113",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                ],
+                "id": 60423,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "1321:7:113",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_bytes32_$",
+                  "typeString": "type(bytes32)"
+                },
+                "typeName": {
+                  "id": 60422,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1321:7:113",
+                  "typeDescriptions": {}
+                }
+              },
+              "id": 60432,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "1321:62:113",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 60443,
+            "nodeType": "EventDefinition",
+            "src": "1585:87:113",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 60434,
+              "nodeType": "StructuredDocumentation",
+              "src": "1390:190:113",
+              "text": "@notice Emitted when configuration is updated.\n @param version    ProtocolVersion version.\n @param updateType Type of update.\n @param data       Encoded update data."
+            },
+            "eventSelector": "1d2b0bda21d56b8bd12d4f94ebacffdfb35f5e226f84b461103bb8beab6353be",
+            "name": "ConfigUpdate",
+            "nameLocation": "1591:12:113",
+            "parameters": {
+              "id": 60442,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60436,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "version",
+                  "nameLocation": "1620:7:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60443,
+                  "src": "1604:23:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 60435,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1604:7:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 60439,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "updateType",
+                  "nameLocation": "1648:10:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60443,
+                  "src": "1629:29:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_UpdateType_$60401",
+                    "typeString": "enum ProtocolVersions.UpdateType"
+                  },
+                  "typeName": {
+                    "id": 60438,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60437,
+                      "name": "UpdateType",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60401,
+                      "src": "1629:10:113"
+                    },
+                    "referencedDeclaration": 60401,
+                    "src": "1629:10:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_UpdateType_$60401",
+                      "typeString": "enum ProtocolVersions.UpdateType"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 60441,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1666:4:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60443,
+                  "src": "1660:10:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 60440,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1660:5:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1603:68:113"
+            }
+          },
+          {
+            "id": 60447,
+            "nodeType": "VariableDeclaration",
+            "src": "1741:40:113",
+            "nodes": [],
+            "baseFunctions": [
+              75926
+            ],
+            "constant": true,
+            "documentation": {
+              "id": 60444,
+              "nodeType": "StructuredDocumentation",
+              "src": "1678:58:113",
+              "text": "@notice Semantic version.\n @custom:semver 0.1.0"
+            },
+            "functionSelector": "54fd4d50",
+            "mutability": "constant",
+            "name": "version",
+            "nameLocation": "1764:7:113",
+            "scope": 60637,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_memory_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 60445,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "1741:6:113",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "hexValue": "302e312e30",
+              "id": 60446,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1774:7:113",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_aa7cdbe2cce2ec7b606b0e199ddd9b264a6e645e767fb8479a7917dcd1b8693f",
+                "typeString": "literal_string \"0.1.0\""
+              },
+              "value": "0.1.0"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 60473,
+            "nodeType": "FunctionDefinition",
+            "src": "2067:207:113",
+            "nodes": [],
+            "body": {
+              "id": 60472,
+              "nodeType": "Block",
+              "src": "2081:193:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "hexValue": "307864456144",
+                            "id": 60454,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "2132:6:113",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_57005_by_1",
+                              "typeString": "int_const 57005"
+                            },
+                            "value": "0xdEaD"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_rational_57005_by_1",
+                              "typeString": "int_const 57005"
+                            }
+                          ],
+                          "id": 60453,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "2124:7:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 60452,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "2124:7:113",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 60455,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2124:15:113",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "hexValue": "30",
+                                "id": 60460,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "number",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "2193:1:113",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_rational_0_by_1",
+                                  "typeString": "int_const 0"
+                                },
+                                "value": "0"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_0_by_1",
+                                  "typeString": "int_const 0"
+                                }
+                              ],
+                              "id": 60459,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "2185:7:113",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_uint256_$",
+                                "typeString": "type(uint256)"
+                              },
+                              "typeName": {
+                                "id": 60458,
+                                "name": "uint256",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "2185:7:113",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 60461,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "2185:10:113",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 60456,
+                            "name": "ProtocolVersion",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 60393,
+                            "src": "2164:15:113",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_userDefinedValueType$_ProtocolVersion_$60393_$",
+                              "typeString": "type(ProtocolVersion)"
+                            }
+                          },
+                          "id": 60457,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "wrap",
+                          "nodeType": "MemberAccess",
+                          "src": "2164:20:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_ProtocolVersion_$60393_$",
+                            "typeString": "function (uint256) pure returns (ProtocolVersion)"
+                          }
+                        },
+                        "id": 60462,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2164:32:113",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "arguments": [
+                              {
+                                "hexValue": "30",
+                                "id": 60467,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "number",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "2253:1:113",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_rational_0_by_1",
+                                  "typeString": "int_const 0"
+                                },
+                                "value": "0"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_0_by_1",
+                                  "typeString": "int_const 0"
+                                }
+                              ],
+                              "id": 60466,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "2245:7:113",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_uint256_$",
+                                "typeString": "type(uint256)"
+                              },
+                              "typeName": {
+                                "id": 60465,
+                                "name": "uint256",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "2245:7:113",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 60468,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "2245:10:113",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 60463,
+                            "name": "ProtocolVersion",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 60393,
+                            "src": "2224:15:113",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_userDefinedValueType$_ProtocolVersion_$60393_$",
+                              "typeString": "type(ProtocolVersion)"
+                            }
+                          },
+                          "id": 60464,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "wrap",
+                          "nodeType": "MemberAccess",
+                          "src": "2224:20:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_wrap_pure$_t_uint256_$returns$_t_userDefinedValueType$_ProtocolVersion_$60393_$",
+                            "typeString": "function (uint256) pure returns (ProtocolVersion)"
+                          }
+                        },
+                        "id": 60469,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2224:32:113",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        },
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      ],
+                      "id": 60451,
+                      "name": "initialize",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60504,
+                      "src": "2091:10:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_userDefinedValueType$_ProtocolVersion_$60393_$_t_userDefinedValueType$_ProtocolVersion_$60393_$returns$__$",
+                        "typeString": "function (address,ProtocolVersion,ProtocolVersion)"
+                      }
+                    },
+                    "id": 60470,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "_owner",
+                      "_required",
+                      "_recommended"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "2091:176:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60471,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2091:176:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60448,
+              "nodeType": "StructuredDocumentation",
+              "src": "1788:274:113",
+              "text": "@notice Constructs the ProtocolVersion contract. Cannot set\n         the owner to `address(0)` due to the Ownable contract's\n         implementation, so set it to `address(0xdEaD)`\n         A zero version is considered empty and is ignored by nodes."
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 60449,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2078:2:113"
+            },
+            "returnParameters": {
+              "id": 60450,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2081:0:113"
+            },
+            "scope": 60637,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 60504,
+            "nodeType": "FunctionDefinition",
+            "src": "2548:307:113",
+            "nodes": [],
+            "body": {
+              "id": 60503,
+              "nodeType": "Block",
+              "src": "2715:140:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 60488,
+                      "name": "__Ownable_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 29424,
+                      "src": "2725:14:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 60489,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2725:16:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60490,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2725:16:113"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 60492,
+                        "name": "_owner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60476,
+                        "src": "2769:6:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 60491,
+                      "name": "transferOwnership",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 29503,
+                      "src": "2751:17:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 60493,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2751:25:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60494,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2751:25:113"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 60496,
+                        "name": "_required",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60479,
+                        "src": "2799:9:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      ],
+                      "id": 60495,
+                      "name": "_setRequired",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60581,
+                      "src": "2786:12:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_userDefinedValueType$_ProtocolVersion_$60393_$returns$__$",
+                        "typeString": "function (ProtocolVersion)"
+                      }
+                    },
+                    "id": 60497,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2786:23:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60498,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2786:23:113"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 60500,
+                        "name": "_recommended",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60482,
+                        "src": "2835:12:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      ],
+                      "id": 60499,
+                      "name": "_setRecommended",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60636,
+                      "src": "2819:15:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_userDefinedValueType$_ProtocolVersion_$60393_$returns$__$",
+                        "typeString": "function (ProtocolVersion)"
+                      }
+                    },
+                    "id": 60501,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2819:29:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60502,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2819:29:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60474,
+              "nodeType": "StructuredDocumentation",
+              "src": "2280:263:113",
+              "text": "@notice Initializer.\n @param _owner             Initial owner of the contract.\n @param _required          Required protocol version to operate on this chain.\n @param _recommended       Recommended protocol version to operate on thi chain."
+            },
+            "functionSelector": "7a1ac61e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "hexValue": "32",
+                    "id": 60485,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "2708:1:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_2_by_1",
+                      "typeString": "int_const 2"
+                    },
+                    "value": "2"
+                  }
+                ],
+                "id": 60486,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 60484,
+                  "name": "reinitializer",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 29633,
+                  "src": "2694:13:113"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2694:16:113"
+              }
+            ],
+            "name": "initialize",
+            "nameLocation": "2557:10:113",
+            "parameters": {
+              "id": 60483,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60476,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nameLocation": "2585:6:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60504,
+                  "src": "2577:14:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 60475,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2577:7:113",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 60479,
+                  "mutability": "mutable",
+                  "name": "_required",
+                  "nameLocation": "2617:9:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60504,
+                  "src": "2601:25:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60478,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60477,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "2601:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "2601:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 60482,
+                  "mutability": "mutable",
+                  "name": "_recommended",
+                  "nameLocation": "2652:12:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60504,
+                  "src": "2636:28:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60481,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60480,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "2636:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "2636:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2567:103:113"
+            },
+            "returnParameters": {
+              "id": 60487,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2715:0:113"
+            },
+            "scope": 60637,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 60515,
+            "nodeType": "FunctionDefinition",
+            "src": "3096:158:113",
+            "nodes": [],
+            "body": {
+              "id": 60514,
+              "nodeType": "Block",
+              "src": "3185:69:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "AST": {
+                    "nodeType": "YulBlock",
+                    "src": "3204:44:113",
+                    "statements": [
+                      {
+                        "nodeType": "YulAssignment",
+                        "src": "3218:20:113",
+                        "value": {
+                          "arguments": [
+                            {
+                              "name": "_slot",
+                              "nodeType": "YulIdentifier",
+                              "src": "3232:5:113"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "sload",
+                            "nodeType": "YulIdentifier",
+                            "src": "3226:5:113"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "3226:12:113"
+                        },
+                        "variableNames": [
+                          {
+                            "name": "out_",
+                            "nodeType": "YulIdentifier",
+                            "src": "3218:4:113"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "evmVersion": "london",
+                  "externalReferences": [
+                    {
+                      "declaration": 60507,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "3232:5:113",
+                      "valueSize": 1
+                    },
+                    {
+                      "declaration": 60511,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "3218:4:113",
+                      "valueSize": 1
+                    }
+                  ],
+                  "id": 60513,
+                  "nodeType": "InlineAssembly",
+                  "src": "3195:53:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60505,
+              "nodeType": "StructuredDocumentation",
+              "src": "2861:230:113",
+              "text": "@notice Returns a ProtocolVersion stored in an arbitrary storage slot.\n         These storage slots decouple the storage layout from solc's automation.\n @param _slot The storage slot to retrieve the address from."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_getProtocolVersion",
+            "nameLocation": "3105:19:113",
+            "parameters": {
+              "id": 60508,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60507,
+                  "mutability": "mutable",
+                  "name": "_slot",
+                  "nameLocation": "3133:5:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60515,
+                  "src": "3125:13:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 60506,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3125:7:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3124:15:113"
+            },
+            "returnParameters": {
+              "id": 60512,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60511,
+                  "mutability": "mutable",
+                  "name": "out_",
+                  "nameLocation": "3179:4:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60515,
+                  "src": "3163:20:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60510,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60509,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "3163:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "3163:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3162:22:113"
+            },
+            "scope": 60637,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 60526,
+            "nodeType": "FunctionDefinition",
+            "src": "3595:151:113",
+            "nodes": [],
+            "body": {
+              "id": 60525,
+              "nodeType": "Block",
+              "src": "3674:72:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "AST": {
+                    "nodeType": "YulBlock",
+                    "src": "3693:47:113",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "name": "_slot",
+                              "nodeType": "YulIdentifier",
+                              "src": "3714:5:113"
+                            },
+                            {
+                              "name": "_version",
+                              "nodeType": "YulIdentifier",
+                              "src": "3721:8:113"
+                            }
+                          ],
+                          "functionName": {
+                            "name": "sstore",
+                            "nodeType": "YulIdentifier",
+                            "src": "3707:6:113"
+                          },
+                          "nodeType": "YulFunctionCall",
+                          "src": "3707:23:113"
+                        },
+                        "nodeType": "YulExpressionStatement",
+                        "src": "3707:23:113"
+                      }
+                    ]
+                  },
+                  "evmVersion": "london",
+                  "externalReferences": [
+                    {
+                      "declaration": 60521,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "3714:5:113",
+                      "valueSize": 1
+                    },
+                    {
+                      "declaration": 60519,
+                      "isOffset": false,
+                      "isSlot": false,
+                      "src": "3721:8:113",
+                      "valueSize": 1
+                    }
+                  ],
+                  "id": 60524,
+                  "nodeType": "InlineAssembly",
+                  "src": "3684:56:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60516,
+              "nodeType": "StructuredDocumentation",
+              "src": "3260:330:113",
+              "text": "@notice Stores a ProtocolVersion in an arbitrary storage slot, `_slot`.\n @param _version The protocol version to store\n @param _slot The storage slot to store the address in.\n @dev WARNING! This function must be used cautiously, as it allows for overwriting values\n      in arbitrary storage slots."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setProtocolVersion",
+            "nameLocation": "3604:19:113",
+            "parameters": {
+              "id": 60522,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60519,
+                  "mutability": "mutable",
+                  "name": "_version",
+                  "nameLocation": "3640:8:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60526,
+                  "src": "3624:24:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60518,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60517,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "3624:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "3624:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 60521,
+                  "mutability": "mutable",
+                  "name": "_slot",
+                  "nameLocation": "3658:5:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60526,
+                  "src": "3650:13:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 60520,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3650:7:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3623:41:113"
+            },
+            "returnParameters": {
+              "id": 60523,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3674:0:113"
+            },
+            "scope": 60637,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 60540,
+            "nodeType": "FunctionDefinition",
+            "src": "3902:123:113",
+            "nodes": [],
+            "body": {
+              "id": 60539,
+              "nodeType": "Block",
+              "src": "3967:58:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 60537,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 60533,
+                      "name": "out_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60531,
+                      "src": "3977:4:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                        "typeString": "ProtocolVersion"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 60535,
+                          "name": "REQUIRED_SLOT",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 60419,
+                          "src": "4004:13:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 60534,
+                        "name": "_getProtocolVersion",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60515,
+                        "src": "3984:19:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_userDefinedValueType$_ProtocolVersion_$60393_$",
+                          "typeString": "function (bytes32) view returns (ProtocolVersion)"
+                        }
+                      },
+                      "id": 60536,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "3984:34:113",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                        "typeString": "ProtocolVersion"
+                      }
+                    },
+                    "src": "3977:41:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "id": 60538,
+                  "nodeType": "ExpressionStatement",
+                  "src": "3977:41:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60527,
+              "nodeType": "StructuredDocumentation",
+              "src": "3752:145:113",
+              "text": "@notice High level getter for the required protocol version.\n @return out_ Required protocol version to sync to the head of the chain."
+            },
+            "functionSelector": "dc8452cd",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "required",
+            "nameLocation": "3911:8:113",
+            "parameters": {
+              "id": 60528,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3919:2:113"
+            },
+            "returnParameters": {
+              "id": 60532,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60531,
+                  "mutability": "mutable",
+                  "name": "out_",
+                  "nameLocation": "3961:4:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60540,
+                  "src": "3945:20:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60530,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60529,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "3945:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "3945:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3944:22:113"
+            },
+            "scope": 60637,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 60554,
+            "nodeType": "FunctionDefinition",
+            "src": "4175:107:113",
+            "nodes": [],
+            "body": {
+              "id": 60553,
+              "nodeType": "Block",
+              "src": "4242:40:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 60550,
+                        "name": "_required",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60544,
+                        "src": "4265:9:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      ],
+                      "id": 60549,
+                      "name": "_setRequired",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60581,
+                      "src": "4252:12:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_userDefinedValueType$_ProtocolVersion_$60393_$returns$__$",
+                        "typeString": "function (ProtocolVersion)"
+                      }
+                    },
+                    "id": 60551,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4252:23:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60552,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4252:23:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60541,
+              "nodeType": "StructuredDocumentation",
+              "src": "4031:139:113",
+              "text": "@notice Updates the required protocol version. Can only be called by the owner.\n @param _required New required protocol version."
+            },
+            "functionSelector": "0457d6f2",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 60547,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 60546,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 29443,
+                  "src": "4232:9:113"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "4232:9:113"
+              }
+            ],
+            "name": "setRequired",
+            "nameLocation": "4184:11:113",
+            "parameters": {
+              "id": 60545,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60544,
+                  "mutability": "mutable",
+                  "name": "_required",
+                  "nameLocation": "4212:9:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60554,
+                  "src": "4196:25:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60543,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60542,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "4196:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "4196:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4195:27:113"
+            },
+            "returnParameters": {
+              "id": 60548,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4242:0:113"
+            },
+            "scope": 60637,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 60581,
+            "nodeType": "FunctionDefinition",
+            "src": "4422:252:113",
+            "nodes": [],
+            "body": {
+              "id": 60580,
+              "nodeType": "Block",
+              "src": "4480:194:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 60562,
+                        "name": "_required",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60558,
+                        "src": "4510:9:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      },
+                      {
+                        "id": 60563,
+                        "name": "REQUIRED_SLOT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60419,
+                        "src": "4521:13:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 60561,
+                      "name": "_setProtocolVersion",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60526,
+                      "src": "4490:19:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_userDefinedValueType$_ProtocolVersion_$60393_$_t_bytes32_$returns$__$",
+                        "typeString": "function (ProtocolVersion,bytes32)"
+                      }
+                    },
+                    "id": 60564,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4490:45:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60565,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4490:45:113"
+                },
+                {
+                  "assignments": [
+                    60567
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 60567,
+                      "mutability": "mutable",
+                      "name": "data",
+                      "nameLocation": "4559:4:113",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 60580,
+                      "src": "4546:17:113",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 60566,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "4546:5:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 60572,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 60570,
+                        "name": "_required",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60558,
+                        "src": "4577:9:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      ],
+                      "expression": {
+                        "id": 60568,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "4566:3:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 60569,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encode",
+                      "nodeType": "MemberAccess",
+                      "src": "4566:10:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function () pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 60571,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4566:21:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "4546:41:113"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 60574,
+                        "name": "VERSION",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60405,
+                        "src": "4615:7:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 60575,
+                          "name": "UpdateType",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 60401,
+                          "src": "4624:10:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_UpdateType_$60401_$",
+                            "typeString": "type(enum ProtocolVersions.UpdateType)"
+                          }
+                        },
+                        "id": 60576,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "REQUIRED_PROTOCOL_VERSION",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 60399,
+                        "src": "4624:36:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_UpdateType_$60401",
+                          "typeString": "enum ProtocolVersions.UpdateType"
+                        }
+                      },
+                      {
+                        "id": 60577,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60567,
+                        "src": "4662:4:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_UpdateType_$60401",
+                          "typeString": "enum ProtocolVersions.UpdateType"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 60573,
+                      "name": "ConfigUpdate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60443,
+                      "src": "4602:12:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_enum$_UpdateType_$60401_$_t_bytes_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,enum ProtocolVersions.UpdateType,bytes memory)"
+                      }
+                    },
+                    "id": 60578,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "4602:65:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60579,
+                  "nodeType": "EmitStatement",
+                  "src": "4597:70:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60555,
+              "nodeType": "StructuredDocumentation",
+              "src": "4288:129:113",
+              "text": "@notice Internal function for updating the required protocol version.\n @param _required New required protocol version."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setRequired",
+            "nameLocation": "4431:12:113",
+            "parameters": {
+              "id": 60559,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60558,
+                  "mutability": "mutable",
+                  "name": "_required",
+                  "nameLocation": "4460:9:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60581,
+                  "src": "4444:25:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60557,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60556,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "4444:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "4444:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4443:27:113"
+            },
+            "returnParameters": {
+              "id": 60560,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4480:0:113"
+            },
+            "scope": 60637,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 60595,
+            "nodeType": "FunctionDefinition",
+            "src": "4836:129:113",
+            "nodes": [],
+            "body": {
+              "id": 60594,
+              "nodeType": "Block",
+              "src": "4904:61:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 60592,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 60588,
+                      "name": "out_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60586,
+                      "src": "4914:4:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                        "typeString": "ProtocolVersion"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 60590,
+                          "name": "RECOMMENDED_SLOT",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 60433,
+                          "src": "4941:16:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        ],
+                        "id": 60589,
+                        "name": "_getProtocolVersion",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60515,
+                        "src": "4921:19:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_userDefinedValueType$_ProtocolVersion_$60393_$",
+                          "typeString": "function (bytes32) view returns (ProtocolVersion)"
+                        }
+                      },
+                      "id": 60591,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "4921:37:113",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                        "typeString": "ProtocolVersion"
+                      }
+                    },
+                    "src": "4914:44:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "id": 60593,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4914:44:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60582,
+              "nodeType": "StructuredDocumentation",
+              "src": "4680:151:113",
+              "text": "@notice High level getter for the recommended protocol version.\n @return out_ Recommended protocol version to sync to the head of the chain."
+            },
+            "functionSelector": "d798b1ac",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "recommended",
+            "nameLocation": "4845:11:113",
+            "parameters": {
+              "id": 60583,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4856:2:113"
+            },
+            "returnParameters": {
+              "id": 60587,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60586,
+                  "mutability": "mutable",
+                  "name": "out_",
+                  "nameLocation": "4898:4:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60595,
+                  "src": "4882:20:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60585,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60584,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "4882:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "4882:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4881:22:113"
+            },
+            "scope": 60637,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 60609,
+            "nodeType": "FunctionDefinition",
+            "src": "5124:119:113",
+            "nodes": [],
+            "body": {
+              "id": 60608,
+              "nodeType": "Block",
+              "src": "5197:46:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 60605,
+                        "name": "_recommended",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60599,
+                        "src": "5223:12:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      ],
+                      "id": 60604,
+                      "name": "_setRecommended",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60636,
+                      "src": "5207:15:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_userDefinedValueType$_ProtocolVersion_$60393_$returns$__$",
+                        "typeString": "function (ProtocolVersion)"
+                      }
+                    },
+                    "id": 60606,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5207:29:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60607,
+                  "nodeType": "ExpressionStatement",
+                  "src": "5207:29:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60596,
+              "nodeType": "StructuredDocumentation",
+              "src": "4971:148:113",
+              "text": "@notice Updates the recommended protocol version. Can only be called by the owner.\n @param _recommended New recommended protocol version."
+            },
+            "functionSelector": "5fd579af",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 60602,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 60601,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 29443,
+                  "src": "5187:9:113"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "5187:9:113"
+              }
+            ],
+            "name": "setRecommended",
+            "nameLocation": "5133:14:113",
+            "parameters": {
+              "id": 60600,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60599,
+                  "mutability": "mutable",
+                  "name": "_recommended",
+                  "nameLocation": "5164:12:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60609,
+                  "src": "5148:28:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60598,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60597,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "5148:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "5148:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5147:30:113"
+            },
+            "returnParameters": {
+              "id": 60603,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5197:0:113"
+            },
+            "scope": 60637,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 60636,
+            "nodeType": "FunctionDefinition",
+            "src": "5392:270:113",
+            "nodes": [],
+            "body": {
+              "id": 60635,
+              "nodeType": "Block",
+              "src": "5456:206:113",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 60617,
+                        "name": "_recommended",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60613,
+                        "src": "5486:12:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      },
+                      {
+                        "id": 60618,
+                        "name": "RECOMMENDED_SLOT",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60433,
+                        "src": "5500:16:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 60616,
+                      "name": "_setProtocolVersion",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60526,
+                      "src": "5466:19:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_userDefinedValueType$_ProtocolVersion_$60393_$_t_bytes32_$returns$__$",
+                        "typeString": "function (ProtocolVersion,bytes32)"
+                      }
+                    },
+                    "id": 60619,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5466:51:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60620,
+                  "nodeType": "ExpressionStatement",
+                  "src": "5466:51:113"
+                },
+                {
+                  "assignments": [
+                    60622
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 60622,
+                      "mutability": "mutable",
+                      "name": "data",
+                      "nameLocation": "5541:4:113",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 60635,
+                      "src": "5528:17:113",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes_memory_ptr",
+                        "typeString": "bytes"
+                      },
+                      "typeName": {
+                        "id": 60621,
+                        "name": "bytes",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "5528:5:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_storage_ptr",
+                          "typeString": "bytes"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 60627,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 60625,
+                        "name": "_recommended",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60613,
+                        "src": "5559:12:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                          "typeString": "ProtocolVersion"
+                        }
+                      ],
+                      "expression": {
+                        "id": 60623,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "5548:3:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 60624,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "encode",
+                      "nodeType": "MemberAccess",
+                      "src": "5548:10:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function () pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 60626,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5548:24:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "5528:44:113"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 60629,
+                        "name": "VERSION",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60405,
+                        "src": "5600:7:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 60630,
+                          "name": "UpdateType",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 60401,
+                          "src": "5609:10:113",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_UpdateType_$60401_$",
+                            "typeString": "type(enum ProtocolVersions.UpdateType)"
+                          }
+                        },
+                        "id": 60631,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "RECOMMENDED_PROTOCOL_VERSION",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 60400,
+                        "src": "5609:39:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_UpdateType_$60401",
+                          "typeString": "enum ProtocolVersions.UpdateType"
+                        }
+                      },
+                      {
+                        "id": 60632,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60622,
+                        "src": "5650:4:113",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_UpdateType_$60401",
+                          "typeString": "enum ProtocolVersions.UpdateType"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 60628,
+                      "name": "ConfigUpdate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60443,
+                      "src": "5587:12:113",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_enum$_UpdateType_$60401_$_t_bytes_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,enum ProtocolVersions.UpdateType,bytes memory)"
+                      }
+                    },
+                    "id": 60633,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "5587:68:113",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60634,
+                  "nodeType": "EmitStatement",
+                  "src": "5582:73:113"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 60610,
+              "nodeType": "StructuredDocumentation",
+              "src": "5249:138:113",
+              "text": "@notice Internal function for updating the recommended protocol version.\n @param _recommended New recommended protocol version."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setRecommended",
+            "nameLocation": "5401:15:113",
+            "parameters": {
+              "id": 60614,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60613,
+                  "mutability": "mutable",
+                  "name": "_recommended",
+                  "nameLocation": "5433:12:113",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60636,
+                  "src": "5417:28:113",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                    "typeString": "ProtocolVersion"
+                  },
+                  "typeName": {
+                    "id": 60612,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 60611,
+                      "name": "ProtocolVersion",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 60393,
+                      "src": "5417:15:113"
+                    },
+                    "referencedDeclaration": 60393,
+                    "src": "5417:15:113",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_userDefinedValueType$_ProtocolVersion_$60393",
+                      "typeString": "ProtocolVersion"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5416:30:113"
+            },
+            "returnParameters": {
+              "id": 60615,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5456:0:113"
+            },
+            "scope": 60637,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 60395,
+              "name": "OwnableUpgradeable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 29529,
+              "src": "484:18:113"
+            },
+            "id": 60396,
+            "nodeType": "InheritanceSpecifier",
+            "src": "484:18:113"
+          },
+          {
+            "baseName": {
+              "id": 60397,
+              "name": "ISemver",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 75927,
+              "src": "504:7:113"
+            },
+            "id": 60398,
+            "nodeType": "InheritanceSpecifier",
+            "src": "504:7:113"
+          }
+        ],
+        "canonicalName": "ProtocolVersions",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 60394,
+          "nodeType": "StructuredDocumentation",
+          "src": "326:129:113",
+          "text": "@title ProtocolVersions\n @notice The ProtocolVersions contract is used to manage superchain protocol version information."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          60637,
+          75927,
+          29529,
+          31068,
+          29680
+        ],
+        "name": "ProtocolVersions",
+        "nameLocation": "464:16:113",
+        "scope": 60638,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 113
+}
